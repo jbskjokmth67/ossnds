@@ -1,0 +1,566 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="UTF-8"><title>
+	Odisha Sub-ordinate Staff Selection Commission|OSSSC
+</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="stylesheet" href="frontend-style.css" type="text/css"><link rel="stylesheet" href="font-awesome.min.css" type="text/css">
+
+<!--<script type='text/javascript' src='responsive-modernizr.js'></script>-->
+<script type="text/javascript" src="jquery-latest.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+    
+<!--for login hashing -->
+<script src="SHA1.js" defer="defer"></script>
+
+<!--Own Jquery Effects-->
+<script src="myeffects.js" defer="defer"></script>      
+
+
+<script lang="javascript" type="text/javascript" defer="defer">
+function noBack() { window.history.forward() }
+noBack();
+window.inhibited_load = noBack;
+window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+window.inhibited_unload = function () { void (0) }
+
+</script>
+<script lang="javascript" type="text/javascript" defer="defer">window.history.forward(1);</script>
+
+<script defer="defer">
+function On_Sametab() {
+    document.forms[0].target = "_self";
+}
+function On_Newtab() {
+    document.forms[0].target = "_blank";
+}
+function stopKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if (((evt.keyCode == 8) && (node.type != "text") && (node.type != "textarea") && (node.type != "password")) || evt.keyCode == 13)
+    { return false; }
+}
+</script>
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="EXPIRES" content="0">  
+<noscript><meta http-equiv="REFRESH" content="5; url=NoJavascript.html" /></noscript>
+<script>
+    function pageLoad() {
+
+        $(':input[type=password]').each(function () {
+            $(this).wrap("<div class='passwordboxx'></div>");
+            $(this).after("<div class='toggle_password'><i class='fa fa-eye' aria-hidden='true'></i></div>");
+        });
+
+        $('.toggle_password').mousedown(function () {
+            $(this).siblings(':input[type=password]').attr('type', 'text');
+        });
+        $('.toggle_password').mouseup(function () {
+            $(this).siblings(':input[type=text]').attr('type', 'password');
+        });
+
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var body_class = $.cookie("body_class");
+        if (body_class) {
+            chooseStyle(body_class);
+        }
+        else { chooseStyle('theme2'); }
+
+    });
+
+    function chooseStyle(color) {
+        //alert("color=" + color);
+        $("body").removeAttr('class');
+        $("body").addClass(color);
+        $.cookie("body_class", color, { path: '/' });
+    }
+
+</script>
+
+
+</head>
+<body ondrag="false" onkeydown="return stopKey(event)" class="theme2"> 
+<div class="loader" style="display: none;"></div>
+<form method="post" action="./Functionaries_Position.html" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2D75CF0E">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="zFg10feO3KenJo4vhOSqyU/+ITgNt/kxutjMt/1paghjKXl0v1umMLICLPGu1t5OBQH+kaDLWoMM1jI7Z86fxIfl5B5ZVDiy30zeU1NEvk0geF87DJD0O9HVqNUYQDm8MyxAX+1zWbhCFtbTBOgGAE4IJ+kq00k7ZQpjatGFYbmADlH+">
+</div>
+
+
+<div class="topper">
+<div class="aligner">
+    
+	<div class="main_content"><a href="#data" style="display:inline-block;">Skip to Main Content</a> | <a href="screen-reader-access.html" style="display:inline-block;">Screen Reader</a></div>
+    <div class="option_panel">
+        <div class="languages">
+            <span id="lang"><span id="lbl_lang">Select Language :  </span></span>
+            <div class="language-wrapper">
+            <label><select name="ctl00$drp_lang" onchange="javascript:setTimeout('__doPostBack(\'ctl00$drp_lang\',\'\')', 0)" id="drp_lang" title="Select Language. " class="custom-selectt" onclick="On_Sametab();">
+	<option selected="selected" value="1">ENGLISH</option>
+
+</select></label>
+            </div>
+        <div class="clr"></div>   	
+        </div>
+        
+        <div class="font-resizer">
+            
+            <ul>
+                <li><a role="link" title="Decrease font size" id="minus">A<sup>-</sup></a></li>
+                <li><a role="link" title="Normal font size" id="normal">A<sup> </sup></a></li>
+                <li><a role="link" title="Increase font size" id="plus">A<sup>+</sup></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+        <div class="color_chooser">
+            <ul>
+                <li><span id="lbl_color">Select Color: : </span></li>
+                <li id="colorBlue"><a href="javascript:chooseStyle('theme1')"><div class="themebox1 patch"><span class="hide">Violet</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme2')"><div class="themebox2 patch"><span class="hide">Green</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme3')"><div class="themebox3 patch"><span class="hide">Gray</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme4')"><div class="themebox4 patch"><span class="hide">Reddish</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme5')"><div class="themebox5 patch"><span class="hide">Blue</span></div></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</div>
+
+
+
+<header class="myheader">
+<div class="aligner">
+		<div class="logo_holder">
+        	<div class="logo_icon"><a href="index.html"><img id="img_logo" alt="logo" src="govtlogo-trans_osssc.PNG"></a></div>
+            <div class="organization_name">
+            	<h1><span id="lbl_ofc_name">Odisha Sub-ordinate Staff Selection Commission</span></h1>
+                
+                <h3><span id="lbl_ofc_abbr">(OSSSC)</span>, <span id="lbl_govt_odisha">Govt. of Odisha</span></h3>
+            </div>
+        <div class="clr"></div>   
+        </div>
+        
+        <div class="user_option">
+        	<ul>
+            	<li><a href="Login.html" onclick="On_Sametab()"><i class="fa fa-lock"></i> <span id="lbl_login">Login</span></a></li>
+                <li><a href="Post_detail_information.html" onclick="On_Sametab()"><i class="fa fa-user-plus"></i> <span id="lbl_reg">Apply Online</span></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+<div class="clr"></div>
+</div>
+</header>
+
+<section class="navigation">
+<div class="aligner">
+<nav class="sujit-nav"><a id="pull" href="#">Menu</a>
+    
+    <ul class="menu">
+                    <li><a href="index.html"><span style="margin:0 0 0 0;">
+                    <img src="witte-home-icon.png" alt="Home"></span></a></li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu1">ABOUT US</span></a>
+                        <ul>
+                        <li><a href="About_Osssc.html"><span id="lbl_menu1_submenu1">OSSSC</span></a></li>
+                        <li><a href="Mission.html"><span id="lbl_menu1_submenu2">Mission</span></a></li>
+                        <li><a href="Organization.html"><span id="lbl_menu1_submenu3">Organization</span></a></li>
+                        <li><a href="Functionaries_Position.html"><span id="lbl_menu1_submenu4">Functionaries in Position</span></a></li>
+                        <li><a href="Job_Assignment.html"><span id="lbl_menu1_submenu5">Job Assignment</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu2">COMMISSION</span></a>
+                    	<ul>
+                        <li><a href="Formation.html"><span id="lbl_menu2_submenu1">Formation</span></a></li>
+                        <li><a href="Chairman.html"><span id="lbl_menu2_submenu2">Chairman</span></a></li>
+                        <li><a href="Members.html"><span id="lbl_menu2_submenu3">Members</span></a></li>
+                        <li><a href="Functions.html"><span id="lbl_menu2_submenu4">Functions</span></a></li>
+                        <li><a href="Incumbancy.html"><span id="lbl_menu2_submenu5">Incumbency</span></a></li>
+                        <li><a href="Boards_Committees.html"><span id="lbl_menu2_submenu6">Boards &amp; Committies</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu3">RECRUITMENT</span></a>
+                        <ul>
+                        <li><a href="Recruitment_calender.html"><span id="lbl_menu_recruit_calender">Recruitment Calender</span></a></li>
+                        <li><a href="VIEW_REGISTRATION_COPY.html"><span id="lbl_menu3_submenu6">View Registration Copy</span></a></li>
+						<li><a href="Old_Question_Papers.html">Old Questions</a></li>
+                        <li><a href="Scope.html"><span id="lbl_menu3_submenu1">Scope</span></a></li>
+                        <li><a href="Login.html"><span id="lbl_menu3_submenu2">Requisition</span></a></li> 
+                        <li><a href="Advertisements.html">
+                            <span id="lbl_menu3_submenu4">Advertisements</span></a></li>
+                        <li><a href="Notification.html">
+                            <span id="lbl_menu3_submenu5">Notifications</span></a></li>
+						<li><a href="Result.html">
+                            <span id="lbl_menu3_submenu_6">Results</span></a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="Tender.html"><span><span id="lbl_menu4">TENDERS &amp; QUOTATIONS</span></span></a></li>
+                    <li class="hassub"><a href="#"><span id="lbl_menu5">RULES</span></a>
+                    	<ul>
+                        <li><a href="Acts.html"><span id="lbl_menu5_submenu1">Acts</span></a></li>
+                        <li><a href="Rules.html"><span id="lbl_menu5_submenu2">Rules</span></a></li>
+                        <li><a href="Regulation.html"><span id="lbl_menu5_submenu3">Regulations</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="http://rtiodisha.in/pa/T1RILzIvMjAzNTUvMTk=" target="_blank" rel="noopener noreferrer"><span><span id="lbl_menu6">RTI</span></span></a></li>
+                    <li><a onclick="On_Newtab();" id="btn_Citizen" href="javascript:__doPostBack('ctl00$btn_Citizen','')">CITIZEN'S CHARTER</a></li>
+                    <li><a href="Contact_Osssc.html"><span id="lbl_contact">CONTACT US</span></a> </li>
+                </ul>
+<div class="clr"></div>
+</nav>
+<div class="clr"></div>
+</div>
+</section> 
+
+
+
+
+
+<section class="content" id="data">
+<div class="aligner">
+    	
+    <h1><span><span id="generic_masterpage1_lbl_head">Functionaries in Position</span></span></h1>
+        
+<div class="ihide"> 
+         
+</div>    
+    <div class="organization_table table_holder">
+        <table>
+        <tbody><tr>
+            <th style="display:none;"><span id="generic_masterpage1_lbl_tlb_head1">Sl. No.</span></th>
+            <th><span id="generic_masterpage1_lbl_tlb_head2">Name</span></th>
+            <th><span id="generic_masterpage1_lbl_tlb_head3">Designation</span></th>
+            <th><span id="generic_masterpage1_lbl_tlb_head4">Incumbency</span>
+                <div style="display:none;">
+                <span class="halfboxx"><span id="generic_masterpage1_lbl_tlb_head4_sub1">From</span></span>
+                <span class="halfboxx"><span id="generic_masterpage1_lbl_tlb_head4_sub2">To</span></span>
+                </div>
+            </th>
+            <th><span id="generic_masterpage1_lbl_tlb_head5">Contact Number</span></th>
+        </tr>
+        <tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row11_cont">1</span></td>
+            <td><span id="generic_masterpage1_lbl_row12_cont">Dr. Lalit Das, IPS (Retd.)</span></td>
+            <td><span id="generic_masterpage1_lbl_row13_cont">Chairman</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row14_cont1">From </span></b> <span id="generic_masterpage1_lbl_row14_cont2">24.10.24</span> </span> <span class="halfboxx"><b> - </b><span id="generic_masterpage1_lbl_row14_cont3">Cont.</span></span></td>
+            <td><span id="generic_masterpage1_lbl_row15_cont">0674-2597169 (O)</span></td>
+        </tr>
+		
+		<tr>
+			<td style="display:none;">&nbsp;</td>
+			<td>Dr. Uddhaba Chandra Majhi, IAS (Retd.)</td>
+			<td>Member</td>
+			<td><span class="halfboxx"><b>From</b> 29.10.24</span> <span class="halfboxx"><b>-</b> Cont.</span></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td style="display:none;">&nbsp;</td>
+			<td>Sri Saroj Kumar Mishra, OAS (Retd.)</td>
+			<td>Member</td>
+			<td><span class="halfboxx"><b>From</b> 30.10.24</span> <span class="halfboxx"><b>-</b> Cont.</span></td>
+			<td></td>
+		</tr>
+		
+		
+        <tr style="display:none;">
+            <td><span id="generic_masterpage1_lbl_row121_cont">2</span></td>
+            <td><span id="generic_masterpage1_lbl_row122_cont">Sri Pratap Chandra Dash, IAS (Retd.)</span></td>
+            <td><span id="generic_masterpage1_lbl_row123_cont">Member</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row124_cont1">From 20.02.20</span></b> <span id="generic_masterpage1_lbl_row124_cont2"></span> </span> <span class="halfboxx"><b> - </b> <span id="generic_masterpage1_lbl_row124_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+		
+        <tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row21_cont">3</span></td>
+            <td><span id="generic_masterpage1_lbl_row22_cont">Sri Bishnu Prasad Mishra, IAS</span></td>
+            <td><span id="generic_masterpage1_lbl_row23_cont">Secretary</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row24_cont1">From</span></b> <span id="generic_masterpage1_lbl_row24_cont2">18.04.18</span> </span> <span class="halfboxx"><b> - </b><span id="generic_masterpage1_lbl_row24_cont3">Cont.</span></span></td>
+            <td><span id="generic_masterpage1_lbl_row25_cont1">0674-2597155 (O)</span></td>
+        </tr>
+        <tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row_new31_cont">4</span></td>
+            <td><span id="generic_masterpage1_lbl_row_new32_cont">Sri Taranisen Naik, OAS (SAG)</span></td>
+            <td><span id="generic_masterpage1_lbl_row_new33_cont">Additional Secretary</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row_new34_cont1">From</span></b> <span id="generic_masterpage1_lbl_row_new34_cont2">22.08.22</span> </span> <span class="halfboxx"><b> - </b><span id="generic_masterpage1_lbl_row_new34_cont3"> Cont.</span></span></td>
+            <td><span id="generic_masterpage1_lbl_row_new35_cont">0674-2597155 (O)</span></td>
+        </tr>
+		<tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row161_cont">5</span></td>
+            <td><span id="generic_masterpage1_lbl_row162_cont">Smt. Bijaylaxmi Patsani, OAS (S)</span></td>
+            <td><span id="generic_masterpage1_lbl_row163_cont">Joint Secretary</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row164_cont1">From</span></b> <span id="generic_masterpage1_lbl_row164_cont2">09.03.21</span> </span> <span class="halfboxx"><b> - </b> <span id="generic_masterpage1_lbl_row164_cont3">Cont.</span></span></td>
+            <td><span id="generic_masterpage1_lbl_row55_cont">0674-2597130 (O)</span>  </td>
+        </tr>
+		
+		<tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row111_cont">2</span></td>
+            <td><span id="generic_masterpage1_lbl_row112_cont">Smt. Lipika Das, OAS (S)</span></td>
+            <td><span id="generic_masterpage1_lbl_row113_cont">Joint Secretary</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row114_cont1">From </span></b> <span id="generic_masterpage1_lbl_row114_cont2">20.02.24</span> </span> <span class="halfboxx"><b> - </b> <span id="generic_masterpage1_lbl_row114_cont3">Cont.</span></span></td>
+            <td>0674-2597158 (O)</td>
+        </tr>
+		
+		
+		
+		
+		
+		
+		
+		
+        <tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row31_cont">6</span></td>
+            <td><span id="generic_masterpage1_lbl_row32_cont">Smt. Pranita Dash, OT &amp; AS</span></td>
+            <td><span id="generic_masterpage1_lbl_row33_cont">Accounts Officer</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row34_cont1">From</span></b> <span id="generic_masterpage1_lbl_row34_cont2">12.01.21</span> </span> <span class="halfboxx"><b> - </b><span id="generic_masterpage1_lbl_row34_cont3">Cont.</span></span></td>
+            <td><span id="generic_masterpage1_lbl_row35_cont">0674-2597126 (O)</span></td>
+        </tr>
+		
+		
+		
+        
+		
+		<tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row171_cont">7</span></td>
+            <td><span id="generic_masterpage1_lbl_row172_cont">Smt. Mahamaya Mohanty</span></td>
+            <td><span id="generic_masterpage1_lbl_row173_cont">Section Officer</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row174_cont1">From</span></b> <span id="generic_masterpage1_lbl_row174_cont2">31.05.13</span> </span> <span class="halfboxx"><b> - </b> <span id="generic_masterpage1_lbl_row174_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+		
+<!--		
+        <tr>
+            <td style="display:none;">&nbsp;</td>
+            <td>Sri Pradeep Kumar Jena</td>
+            <td>Section Officer</td>
+            <td><span class="halfboxx"><b>From</b> 23.06.23  </span> <span class="halfboxx"><b> - </b> Cont.</span></td>
+            <td>&nbsp;</td>
+        </tr
+		-->
+		<tr>
+            <td style="display:none;">&nbsp;</td>
+            <td>Sri Soumya Ranjan Samal</td>
+            <td>Section Officer</td>
+            <td><span class="halfboxx"><b>From</b> 07.08.23  </span> <span class="halfboxx"><b> - </b> Cont.</span></td>
+            <td>&nbsp;</td>
+        </tr>
+		
+		
+        <tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row81_cont">9</span></td>
+            <td><span id="generic_masterpage1_lbl_row82_cont">Sri Dibakar Mishra</span></td>
+            <td><span id="generic_masterpage1_lbl_row83_cont">O.S.D</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row84_cont1">From</span></b> <span id="generic_masterpage1_lbl_row84_cont2">09.12.20</span> </span> <span class="halfboxx"><b> - </b><span id="generic_masterpage1_lbl_row84_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+		
+		<tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row141_cont">8</span></td>
+            <td><span id="generic_masterpage1_lbl_row142_cont">Sri Pradipta Ku. Patra</span></td>
+            <td><span id="generic_masterpage1_lbl_row143_cont">O.S.D</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row144_cont1">From</span></b> <span id="generic_masterpage1_lbl_row144_cont2">05.04.21</span> </span> <span class="halfboxx"><b> - </b> <span id="generic_masterpage1_lbl_row144_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+		
+		
+		<tr>
+            <td style="display:none;">&nbsp;</td>
+            <td>Sri Ganesh Prasad Mishra</td>
+            <td>O.S.D</td>
+            <td><span class="halfboxx"><b>From</b> 12.01.24  </span> <span class="halfboxx"><b> - </b> Cont.</span></td>
+            <td>&nbsp;</td>
+        </tr>
+		
+		
+		<tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row131_cont">14</span></td>
+            <td><span id="generic_masterpage1_lbl_row132_cont">Sri Pravakar Sahoo</span></td>
+            <td><span id="generic_masterpage1_lbl_row133_cont">P.A</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row134_cont1">From</span></b> <span id="generic_masterpage1_lbl_row134_cont2">01.07.13</span> </span> <span class="halfboxx"><b> - </b><span id="generic_masterpage1_lbl_row134_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+        
+        <tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row221_cont">11</span></td>
+            <td><span id="generic_masterpage1_lbl_row222_cont">Smt. Soumyajyoti Subudhi</span></td>
+            <td><span id="generic_masterpage1_lbl_row223_cont">ASO</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row224_cont1">From</span></b> <span id="generic_masterpage1_lbl_row224_cont2">28.10.15</span> </span> <span class="halfboxx"><b> - </b> <span id="generic_masterpage1_lbl_row224_cont3">Cont</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+		<tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row231_cont">13</span></td>
+            <td><span id="generic_masterpage1_lbl_row232_cont">Sri Jiban Dharua</span></td>
+            <td><span id="generic_masterpage1_lbl_row233_cont">ASO</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row234_cont1">From</span></b> <span id="generic_masterpage1_lbl_row234_cont2">16.11.15</span> </span> <span class="halfboxx"><b> - </b> <span id="generic_masterpage1_lbl_row234_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+
+		
+        <tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row101_cont">10</span></td>
+            <td><span id="generic_masterpage1_lbl_row102_cont">Sri Rajesh Kumar Jena</span></td>
+            <td><span id="generic_masterpage1_lbl_row103_cont">ASO</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row104_cont1">From</span></b> <span id="generic_masterpage1_lbl_row104_cont2">03.03.15</span> </span> <span class="halfboxx"><b> - </b><span id="generic_masterpage1_lbl_row104_cont3">Cont</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+		<tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row151_cont">12</span></td>
+            <td><span id="generic_masterpage1_lbl_row152_cont">Smt. Subhaprada Lenka</span></td>
+            <td><span id="generic_masterpage1_lbl_row153_cont">ASO</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row154_cont1">From</span></b> <span id="generic_masterpage1_lbl_row154_cont2">08.03.19</span> </span> <span class="halfboxx"><b> - </b> <span id="generic_masterpage1_lbl_row154_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+        
+        
+        <tr>
+            <td style="display:none;">&nbsp;</td>
+            <td>Sri Diptendu Kumar Barik</td>
+            <td>ASO</td>
+            <td><span class="halfboxx"><b>From</b> 19.02.24  </span> <span class="halfboxx"><b> - </b> Cont.</span></td>
+            <td>&nbsp;</td>
+        </tr>
+		<tr>
+            <td style="display:none;">&nbsp;</td>
+            <td>Sri Biswajeet Mallick</td>
+            <td>ASO</td>
+            <td><span class="halfboxx"><b>From</b> 19.02.24  </span> <span class="halfboxx"><b> - </b> Cont.</span></td>
+            <td>&nbsp;</td>
+        </tr>
+		<tr>
+            <td style="display:none;">&nbsp;</td>
+            <td>Sri Vicky Pradhan</td>
+            <td>ASO</td>
+            <td><span class="halfboxx"><b>From</b> 19.02.24  </span> <span class="halfboxx"><b> - </b> Cont.</span></td>
+            <td>&nbsp;</td>
+        </tr>
+		<tr>
+            <td style="display:none;">&nbsp;</td>
+            <td>Sri Yudhistir Kumbhar</td>
+            <td>ASO</td>
+            <td><span class="halfboxx"><b>From</b> 19.02.24  </span> <span class="halfboxx"><b> - </b> Cont.</span></td>
+            <td>&nbsp;</td>
+        </tr>
+		
+        
+        
+        <tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row191_cont">19</span></td>
+            <td><span id="generic_masterpage1_lbl_row192_cont">Sri Malaya Ku. Dash</span></td>
+            <td><span id="generic_masterpage1_lbl_row193_cont">Jr.  Data Entry Operator</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row194_cont1">From</span></b> <span id="generic_masterpage1_lbl_row194_cont2">14.07.21</span> </span> <span class="halfboxx"><b> - </b><span id="generic_masterpage1_lbl_row194_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row201_cont">20</span></td>
+            <td><span id="generic_masterpage1_lbl_row202_cont">Sri Sujit Ku. Biswal</span></td>
+            <td><span id="generic_masterpage1_lbl_row203_cont">Jr.  Data Entry Operator</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row204_cont1">From</span></b> <span id="generic_masterpage1_lbl_row204_cont2">15.07.21</span> </span> <span class="halfboxx"><b> - </b> <span id="generic_masterpage1_lbl_row204_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+		
+        <tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row61_cont">9</span></td>
+            <td><span id="generic_masterpage1_lbl_row62_cont">Smt. Lipsa Mohanty</span></td>
+            <td><span id="generic_masterpage1_lbl_row63_cont">Jr.  Data Entry Operator</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row64_cont1">From</span></b> <span id="generic_masterpage1_lbl_row64_cont2">15.07.21</span> </span> <span class="halfboxx"><b> - </b><span id="generic_masterpage1_lbl_row64_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+		
+		<tr>
+            <td style="display:none;"><span id="generic_masterpage1_lbl_row51_cont">7</span></td>
+            <td><span id="generic_masterpage1_lbl_row52_cont">Sri Purna Chandra Mohanty</span></td>
+            <td><span id="generic_masterpage1_lbl_row53_cont">Jr.  Data Entry Operator</span></td>
+            <td><span class="halfboxx"><b><span id="generic_masterpage1_lbl_row54_cont1">From</span></b> <span id="generic_masterpage1_lbl_row54_cont2">22.07.21</span> </span> <span class="halfboxx"><b> - </b><span id="generic_masterpage1_lbl_row54_cont3">Cont.</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+		
+            
+        </tbody></table>
+    <div class="clr"></div>
+    </div>
+
+<div class="clr"></div>
+</div>
+</section>
+
+
+
+<section class="welcome">
+<div class="aligner">
+	<div class="welcome_message">
+    	<h2><span id="lbl_disclaimer">Disclaimer</span></h2>
+        <p><span id="lbl_disclaimer_cont">This is the Official Website/Web portal of Odisha Sub-Ordinate Staff Selection Commission (OSSSC). This Website/Web portal has been developed by National Informatics Centre. OSSSC is the owner of this Website/Web portal &amp; the contents in this Website/Web portal are being provided and updated by the OSSSC. It is deemed that the visitors to this Website/Web portal have read, understood and agreed to be bound by the Privacy Policy and Usage Terms and Conditions of the Website/ Web portal. Any suggestions or queries in regard to this Website/Web portal may be sent to the Secretary, OSSSC. Ph: / Fax: 0674-2597155, E-mail:</span><img src="mail_osssc.png" alt="Mail for "></p>
+    <div class="clr"></div>
+    </div>
+    
+    <div class="support_box">
+    	<h2><span id="lbl_hd_assistance">Happy to Assist !</span></h2>
+        <div class="supportbox">
+        	<h4><span id="lbl_tech_asst">For Technical Assistance call on</span></h4>
+            <h2><span id="lbl_telphone">0674-2597149</span></h2>
+            <h4>or email us on <img id="img_email" src="support_osssc.png" alt="support email"></h4>
+            <h4><span id="lbl_adm_asst">For Administrative Assistance call on</span></h4>
+            <h2><span id="lbl_adm_phone">0674-2597106</span></h2>
+            <span id="lbl_tech_hour">between 10 AM to 5 PM on official days</span>
+        <div class="clr"></div>
+        </div>
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</section>
+
+<footer>
+<div class="footermenu">
+	<ul>
+    	<li><a href="Privacy_policy.html"><span id="lbl_privacy">Privacy Policy</span></a></li>
+        <li><a href="Usage_Terms.html"><span id="lbl_terms">Usage Terms &amp; Condition</span></a></li>
+    </ul>
+</div>
+<div class="clr"></div>
+<div class="best_viewed"><span id="lbl_best_view">Site best viewed in I.E 9 or above, Mozilla 22.0 or above, Google Chrome 30.0 or above.</span></div>   
+<div class="clr"></div>
+<div class="copyright"><span id="lbl_copyright">All rights of this portal are vested with the Odisha Sub-Ordinate Staff-Selection Commission.</span></div>
+</footer>
+
+    <div class="ihide"><span id="lbl_disp_lang">1</span></div>
+</form> 
+
+
+                
+
+
+</body></html>
