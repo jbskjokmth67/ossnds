@@ -1,0 +1,614 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta charset="UTF-8"><title>
+	Welcome to Odisha Sub-ordinate Staff Selection Commission | OSSSC
+</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="stylesheet" href="frontend-style.css" type="text/css"><link rel="stylesheet" href="font-awesome.min.css" type="text/css">
+
+<script type="text/javascript" src="responsive-modernizr.js"></script>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+    <!--Hashing-->
+
+<script type="text/javascript" src="jquery.cookie.js"></script>
+
+<script src="SHA1.js" defer="defer"></script>
+
+<!--Own Jquery Effects-->
+<script src="myeffects.js" defer="defer"></script>
+<script defer="defer">
+function On_Sametab() {
+    document.forms[0].target = "_self";
+}
+</script>
+
+  
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="EXPIRES" content="0">
+<script lang="javascript" type="text/javascript" defer="defer">window.history.forward(1);</script> 
+<noscript><meta http-equiv="REFRESH" content="5; url=../NoJavascript.html" /></noscript>
+<script>
+    function pageLoad() {
+
+        $(':input[type=password]').each(function () {
+            $(this).wrap("<div class='passwordboxx'></div>");
+            $(this).after("<div class='toggle_password'><i class='fa fa-eye' aria-hidden='true'></i></div>");
+        });
+
+        $('.toggle_password').mousedown(function () {
+            $(this).siblings(':input[type=password]').attr('type', 'text');
+        });
+        $('.toggle_password').mouseup(function () {
+            $(this).siblings(':input[type=text]').attr('type', 'password');
+        });
+
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var body_class = $.cookie("body_class");
+        if (body_class) {
+            chooseStyle(body_class);
+        }
+        else { chooseStyle('theme2'); }
+    });
+
+    function chooseStyle(color) {
+        //alert("color=" + color);
+        $("body").removeAttr('class');
+        $("body").addClass(color);
+        $.cookie("body_class", color, { path: '/' });
+    }
+</script>
+
+</head>
+<body ondrag="false" ondragenter="return false" onkeydown="return stopKey(event)" oncopy="return false;" oncut=" return false;" onpaste="return false;" class="theme2">
+<div class="loader" style="display: none;"></div>
+
+<style>
+    .floating_contact{ cursor:pointer; position:fixed;top:40%; right:-225px; display:flex; z-index:999;
+     -webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;
+    }
+    .floating_contact:hover{right:0;}
+    .switch{color:#FFF; padding:5px;font-size:18px; font-weight:bold; text-align:center; width:30px;-webkit-animation: help 0.5s linear 0.5s infinite alternate;animation: help 0.5s linear 0.5s infinite alternate;}
+    @-webkit-keyframes help { 0%   {background:#000} 50% {background:#f00} 100% {background:#000}}
+    @keyframes help { 0%   {background:#000} 50% {background:#f00} 100% {background:#000}}
+    .switch i{ font-size:22px;}
+    .the_contact{ background:#FFF; padding:5px; text-align:center; width:225px;}
+</style>
+
+<div id="technical_helpline" class="floating_contact">
+    <div class="switch"><i class="fa fa-comments" aria-hidden="true"></i> H<br>E<br>L<br>P</div>
+    <div class="the_contact"><span id="lbl_tech_assistant"><div class="the_contact"><h4>For Technical Assistance<br>Call on</h4><h1>0674-2597149 </h1></div></span> </div>
+</div>
+
+<form method="post" action="./Login.html" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VSTATE" id="__VSTATE" value="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">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="jsoy.js" type="text/javascript"></script>
+
+
+<script src="jsKS.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="JsDD.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="cvYQzVicvxoTA1HKqh0f9n968XI2VkHLUGw-YXurGU9KVkIbVdubdMnrwDiYWkmTUz4Ec9Azj24c9P_I3CgzjGU9eWKwRO4wHCurHrwFx84II24C0">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="wuLH+oKvRXAUSPFrTyTeR5tvHtpbM+D2Kb1hjVkxyhM2PlZWEHCH7Tr2fDgqsU/NuVTfDFaDfKVuNj0D9jih6dSSFyyahJcTaqSMaiXUtq+vJuxm2pXsX0isDg1lwhUfdf7Cpk8yNmRkVQzS1m8GlOFK3GN4JdWQVPOg5H+nfNVk4Sx4Ejli6yQyjuzefANAtIpKuiqVI40LwHWDcrkNCupY78N9zAloVASkZjZA9hlGD8w2nw8JNewYOYiFB9FE73CAn0F1BUKOt1Fj3e2oavNaJwXxcm5bF37Mu9e8cuh62bWdTM0OKSVmOPXi3mnOlQACibDOe5Y/wsDYwrkRnxUy6m3XOBUAOdjUJuijMt06Wb+LFjErOv6+8DV1VitUy5ClKiWcy0loEgnFYqIzn6j4Xuo=">
+</div>
+
+        
+
+<div class="topper">
+<div class="aligner">
+    
+	<div class="main_content"><a href="#data">Skip to Main Content</a></div>
+    <div class="option_panel">
+        <div class="languages">
+            <span id="lang"><span id="lbl_lang">Select Language :  </span></span>
+            <div class="language-wrapper">
+            <label><select name="ctl00$drp_lang" onchange="ClearCredentials();setTimeout('__doPostBack(\'ctl00$drp_lang\',\'\')', 0)" id="drp_lang" title="Select Language. " class="custom-selectt" onclick="On_Sametab();" fdprocessedid="i0tbgr">
+	<option selected="selected" value="1">ENGLISH</option>
+
+</select></label>
+            </div>
+        <div class="clr"></div>   	
+        </div>
+        
+        <div class="font-resizer">
+            
+            <ul>
+                <li><a role="link" title="Decrease font size" id="minus">A<sup>-</sup></a></li>
+                <li><a role="link" title="Normal font size" id="normal">A<sup> </sup></a></li>
+                <li><a role="link" title="Increase font size" id="plus">A<sup>+</sup></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+        <div class="color_chooser">
+            <ul>
+                <li><span id="lbl_color">Select Color: : </span></li>
+                <li id="colorBlue"><a href="javascript:chooseStyle('theme1')"><div class="themebox1 patch"><span class="hide">Violet</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme2')"><div class="themebox2 patch"><span class="hide">Green</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme3')"><div class="themebox3 patch"><span class="hide">Gray</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme4')"><div class="themebox4 patch"><span class="hide">Reddish</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme5')"><div class="themebox5 patch"><span class="hide">Blue</span></div></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</div>
+
+
+
+<header class="myheader">
+<div class="aligner">
+		<div class="logo_holder">
+        	<div class="logo_icon"><a href="index.html"><img id="img_logo" src="govtlogo-trans_osssc.PNG"></a></div>
+            <div class="organization_name">
+            	<h1><span id="lbl_ofc_name">Odisha Sub-ordinate Staff Selection Commission</span></h1>               
+                <h3><span id="lbl_ofc_abbr">(OSSSC)</span>, <span id="lbl_govt_odisha">Govt. of Odisha</span></h3>
+            </div>
+        <div class="clr"></div>   
+        </div>
+        
+        <div id="div_login" class="user_option" style="display:inline-block">
+        	<ul>
+                <li><a href="index.html" onclick="On_Sametab()"><i class="fa fa-home"></i>HOME</a></li>
+            	<li><a id="lbl_login" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$lbl_login&quot;, &quot;&quot;, false, &quot;&quot;, &quot;Login.html&quot;, false, true))">Login</a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+<div class="clr"></div>
+</div>
+</header>
+
+<section class="page_title">
+<div class="aligner"><h2>
+
+  
+
+<span id="functionality_head_lbl_Login_Details" class="login_tile">Login</span>
+</h2>
+<div class="clr"></div>
+</div>
+</section>
+
+    
+    
+    <script src="SHA512.js"></script>
+    <script src="aes1.js"></script>
+
+<style>
+      .updater {position: fixed;z-index: 9999999;height: 100%;width: 100%;top: 0;left: 0;right: 0;bottom:0;background: rgba(255,255,255,0.4) url('small-loader.gif') no-repeat center;}
+    .opt_mode{margin:5px 0 10px 0;border:1px solid #d0d0d0;padding:10px 15px; background:#f6f6f6;-webkit-border-radius: 4px;border-radius: 4px;}
+    .opt_mode i{color:#e98314;font-size:18px;margin:0 10px 0 0;}
+    #functionality_content_rbl_loginotp td{padding:0px !important;}
+</style>
+
+    <script src="SHA256.js" defer="defer"></script>
+
+     
+<section class="content" id="data">
+<div class="aligner">
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$functionality_content$scrptManger', 'form1', ['tctl00$functionality_content$up_panel','functionality_content_up_panel'], [], ['ctl00$functionality_content$btnLogIn','functionality_content_btnLogIn'], 90, 'ctl00');
+//]]>
+</script>
+
+      <div id="functionality_content_UpdateProgress5" style="display:none;" role="status" aria-hidden="true">
+	
+                            <div class="updater"> </div>
+                        
+</div>
+                    <div id="functionality_content_up_panel">
+	 
+    <div class="loginbox login">
+        <div class="login_form">
+            <div class="ihide">
+                
+    
+     
+     
+     
+                 <span id="functionality_content_lbl_Commission_Abbr_addr">OSSSC, Bhubaneswar</span>  
+</div>
+            <div class="alert_box"><span id="functionality_content_lbl_msg"></span></div>
+                        
+            
+            <h3><span id="functionality_content_lbl_User_Name">Username / Registration No. / Mobile No. / Email</span><span style="color: red">*</span></h3>
+            <input name="ctl00$functionality_content$txtUname" type="text" maxlength="60" onchange="javascript:setTimeout('__doPostBack(\'ctl00$functionality_content$txtUname\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;return AlphaNumeric_For_Username(event)" id="functionality_content_txtUname" title="Username should be more than 8 characters and less than 16 characters. Username should contain at least one uppercase,one lowercase English Alphabets and one Number.Rest all can be Alphabets of any case and Numbers . Please note that other Special Characters are not allowed." autocomplete="off" onfocus="Clear_Label()" fdprocessedid="uueycn">
+            <span id="functionality_content_lbl_v_usernm" class="alert_label"></span>
+              <div style="padding:10px 0 0 0;">
+                <b style="color:#d87305"><table id="rbl_loginotp">
+		<tbody><tr>
+			<td><input id="rbl_loginotp_0" type="radio" name="ctl00$functionality_content$rbl_loginotp" value="1" checked="checked"><label for="rbl_loginotp_0">Login using Password</label></td>
+		</tr><tr>
+			<td><input id="rbl_loginotp_1" type="radio" name="ctl00$functionality_content$rbl_loginotp" value="2" onclick="javascript:setTimeout('__doPostBack(\'ctl00$functionality_content$rbl_loginotp$rbl_loginotp_1\',\'\')', 0)"><label for="rbl_loginotp_1">Login using OTP</label></td>
+		</tr>
+	</tbody></table>
+
+                </b>
+                  
+                
+            </div>
+            <div id="functionality_content_div_password_part">
+            
+           <div id="functionality_content_div_password">  <h3><span id="functionality_content_lbl_Pwd">Password</span><span style="color: red">*</span></h3>
+            <div class="passwordboxx"><input name="ctl00$functionality_content$txtPwd" type="password" id="functionality_content_txtPwd" title="Password should be more than 8 and less than 16 English characters. Password should contain at least one upper case English alphabet, one lower case English alphabet, one English Number. Special Characters (!,@,#,$) may also can be used. Please note that other Special Characters are not allowed." autocomplete="off" oncopy="return false;" oncut=" return false;" onfocus="Clear_Label()" onpaste="return false;" onkeypress="capLock(event)" fdprocessedid="g4a1"><div class="toggle_password"><i class="fa fa-eye" aria-hidden="true"></i></div></div>
+            <span id="functionality_content_lbl_v_password" class="alert_label"></span>
+                <div id="divMayus" style="display:none; font-size:13px;color:red;">Caps Lock is on.</div>
+              </div>
+               
+            <div class="captchaboxx">
+                <h4><span id="functionality_content_lbl_Captch">Enter Captcha Text Here</span><span style="color: red">*</span></h4>
+                <div class="captchanote"><span id="functionality_content_lbl_captcha_txt">Captcha Is Case Sensitive</span></div>
+                <div class="captchabox">
+                    <img id="functionality_content_imgCaptcha" src="../Generate_Captcha.html?638811950409213892" style="height:36px;width:150px;">
+                    <input name="ctl00$functionality_content$txtCaptchaText" type="text" maxlength="6" id="functionality_content_txtCaptchaText" title="Enter Captcha Text Here" autocomplete="off" onfocus="Clear_Label()" class="captacha_txt" fdprocessedid="yi00lk">
+                </div>
+                <span class="refresh_captcha"><a onclick="ClearCredentials();" id="functionality_content_lnkBtnCaptcha" title="Refresh Captcha" href="javascript:__doPostBack('ctl00$functionality_content$lnkBtnCaptcha','')">Refresh Captcha</a></span>
+                <span id="functionality_content_lbl_v_captcha" class="alert_label"></span>
+
+                <div class="clr"></div>
+            </div>
+
+            <input type="submit" name="ctl00$functionality_content$btnLogIn" value="Login" onclick="return validate_all('functionality_content_txtUname,functionality_content_txtPwd,functionality_content_txtCaptchaText','TEXTBOX,PASSWORD,TEXTBOX_CAPTCHA,','#$^|{}[]<>=**~^*+|{}[]?<>=**~!@#$%^&amp;*()_+|{}[];///?<>`=\&quot;\&quot;-,.**','Enter Username / Registration No. / Mobile No. / Email****Enter password.*Invalid password.*Password should not be less than 8.*Password should not be more than 15.*Password must have at least one lower case English alphabet.*Password must have at least one upper case English alphabet.*Password must have at least one English digit.****Enter Captcha.*Captcha is not matching.****','1416381357');" id="functionality_content_btnLogIn" class="button_submit full_btn" fdprocessedid="fsazq8j">
+            <div class="clr"></div>
+            </div>
+             <div class="clr"></div>
+            <div class="loginhelp">
+                    <h4><span id="functionality_content_lbl_help" title="Need Help">Need Help</span></h4>
+                    <div class="help_options">
+                    <ul>
+                        <li><a onclick="ClearCredentials();" id="functionality_content_btn_Forgot_Pwd" title="Reset Password " href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$functionality_content$btn_Forgot_Pwd&quot;, &quot;&quot;, false, &quot;&quot;, &quot;ForgetPassword.html&quot;, false, true))" style="text-align: center">Reset Password </a></li> 
+                         <li><a onclick="ClearCredentials();" id="functionality_content_lnk_need_help" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$functionality_content$lnk_need_help&quot;, &quot;&quot;, false, &quot;&quot;, &quot;Need_Help.html&quot;, false, true))" style="text-align: center">Recover your User Account Details</a></li>
+                    </ul>
+                    <div class="clr"></div>
+                    </div>
+                <div class="clr"></div>
+                </div>
+        <div class="clr"></div>
+        </div>
+        <div class="login_options">
+            <div class="registernow"><a onclick="ClearCredentials();ClearCredentials();" id="functionality_content_btn_New_Registration" title="Register Now" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$functionality_content$btn_New_Registration&quot;, &quot;&quot;, false, &quot;&quot;, &quot;Post_detail_information.html&quot;, false, true))">Register Now</a></div>
+           
+            <div class="clr"></div>
+        </div>
+        
+        <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+        
+</div>
+</div>
+</section>
+
+
+<script lang="javascript" type="text/javascript" defer="defer">window.history.forward(1);</script>
+<script type="text/javascript" defer="defer">
+    function force_pwd_change() {
+        alert('alerted');
+    }
+    function capLock(e) {
+        kc = e.keyCode ? e.keyCode : e.which;
+        sk = e.shiftKey ? e.shiftKey : ((kc == 16) ? true : false);
+        if (((kc >= 65 && kc <= 90) && !sk) || ((kc >= 97 && kc <= 122) && sk))
+            document.getElementById('divMayus').style.display = 'block';
+        else
+            document.getElementById('divMayus').style.display = 'none';
+    }
+    function Clear_Label() {
+        document.getElementById("functionality_content_lbl_v_usernm").innerHTML = "";
+        document.getElementById("functionality_content_lbl_v_password").innerHTML = "";
+        document.getElementById("functionality_content_lbl_v_captcha").innerHTML = "";
+        document.getElementById("functionality_content_lbl_msg").innerHTML = "";
+    }
+    function AlphaNumeric_For_Username(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode > 31 && (charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)
+            && charCode != 46 && charCode != 95 && charCode!=64) //46 =. , 95 = _
+        {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    function validate_all(control_id, control_type, client_expression, client_error_msg, rnd) {
+        try {
+
+            var sel_val = "";
+            var atLeast1 = 1;
+            var InputControl = document.getElementById('rbl_loginotp');
+
+            var check1 = InputControl.getElementsByTagName("input");
+            var counter1 = 0;
+            for (var i = 0; i < check1.length; i++) {
+                if (check1[i].checked) {
+                    counter1++;
+                    sel_val = check1[i].value;
+                }
+            }
+             
+            var flag = true;
+            var control = control_id.split(',');
+            var expression = client_expression.split("**");
+            var error_msg = client_error_msg.split("****");
+            var type = control_type.split(',');
+            for (var i = 0; i < control.length; i++) {
+                if (type[i] == "TEXTBOX") {
+                    flag = validate_text_box(control[i], error_msg[i], expression[i])
+                    if (flag == false) {
+                        return false;
+                    }
+                }
+                else if (type[i] == "TEXTBOX_CAPTCHA") {
+                    flag = validate_text_box_captcha(control[i], error_msg[i], expression[i])
+                    if (flag == false) {
+                        return false;
+                    }
+                }
+                else if (type[i] == "PASSWORD") {
+                    flag = validate_password(control[i], error_msg[i], expression[i])
+                    if (flag == false) {
+                        return false;
+                    }
+                }
+            }
+            if (flag == true)
+            {
+                if (sel_val=="1" || sel_val=="") {
+                    flag = salt(rnd);
+                }
+                else {
+                    return true;
+                }
+            }
+            if (flag == false) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        catch(ex)
+        {
+            alert(ex.stack); return false;
+        }
+    }
+
+    function validate_password(control_id, password_err, expression)  {
+        var flag = true;
+        var InputControlId = document.getElementById(control_id);
+        var text = InputControlId.value.trim();
+        var error_msg = password_err.split("*");
+
+        if (text == "") {
+            alert(error_msg[0]);
+            InputControlId.style.borderColor = "red";
+            InputControlId.focus();
+            flag = false;
+            return flag;
+        }
+        else {
+            for (var j = 0; j < text.length; j++) {
+                if (expression.indexOf(text.charAt(j)) != -1) {
+                    alert(error_msg[1]);
+                    InputControlId.style.borderColor = "red";
+                    InputControlId.focus();
+                    flag = false;
+                    return flag;
+                }
+            }
+        }
+
+        if (text.search(/[a-z]/) < 0) {
+            alert(error_msg[4]);
+            InputControlId.focus();
+            InputControlId.style.borderColor = "red";
+            flag = false;
+            return flag;
+        }
+        if (text.search(/[A-Z]/) < 0) {
+            alert(error_msg[5]);
+            InputControlId.focus();
+            InputControlId.style.borderColor = "red";
+            flag = false;
+            return flag;
+        }
+        if (text.search(/[0-9]/) < 0) {
+            alert(error_msg[6]);
+            InputControlId.focus();
+            InputControlId.style.borderColor = "red";
+            flag = false;
+            return flag;
+        }
+        if (text.length < 8) {
+            alert(error_msg[2]);
+            InputControlId.focus();
+            InputControlId.style.borderColor = "red";
+            flag = false;
+            return flag;
+        }
+        if (text.length > 16) {
+            alert(error_msg[3]);
+            InputControlId.focus();
+            InputControlId.style.borderColor = "red";
+            flag = false;
+            return flag;
+        }
+        if (flag = true) {
+            InputControlId.style.borderColor = "#c4c4c4";
+        }
+        return flag;
+    }
+
+    function validate_text_box(control_id, error_msg, expression) {
+        var flag = true;
+        var InputControlId = document.getElementById(control_id);
+        if (InputControlId != null) {
+            var text = InputControlId.value.trim();
+            if (text == "") {
+                alert(error_msg);
+                InputControlId.style.borderColor = "red";
+                InputControlId.focus();
+                flag = false;
+                return flag;
+            }
+            else {
+                for (var j = 0; j < text.length; j++) {
+                    if (expression.indexOf(text.charAt(j)) != -1) {
+                        alert(Error_msg);
+                        InputControlId.style.borderColor = "red";
+                        InputControlId.focus();
+                        flag = false;
+                        return flag;
+                    }
+                }
+                InputControlId.style.borderColor = "#c4c4c4";
+            }
+        }
+        return flag;
+    }
+
+    function validate_text_box_captcha(control_id, error_msg, expression) {
+        var flag = true;
+        var InputControlId = document.getElementById(control_id);
+        if (InputControlId != null) {
+            var msg = error_msg.split('*');
+            var text = InputControlId.value.trim();
+            if (text == "") {
+                alert(msg[0]);
+                InputControlId.style.borderColor = "red";
+                InputControlId.focus();
+                flag = false;
+                return flag;
+            }
+            else {
+                InputControlId.style.borderColor = "#c4c4c4";
+            }
+        }
+        return flag;
+    }
+
+    function salt(s1) { 
+            var msg = document.getElementById("functionality_content_txtPwd").value; 
+        var simpleHash = SHA1(msg);//SHA256(msg); 
+        document.getElementById("functionality_content_txtPwd").value = MD5(simpleHash + s1);//SHA256(simpleHash + s1);
+    }
+
+    function ClearCredentials() {
+        document.getElementById('functionality_content_txtUname').value = "";
+        document.getElementById('functionality_content_txtPwd').value = "";
+        document.getElementById('functionality_content_txtCaptchaText').value = "";
+    }
+    function Validate_Generate_OTP()
+    {
+        if(document.getElementById('functionality_content_txtUname')!=null && document.getElementById('functionality_content_txtUname').value=="")
+        {
+            alert('Enter Username / Mobile No. /Email');
+            document.getElementById('functionality_content_txtUname').focus();
+            document.getElementById('functionality_content_txtUname').borderColor = "red";
+            return false;
+        }
+        else {
+            document.getElementById('functionality_content_txtUname').borderColor = "#c4c4c4";
+            if (document.getElementById('functionality_content_txt_otp_captcha') != null && document.getElementById('functionality_content_txt_otp_captcha').value == "") {
+                alert('Enter Captcha');
+                document.getElementById('functionality_content_txt_otp_captcha').focus();
+                document.getElementById('functionality_content_txt_otp_captcha').borderColor = "red";
+                return false;
+            }
+            else { 
+                document.getElementById('functionality_content_txt_otp_captcha').borderColor = "#c4c4c4";
+                return true;
+            }
+        }
+    }
+</script>
+
+
+
+<section class="welcome">
+<div class="aligner">
+	<div class="welcome_message">
+    	<h2><span id="lbl_disclaimer">Disclaimer</span></h2>
+        <p><span id="lbl_disclaimer_cont">This is the Official Website/Web portal of Odisha Sub-Ordinate Staff Selection Commission (OSSSC). This Website/Web portal has been developed by National Informatics Centre. OSSSC is the owner of this Website/Web portal &amp; the contents in this Website/Web portal are being provided and updated by the OSSSC. It is deemed that the visitors to this Website/Web portal have read, understood and agreed to be bound by the Privacy Policy and Usage Terms and Conditions of the Website/ Web portal. Any suggestions or queries in regard to this Website/Web portal may be sent to the Secretary, OSSSC. Ph: / Fax: 0674-2597155, E-mail:</span><img src="mail.png" alt="Mail for "></p>
+    <div class="clr"></div>
+    </div>
+    
+    <div class="support_box">
+    	<h2><span id="lbl_hd_assistance">Happy to Assist !</span></h2>
+        <div class="supportbox">
+        	<h4><span id="lbl_tech_asst">For Technical Assistance call on</span></h4>
+            <h2><span id="lbl_telphone">0674-2597149</span></h2>
+            <h4><span id="lbl_adm_asst">For Administrative Assistance call on</span></h4>
+            <h2><span id="lbl_adm_phone">0674-2597106</span></h2>
+            <span id="lbl_tech_hour">between 10 AM to 5 PM on official days</span>
+        <div class="clr"></div>
+        </div>
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</section>
+
+<footer>
+<div class="footermenu">
+	<ul>
+    	<li><a href="Privacy_policy.html"><span id="lbl_privacy">Privacy Policy</span></a></li>
+        <li><a href="Usage_Terms.html"><span id="lbl_terms">Usage Terms &amp; Condition</span></a></li>
+    </ul>
+</div>
+<div class="clr"></div>
+<div class="best_viewed"><span id="lbl_best_view">Site best viewed in I.E 9 or above, Mozilla 22.0 or above, Google Chrome 30.0 or above.</span></div>   
+<div class="clr"></div>
+<div class="copyright"><span id="lbl_copyright">All rights of this portal are vested with the Odisha Sub-Ordinate Staff-Selection Commission.</span></div>
+</footer>
+    
+    <div class="ihide"><span id="lbl_disp_lang">1</span></div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"functionality_content_up_panel","displayAfter":500,"dynamicLayout":true}, null, null, $get("functionality_content_UpdateProgress5"));
+});
+//]]>
+</script>
+</form> 
+                
+
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>

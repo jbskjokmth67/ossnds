@@ -1,0 +1,342 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="UTF-8"><title>
+	Odisha Sub-ordinate Staff Selection Commission|OSSSC
+</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="stylesheet" href="frontend-style.css" type="text/css"><link rel="stylesheet" href="font-awesome.min.css" type="text/css">
+
+<!--<script type='text/javascript' src='responsive-modernizr.js'></script>-->
+<script type="text/javascript" src="jquery-latest.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+    
+<!--for login hashing -->
+<script src="SHA1.js" defer="defer"></script>
+
+<!--Own Jquery Effects-->
+<script src="myeffects.js" defer="defer"></script>      
+
+
+<script lang="javascript" type="text/javascript" defer="defer">
+function noBack() { window.history.forward() }
+noBack();
+window.inhibited_load = noBack;
+window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+window.inhibited_unload = function () { void (0) }
+
+</script>
+<script lang="javascript" type="text/javascript" defer="defer">window.history.forward(1);</script>
+
+<script defer="defer">
+function On_Sametab() {
+    document.forms[0].target = "_self";
+}
+function On_Newtab() {
+    document.forms[0].target = "_blank";
+}
+function stopKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if (((evt.keyCode == 8) && (node.type != "text") && (node.type != "textarea") && (node.type != "password")) || evt.keyCode == 13)
+    { return false; }
+}
+</script>
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="EXPIRES" content="0">  
+<noscript><meta http-equiv="REFRESH" content="5; url=NoJavascript.html" /></noscript>
+<script>
+    function pageLoad() {
+
+        $(':input[type=password]').each(function () {
+            $(this).wrap("<div class='passwordboxx'></div>");
+            $(this).after("<div class='toggle_password'><i class='fa fa-eye' aria-hidden='true'></i></div>");
+        });
+
+        $('.toggle_password').mousedown(function () {
+            $(this).siblings(':input[type=password]').attr('type', 'text');
+        });
+        $('.toggle_password').mouseup(function () {
+            $(this).siblings(':input[type=text]').attr('type', 'password');
+        });
+
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var body_class = $.cookie("body_class");
+        if (body_class) {
+            chooseStyle(body_class);
+        }
+        else { chooseStyle('theme2'); }
+
+    });
+
+    function chooseStyle(color) {
+        //alert("color=" + color);
+        $("body").removeAttr('class');
+        $("body").addClass(color);
+        $.cookie("body_class", color, { path: '/' });
+    }
+
+</script>
+
+
+</head>
+<body ondrag="false" onkeydown="return stopKey(event)" class="theme2"> 
+<div class="loader" style="display: none;"></div>
+<form method="post" action="./About_Osssc.html" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2097FF27">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="oXSgUc1RX9fLbMn6k0U4o2gH4JPsN7zAFzyQzGwgVZFpWeU05lJxqsfdPeyPzXjnf2zuoqRgfZ+59JkPgeuty69maUb41cJbSdTRimDZSuv3cIhd4Tml5ncTqGo1aBncgKzIkq5/a1BH6008vlsUUtKl/AIYwa2Qle94lP0OLTMNfG2b">
+</div>
+
+
+<div class="topper">
+<div class="aligner">
+    
+	<div class="main_content"><a href="#data" style="display:inline-block;">Skip to Main Content</a> | <a href="screen-reader-access.html" style="display:inline-block;">Screen Reader</a></div>
+    <div class="option_panel">
+        <div class="languages">
+            <span id="lang"><span id="lbl_lang">Select Language :  </span></span>
+            <div class="language-wrapper">
+            <label><select name="ctl00$drp_lang" onchange="javascript:setTimeout('__doPostBack(\'ctl00$drp_lang\',\'\')', 0)" id="drp_lang" title="Select Language. " class="custom-selectt" onclick="On_Sametab();">
+	<option selected="selected" value="1">ENGLISH</option>
+
+</select></label>
+            </div>
+        <div class="clr"></div>   	
+        </div>
+        
+        <div class="font-resizer">
+            
+            <ul>
+                <li><a role="link" title="Decrease font size" id="minus">A<sup>-</sup></a></li>
+                <li><a role="link" title="Normal font size" id="normal">A<sup> </sup></a></li>
+                <li><a role="link" title="Increase font size" id="plus">A<sup>+</sup></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+        <div class="color_chooser">
+            <ul>
+                <li><span id="lbl_color">Select Color: : </span></li>
+                <li id="colorBlue"><a href="javascript:chooseStyle('theme1')"><div class="themebox1 patch"><span class="hide">Violet</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme2')"><div class="themebox2 patch"><span class="hide">Green</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme3')"><div class="themebox3 patch"><span class="hide">Gray</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme4')"><div class="themebox4 patch"><span class="hide">Reddish</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme5')"><div class="themebox5 patch"><span class="hide">Blue</span></div></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</div>
+
+
+
+<header class="myheader sticky">
+<div class="aligner">
+		<div class="logo_holder">
+        	<div class="logo_icon"><a href="index.html"><img id="img_logo" alt="logo" src="govtlogo-trans_osssc.PNG"></a></div>
+            <div class="organization_name">
+            	<h1><span id="lbl_ofc_name">Odisha Sub-ordinate Staff Selection Commission</span></h1>
+                
+                <h3><span id="lbl_ofc_abbr">(OSSSC)</span>, <span id="lbl_govt_odisha">Govt. of Odisha</span></h3>
+            </div>
+        <div class="clr"></div>   
+        </div>
+        
+        <div class="user_option">
+        	<ul>
+            	<li><a href="Login.html" onclick="On_Sametab()"><i class="fa fa-lock"></i> <span id="lbl_login">Login</span></a></li>
+                <li><a href="Post_detail_information.html" onclick="On_Sametab()"><i class="fa fa-user-plus"></i> <span id="lbl_reg">Apply Online</span></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+<div class="clr"></div>
+</div>
+</header>
+
+<section class="navigation">
+<div class="aligner">
+<nav class="sujit-nav"><a id="pull" href="#">Menu</a>
+    
+    <ul class="menu">
+                    <li><a href="index.html"><span style="margin:0 0 0 0;">
+                    <img src="witte-home-icon.png" alt="Home"></span></a></li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu1">ABOUT US</span></a>
+                        <ul>
+                        <li><a href="About_Osssc.html"><span id="lbl_menu1_submenu1">OSSSC</span></a></li>
+                        <li><a href="Mission.html"><span id="lbl_menu1_submenu2">Mission</span></a></li>
+                        <li><a href="Organization.html"><span id="lbl_menu1_submenu3">Organization</span></a></li>
+                        <li><a href="Functionaries_Position.html"><span id="lbl_menu1_submenu4">Functionaries in Position</span></a></li>
+                        <li><a href="Job_Assignment.html"><span id="lbl_menu1_submenu5">Job Assignment</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu2">COMMISSION</span></a>
+                    	<ul>
+                        <li><a href="Formation.html"><span id="lbl_menu2_submenu1">Formation</span></a></li>
+                        <li><a href="Chairman.html"><span id="lbl_menu2_submenu2">Chairman</span></a></li>
+                        <li><a href="Members.html"><span id="lbl_menu2_submenu3">Members</span></a></li>
+                        <li><a href="Functions.html"><span id="lbl_menu2_submenu4">Functions</span></a></li>
+                        <li><a href="Incumbancy.html"><span id="lbl_menu2_submenu5">Incumbency</span></a></li>
+                        <li><a href="Boards_Committees.html"><span id="lbl_menu2_submenu6">Boards &amp; Committies</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu3">RECRUITMENT</span></a>
+                        <ul>
+                        <li><a href="Recruitment_calender.html"><span id="lbl_menu_recruit_calender">Recruitment Calender</span></a></li>
+                        <li><a href="VIEW_REGISTRATION_COPY.html"><span id="lbl_menu3_submenu6">View Registration Copy</span></a></li>
+						<li><a href="Old_Question_Papers.html">Old Questions</a></li>
+                        <li><a href="Scope.html"><span id="lbl_menu3_submenu1">Scope</span></a></li>
+                        <li><a href="Login.html"><span id="lbl_menu3_submenu2">Requisition</span></a></li> 
+                        <li><a href="Advertisements.html">
+                            <span id="lbl_menu3_submenu4">Advertisements</span></a></li>
+                        <li><a href="Notification.html">
+                            <span id="lbl_menu3_submenu5">Notifications</span></a></li>
+						<li><a href="Result.html">
+                            <span id="lbl_menu3_submenu_6">Results</span></a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="Tender.html"><span><span id="lbl_menu4">TENDERS &amp; QUOTATIONS</span></span></a></li>
+                    <li class="hassub"><a href="#"><span id="lbl_menu5">RULES</span></a>
+                    	<ul>
+                        <li><a href="Acts.html"><span id="lbl_menu5_submenu1">Acts</span></a></li>
+                        <li><a href="Rules.html"><span id="lbl_menu5_submenu2">Rules</span></a></li>
+                        <li><a href="Regulation.html"><span id="lbl_menu5_submenu3">Regulations</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="http://rtiodisha.in/pa/T1RILzIvMjAzNTUvMTk=" target="_blank" rel="noopener noreferrer"><span><span id="lbl_menu6">RTI</span></span></a></li>
+                    <li><a onclick="On_Newtab();" id="btn_Citizen" href="javascript:__doPostBack('ctl00$btn_Citizen','')">CITIZEN'S CHARTER</a></li>
+                    <li><a href="Contact_Osssc.html"><span id="lbl_contact">CONTACT US</span></a> </li>
+                </ul>
+<div class="clr"></div>
+</nav>
+<div class="clr"></div>
+</div>
+</section> 
+
+
+
+
+<section class="content" id="data">
+<<div id="result-section" style="max-width: 400px; margin: 40px auto; padding: 20px; background: #ffffff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
+    <h3 style="margin-bottom: 20px; color: #333;">Check Your Result</h3>
+    
+    <form id="resultForm" onsubmit="return showResult();" style="text-align: left;">
+        <label for="roll">Roll Number</label><br>
+        <input type="text" id="roll" name="roll" required style="width: 100%; padding: 8px; margin: 5px 0 15px; border: 1px solid #ccc; border-radius: 5px;"><br>
+
+        <label for="dob">Date of Birth</label><br>
+        <input type="date" id="dob" name="dob" required style="width: 100%; padding: 8px; margin: 5px 0 15px; border: 1px solid #ccc; border-radius: 5px;"><br>
+
+        <button type="submit" style="width: 100%; padding: 10px; background: #0275d8; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+            Submit
+        </button>
+    </form>
+
+    <div id="resultTable" style="display: none; margin-top: 30px;">
+        <h4 style="margin-bottom: 15px;">Result</h4>
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+            <thead>
+                <tr style="background: #f1f1f1;">
+                    <th style="padding: 8px; border: 1px solid #ccc;">Name</th>
+                    <th style="padding: 8px; border: 1px solid #ccc;">Roll</th>
+                    <th style="padding: 8px; border: 1px solid #ccc;">Post</th>
+                    <th style="padding: 8px; border: 1px solid #ccc;">Remark</th>
+                </tr>
+            </thead>
+            <tbody id="resultBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+function showResult() {
+    const roll = document.getElementById('roll').value.trim();
+    const dob = document.getElementById('dob').value;
+
+    // Dummy data simulation
+    const results = [
+        { name: 'Tusar Mohanty', roll: roll, post: 'Junior Assistant', remark: 'Qualified' },
+        { name: 'Suman Das', roll: '23456', post: 'Data Entry Operator', remark: 'Not Qualified' },
+        { name: 'Pooja Kumari', roll: '34567', post: 'Clerk', remark: 'Qualified' }
+    ];
+
+    const resultBody = document.getElementById('resultBody');
+    resultBody.innerHTML = '';
+
+    results.forEach(r => {
+        resultBody.innerHTML += `
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ccc;">${r.name}</td>
+                <td style="padding: 8px; border: 1px solid #ccc;">${r.roll}</td>
+                <td style="padding: 8px; border: 1px solid #ccc;">${r.post}</td>
+                <td style="padding: 8px; border: 1px solid #ccc;">${r.remark}</td>
+            </tr>
+        `;
+    });
+
+    document.getElementById('resultTable').style.display = 'block';
+    return false;
+}
+</script>
+
+
+</section>
+
+
+
+
+
+<footer>
+<div class="footermenu">
+	<ul>
+    	<li><a href="Privacy_policy.html"><span id="lbl_privacy">Privacy Policy</span></a></li>
+        <li><a href="Usage_Terms.html"><span id="lbl_terms">Usage Terms &amp; Condition</span></a></li>
+    </ul>
+</div>
+<div class="clr"></div>
+<div class="best_viewed"><span id="lbl_best_view">Site best viewed in I.E 9 or above, Mozilla 22.0 or above, Google Chrome 30.0 or above.</span></div>   
+<div class="clr"></div>
+<div class="copyright"><span id="lbl_copyright">All rights of this portal are vested with the Odisha Sub-Ordinate Staff-Selection Commission.</span></div>
+</footer>
+
+    <div class="ihide"><span id="lbl_disp_lang">1</span></div>
+</form> 
+
+
+                
+
+
+</body></html>

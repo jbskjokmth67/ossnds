@@ -1,0 +1,976 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="UTF-8"><title>
+	Odisha Sub-ordinate Staff Selection Commission|OSSSC
+</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="stylesheet" href="frontend-style.css" type="text/css"><link rel="stylesheet" href="font-awesome.min.css" type="text/css">
+
+<!--<script type='text/javascript' src='responsive-modernizr.js'></script>-->
+<script type="text/javascript" src="jquery-latest.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+    
+<!--for login hashing -->
+<script src="SHA1.js" defer="defer"></script>
+
+<!--Own Jquery Effects-->
+<script src="myeffects.js" defer="defer"></script>      
+
+
+<script lang="javascript" type="text/javascript" defer="defer">
+function noBack() { window.history.forward() }
+noBack();
+window.inhibited_load = noBack;
+window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+window.inhibited_unload = function () { void (0) }
+
+</script>
+<script lang="javascript" type="text/javascript" defer="defer">window.history.forward(1);</script>
+
+<script defer="defer">
+function On_Sametab() {
+    document.forms[0].target = "_self";
+}
+function On_Newtab() {
+    document.forms[0].target = "_blank";
+}
+function stopKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if (((evt.keyCode == 8) && (node.type != "text") && (node.type != "textarea") && (node.type != "password")) || evt.keyCode == 13)
+    { return false; }
+}
+</script>
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="EXPIRES" content="0">  
+<noscript><meta http-equiv="REFRESH" content="5; url=NoJavascript.html" /></noscript>
+<script>
+    function pageLoad() {
+
+        $(':input[type=password]').each(function () {
+            $(this).wrap("<div class='passwordboxx'></div>");
+            $(this).after("<div class='toggle_password'><i class='fa fa-eye' aria-hidden='true'></i></div>");
+        });
+
+        $('.toggle_password').mousedown(function () {
+            $(this).siblings(':input[type=password]').attr('type', 'text');
+        });
+        $('.toggle_password').mouseup(function () {
+            $(this).siblings(':input[type=text]').attr('type', 'password');
+        });
+
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var body_class = $.cookie("body_class");
+        if (body_class) {
+            chooseStyle(body_class);
+        }
+        else { chooseStyle('theme2'); }
+
+    });
+
+    function chooseStyle(color) {
+        //alert("color=" + color);
+        $("body").removeAttr('class');
+        $("body").addClass(color);
+        $.cookie("body_class", color, { path: '/' });
+    }
+
+</script>
+
+
+</head>
+<body ondrag="false" onkeydown="return stopKey(event)" class="theme2"> 
+<div class="loader" style="display: none;"></div>
+<form method="post" action="./Recruitment_calender.html" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="18D799B1">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="REDH9ZyOfDeAJ38t5ZQhPmdYUxBZn/A0Uan1POr7gRcv5GDd+vJGd0UFjEwz2RMNB69iZU/+dzVD2GuApNLfZ+3xnoM5hazNUAN0j2msC3yb0pXpUDb+8PXVJOdr8OIYDL2MqqGjCwPBYfW/ynBPgrj0NhVN0hwZMXr2tbWZrIvYuRIf">
+</div>
+
+
+<div class="topper">
+<div class="aligner">
+    
+	<div class="main_content"><a href="#data" style="display:inline-block;">Skip to Main Content</a> | <a href="screen-reader-access.html" style="display:inline-block;">Screen Reader</a></div>
+    <div class="option_panel">
+        <div class="languages">
+            <span id="lang"><span id="lbl_lang">Select Language :  </span></span>
+            <div class="language-wrapper">
+            <label><select name="ctl00$drp_lang" onchange="javascript:setTimeout('__doPostBack(\'ctl00$drp_lang\',\'\')', 0)" id="drp_lang" title="Select Language. " class="custom-selectt" onclick="On_Sametab();">
+	<option selected="selected" value="1">ENGLISH</option>
+
+</select></label>
+            </div>
+        <div class="clr"></div>   	
+        </div>
+        
+        <div class="font-resizer">
+            
+            <ul>
+                <li><a role="link" title="Decrease font size" id="minus">A<sup>-</sup></a></li>
+                <li><a role="link" title="Normal font size" id="normal">A<sup> </sup></a></li>
+                <li><a role="link" title="Increase font size" id="plus">A<sup>+</sup></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+        <div class="color_chooser">
+            <ul>
+                <li><span id="lbl_color">Select Color: : </span></li>
+                <li id="colorBlue"><a href="javascript:chooseStyle('theme1')"><div class="themebox1 patch"><span class="hide">Violet</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme2')"><div class="themebox2 patch"><span class="hide">Green</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme3')"><div class="themebox3 patch"><span class="hide">Gray</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme4')"><div class="themebox4 patch"><span class="hide">Reddish</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme5')"><div class="themebox5 patch"><span class="hide">Blue</span></div></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</div>
+
+
+
+<header class="myheader sticky">
+<div class="aligner">
+		<div class="logo_holder">
+        	<div class="logo_icon"><a href="index.html"><img id="img_logo" alt="logo" src="govtlogo-trans_osssc.PNG"></a></div>
+            <div class="organization_name">
+            	<h1><span id="lbl_ofc_name">Odisha Sub-ordinate Staff Selection Commission</span></h1>
+                
+                <h3><span id="lbl_ofc_abbr">(OSSSC)</span>, <span id="lbl_govt_odisha">Govt. of Odisha</span></h3>
+            </div>
+        <div class="clr"></div>   
+        </div>
+        
+        <div class="user_option">
+        	<ul>
+            	<li><a href="Login.html" onclick="On_Sametab()"><i class="fa fa-lock"></i> <span id="lbl_login">Login</span></a></li>
+                <li><a href="Post_detail_information.html" onclick="On_Sametab()"><i class="fa fa-user-plus"></i> <span id="lbl_reg">Apply Online</span></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+<div class="clr"></div>
+</div>
+</header>
+
+<section class="navigation">
+<div class="aligner">
+<nav class="sujit-nav"><a id="pull" href="#">Menu</a>
+    
+    <ul class="menu">
+                    <li><a href="index.html"><span style="margin:0 0 0 0;">
+                    <img src="witte-home-icon.png" alt="Home"></span></a></li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu1">ABOUT US</span></a>
+                        <ul>
+                        <li><a href="About_Osssc.html"><span id="lbl_menu1_submenu1">OSSSC</span></a></li>
+                        <li><a href="Mission.html"><span id="lbl_menu1_submenu2">Mission</span></a></li>
+                        <li><a href="Organization.html"><span id="lbl_menu1_submenu3">Organization</span></a></li>
+                        <li><a href="Functionaries_Position.html"><span id="lbl_menu1_submenu4">Functionaries in Position</span></a></li>
+                        <li><a href="Job_Assignment.html"><span id="lbl_menu1_submenu5">Job Assignment</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu2">COMMISSION</span></a>
+                    	<ul>
+                        <li><a href="Formation.html"><span id="lbl_menu2_submenu1">Formation</span></a></li>
+                        <li><a href="Chairman.html"><span id="lbl_menu2_submenu2">Chairman</span></a></li>
+                        <li><a href="Members.html"><span id="lbl_menu2_submenu3">Members</span></a></li>
+                        <li><a href="Functions.html"><span id="lbl_menu2_submenu4">Functions</span></a></li>
+                        <li><a href="Incumbancy.html"><span id="lbl_menu2_submenu5">Incumbency</span></a></li>
+                        <li><a href="Boards_Committees.html"><span id="lbl_menu2_submenu6">Boards &amp; Committies</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu3">RECRUITMENT</span></a>
+                        <ul>
+                        <li><a href="Recruitment_calender.html"><span id="lbl_menu_recruit_calender">Recruitment Calender</span></a></li>
+                        <li><a href="VIEW_REGISTRATION_COPY.html"><span id="lbl_menu3_submenu6">View Registration Copy</span></a></li>
+						<li><a href="Old_Question_Papers.html">Old Questions</a></li>
+                        <li><a href="Scope.html"><span id="lbl_menu3_submenu1">Scope</span></a></li>
+                        <li><a href="Login.html"><span id="lbl_menu3_submenu2">Requisition</span></a></li> 
+                        <li><a href="Advertisements.html">
+                            <span id="lbl_menu3_submenu4">Advertisements</span></a></li>
+                        <li><a href="Notification.html">
+                            <span id="lbl_menu3_submenu5">Notifications</span></a></li>
+						<li><a href="Result.html">
+                            <span id="lbl_menu3_submenu_6">Results</span></a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="Tender.html"><span><span id="lbl_menu4">TENDERS &amp; QUOTATIONS</span></span></a></li>
+                    <li class="hassub"><a href="#"><span id="lbl_menu5">RULES</span></a>
+                    	<ul>
+                        <li><a href="Acts.html"><span id="lbl_menu5_submenu1">Acts</span></a></li>
+                        <li><a href="Rules.html"><span id="lbl_menu5_submenu2">Rules</span></a></li>
+                        <li><a href="Regulation.html"><span id="lbl_menu5_submenu3">Regulations</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="http://rtiodisha.in/pa/T1RILzIvMjAzNTUvMTk=" target="_blank" rel="noopener noreferrer"><span><span id="lbl_menu6">RTI</span></span></a></li>
+                    <li><a onclick="On_Newtab();" id="btn_Citizen" href="javascript:__doPostBack('ctl00$btn_Citizen','')">CITIZEN'S CHARTER</a></li>
+                    <li><a href="Contact_Osssc.html"><span id="lbl_contact">CONTACT US</span></a> </li>
+                </ul>
+<div class="clr"></div>
+</nav>
+<div class="clr"></div>
+</div>
+</section> 
+
+
+
+
+<section class="content" id="data">     
+ <div style="max-width:1500px; margin:0px auto;">   	
+    <h1>TENTATIVE  RECRUITMENT CALENDAR </h1>
+    <style>
+        .table_holder table tr:nth-child(odd){background:none;}
+        th{text-align:center !important;}
+
+        tr.completed_row{background:#d9f8ca !important;}
+        span.completed_status{display:inline-block; font-size:70%; color:#FFF; background:#046c1a; padding:3px 5px; border-radius:3px;}
+		span.cancelled_status{display:inline-block; font-size:70%; color:#FFF; background:orange; padding:3px 5px; border-radius:3px;}
+		
+		.blink_text{
+			-webkit-animation: blink_ani .2s linear .2s infinite alternate;
+			animation: blink_ani .2s linear .2s infinite alternate;
+		}
+		@-webkit-keyframes blink_ani {
+		0% {color:orange}
+			100% {
+				color: #d50700
+			}
+		}
+
+		@keyframes blink_ani {
+		0% {color:orange}
+			100% {
+				color: #d50700
+			}
+		}
+
+    </style>
+
+		<p style="color:red; font-size:175%; font-weight:bold;">The dates mentioned are purely tentative and subject to change from time to time depending on the compliances of Administrative Departments/ Court Cases as will be decided by the Commission.</p>
+    <div class="table_holder" style="font-size:17px; font-family:arial;">
+    <table>
+        <tbody>
+		<tr>
+			<td colspan="12" style="text-align:center;"><h2 style="color:orange; font-size:200%;">2024 - 25</h2></td>
+		</tr>
+		
+		<tr>
+            <th>Sl No</th>
+			<th>Name of the Recruitment Examination</th>
+			<th>No. of Vacancy</th>
+			<th>Date of Publication of Advertisement</th>
+			<th>Last date of Receipt of Application</th>
+			<th>Number of Candidates</th>
+			<th>Date of Written Test</th>
+			<th>Publication of Provisional Screening List</th>
+            <th>Date of Physical Test</th>
+            <th>Date of Practical Skill Test</th>
+			<th>Date of DV</th>
+			<th>Publication of Provisional Results</th>
+			<th>Publication of Select List  &amp; Sponsoring of candidates</th>
+            <th>Remarks</th>
+        </tr>
+		
+		
+		
+		
+		
+		
+		<!------------------------------------------------------->
+		<tr class="completed_row" style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>1</td>
+            <td>MPHW(F)</td>
+            <td>2753</td>
+            <td>29.04.2023</td>
+            <td>30.05.2023 and 25.10.2023</td>
+			<td>20,451</td>
+            <td>03.12.2023</td>
+			<td>07.02.2024</td>
+			<td>Not Applicable</td>
+			<td>Not Applicable</td>
+			<td>&nbsp;</td>
+			<td>25.09.2024</td>
+			<td>04.10.2024</td>
+            <td style="text-align:center;"><span class="completed_status">Completed</span></td>
+        </tr>
+		
+		
+		
+		
+		
+		<tr class="completed_row" style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td rowspan="2">2</td>
+            <td rowspan="2">Radiographer</td>
+            <td rowspan="2">338</td>
+            <td>15.09.2023</td>
+            <td>20.10.2023</td>
+			<td rowspan="2">859</td>
+			<td rowspan="2" style="text-align:center;">05.05.2024</td>
+            <td rowspan="2" style="text-align:center;">&nbsp;</td>
+			<td rowspan="2" style="text-align:center;">&nbsp;</td>
+			<td rowspan="2" style="text-align:center;">&nbsp;</td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">06.08.2024</td>
+			<td rowspan="2">06.08.2024</td>
+			<td rowspan="2" style="text-align:center;"><span class="completed_status">Completed</span></td>
+        </tr>
+		<tr class="completed_row" style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>05.04.2024</td>
+            <td>20.04.2024</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+			<td rowspan="4" valign="top">3</td>
+			<td colspan="11"><b>COMBINED RECRUITMENT EXAMINATION (II) - 2023 </b> as under</td>
+		</tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Livestock Inspector</td>
+            <td>719</td>
+            <td rowspan="3">20.10.2023</td>
+            <td rowspan="3">30.11.2023</td>
+			<td rowspan="3">4,18,423</td>
+            <td rowspan="3">24.04.2024 to 07.05.2024</td>
+			<td rowspan="3">Percentile Score of Written Test published on 21.08.2024<br><br>Screening List published on 03.09.2024</td>
+			<td rowspan="3">3<sup>rd</sup> March 2025 to 6<sup>th</sup> March 2025</td>
+			<td rowspan="3">Not Applicable</td>
+			<td rowspan="3">&nbsp;</td>
+			<td rowspan="3">-</td>
+			<td rowspan="3">-</td>
+            <td rowspan="3" style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Forester</td>
+            <td>316</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Forest Guard</td>
+            <td>1677</td>
+        </tr>
+		
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+			<td rowspan="3" valign="top">4</td>
+			<td colspan="11"><b>COMBINED RECRUITMENT EXAMINATION (III) - 2023 </b> as under</td>
+		</tr>
+		
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Pharmacist</td>
+            <td>206</td>
+            <td rowspan="2">15.12.2023</td>
+            <td rowspan="2"><span>20.03.2024</span></td>
+			<td rowspan="2">14,033</td>
+            <td rowspan="2"><!--<span class="blink_text">-->03.08.2024</td>
+			<td rowspan="2">26.03.2025 and 29.03.2025 </td>
+			<td rowspan="2">Not Applicable</td>
+			<td rowspan="2">Not Applicable</td>
+			<td rowspan="2">04.04.2025 onwards</td>
+			<td rowspan="2">-</td>
+			<td rowspan="2">-</td>
+            <td rowspan="2" style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>MPHW(M)</td>
+            <td>1451</td>
+        </tr>
+		
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+			<td rowspan="6" valign="top">5</td>
+			<td colspan="11"><b>COMBINED RECRUITMENT EXAMINATION (IV) - 2023 </b> as under</td>
+		</tr>
+		
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Revenue Inspector</td>
+            <td>559</td>
+            <td rowspan="5">29.12.2023</td>
+            <td rowspan="5">31.03.2024</td>
+			<td rowspan="5">5,58,129</td>
+            <td rowspan="5">Prelim Examination<br>20 Sep. - 8 Oct.</td>
+			<td rowspan="5">-</td>
+			<td rowspan="5">-</td>
+			<td rowspan="5">-</td>
+			<td rowspan="5">&nbsp;</td>
+			<td rowspan="5">-</td>
+			<td rowspan="5">-</td>
+            <td rowspan="5" style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Assistant Revenue Inspector</td>
+            <td>827</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Amin</td>
+            <td>686</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>ICDS Supervisor</td>
+            <td>498</td>
+        </tr>
+		
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Statistical Field Surveyor</td>
+            <td>325</td>
+        </tr>
+		
+		
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+			<td rowspan="23" valign="top">6</td>
+			<td colspan="11"><b>COMBINED RECRUITMENT EXAMINATION for different category of Teachers under ST &amp; SC Department</b></td>
+		</tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Hindi Teacher</td>
+            <td rowspan="22">Total : 2629</td>
+            <td rowspan="22">31.08.2024</td>
+            <td rowspan="22">Cancelled</td>
+            <td rowspan="22">&nbsp;</td>
+			<td rowspan="22">&nbsp;</td>
+			<td rowspan="22">-</td>
+			<td rowspan="22">-</td>
+			<td rowspan="22">-</td>
+			<td rowspan="22">&nbsp;</td>
+			<td rowspan="22">-</td>
+			<td rowspan="22">-</td>
+            <td rowspan="22" style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Physical Education Teacher</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Sanskrit Teacher</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Trained Graduate Teacher Arts</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Trained Graduate Teacher - CBZ</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Trained Graduate Teacher - PCM</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Sevak/Sevika</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Soura</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Kuvi</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Kui</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Oram</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Munda/Mundari</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Sadri</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Bhuyan</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Ho</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Santali</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Juang</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Desia</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Gadaba</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Kisan</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Koya</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal language Teacher - Bonda</td>
+        </tr>
+		
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>7</td>
+            <td>Hindi Teacher</td>
+            <td>83</td>
+            <td>27.12.2024</td>
+            <td>31.01.2025</td>
+			<td>2,943</td>
+            <td>22.05.2025</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+            <td style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>8</td>
+            <td>Sanskrit Teacher</td>
+            <td>71</td>
+            <td>29.12.2024</td>
+            <td>31.01.2025</td>
+			<td>3,460</td>
+            <td>21.05.2025</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+            <td style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>9</td>
+            <td>Physical Education Teacher (PET)</td>
+            <td>105</td>
+            <td>29.12.2024</td>
+            <td>31.01.2025</td>
+			<td>2,739</td>
+            <td>22.05.2025</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+            <td style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>10</td>
+            <td>Trained Graduate Teacher (TGT) - Science (PCM)</td>
+            <td>29</td>
+            <td>29.12.2024</td>
+            <td>31.01.2025</td>
+			<td>14,610</td>
+            <td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+            <td style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>11</td>
+            <td>Trained Graduate Teacher (TGT) - Science (CBZ)</td>
+            <td>33</td>
+            <td>30.12.2024</td>
+            <td>31.01.2025</td>
+			<td>10,703</td>
+            <td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+            <td style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>12</td>
+            <td>Trained Graduate Teacher (TGT) - Arts</td>
+            <td>29</td>
+            <td>30.12.2024</td>
+            <td>31.01.2025</td>
+			<td>19,393</td>
+            <td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+            <td style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+			<td rowspan="3" valign="top">13</td>
+			<td colspan="11"><b>Sevak/Sevika and Tribal Language Teacher</b></td>
+		</tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Sevak/Sevika</td>
+            <td>2043</td>
+            <td rowspan="2">30.12.2024</td>
+            <td rowspan="2">31.01.2025</td>
+			<td rowspan="2">33,613</td>
+            <td rowspan="2">&nbsp;</td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">&nbsp;</td>
+            <td rowspan="2" style="text-align:center;">&nbsp;</td>
+        </tr>
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>Tribal Language Teacher</td>
+            <td>236</td>
+        </tr>
+		
+		
+		<!--
+		<tr style="font-size:17px; font-family:arial;font-weight:bold;">
+            <td>9</td>
+            <td>HEW</td>
+            <td>94</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+            <td style="text-align:center;">&nbsp;</td>
+        </tr>
+		-->
+		<tr>
+			<td colspan="12" style="text-align:center;"><h2 style="color:green; font-size:200%;">Recruitment Completed</h2></td>
+		</tr>
+		<tr>
+            <th>Sl No</th>
+			<th>Name of the Recruitment Examination</th>
+			<th>No. of Vacancy</th>
+			<th>Date of Publication of Advertisement</th>
+			<th>Last date of Receipt of Application</th>
+			<th>Number of Candidates</th>
+			<th>Date of Written Test</th>
+			<th>Publication of Provisional Screening List</th>
+            <th>Date of Physical Test</th>
+            <th>Date of Practical Skill Test</th>
+			<th>Date of DV</th>
+			<th>Publication of Provisional Results</th>
+			<th>Publication of Select List  &amp; Sponsoring of candidates</th>
+            <th>Remarks</th>
+        </tr>
+		
+		<tr class="completed_row" style="font-size:17px; font-family:arial;font-weight:bold;">
+			<td rowspan="3" valign="top">1</td>
+			<td colspan="13"><b>COMBINED RECRUITMENT EXAMINATION - 2023 </b> as under</td>
+		</tr>
+		<tr class="completed_row">
+			<td>Junior Assistant</td>
+			<td>4916</td>
+			<td rowspan="2">24.02.2023</td>
+			<td rowspan="2"><!--<a class="newflash">12.04.2023</a>-->12.04.2023</td>
+			<td rowspan="2">4,27,277</td>
+			<td rowspan="2">09.07.2023</td>
+			<td rowspan="2">15.09.2023</td>
+			<td rowspan="2" width="153px">NA</td>
+			<td rowspan="2"><span>05.11.2023 and 15.11.2023</span></td>
+			<td rowspan="2">&nbsp;</td>
+			<td rowspan="2">8.12.2023 and 20.12.2023</td>
+			<td rowspan="2">
+				<p style="text-align:left;"><span style="color:green;">Jan 2024-</span> Deogarh</p>
+				<p style="text-align:left;"><span style="color:green;">Feb 2024-</span> Malkangiri, Boudh, Dhenkanal, Jagatsighpur, Jharsuguda, Nabarangpur, Nayagarh, Nuapada, Rayagada, Subarnapur, Jajpur, Bhadrak, Gajapati, Kandhamal, Koraput, Angul, Kendrapara, Sambalpur</p>
+				<p style="text-align:left;"><span style="color:green;">March 2024-</span> Keonjhar, Bargarh, Kalahandi, Mayurbhanj, Khordha, Balangir, Puri, Balasore, Sundargarh, Ganjam, Cuttack</p>
+			</td>
+			<td rowspan="2" style="text-align:center;"><span class="completed_status">Completed</span></td>
+		</tr>
+		<tr class="completed_row">
+			<td>Panchayat Executive Officer</td>
+			<td>2297</td>
+		</tr>
+		
+		<tr>
+            <td>2</td>
+            <td>Laboratory Technician</td>
+            <td>921</td>
+            <td>15.09.2023</td>
+            <td>20.10.2023</td>
+            <td colspan="8"> <span style="color:red;">Cancelled</span> <span style="display:none;">to be decided after clearance by H&amp;FW Dept.</span></td>
+            <td style="text-align:center;">&nbsp;</td>
+        </tr>
+		
+		<tr class="completed_row">
+            <td>3</td>
+            <td>Nursing Officer-2023</td>
+            <td>7483</td>
+            <td>21.01.23</td>
+            <td>17.02.23</td>
+			<td>19,004</td>
+            <td>19.03.23</td>
+			<td>09.08.2023</td>
+			<td>NA</td>
+			<td>NA</td>
+			<td>21.08.2023 onwards</td>
+			<td>30.10.2023</td>
+			<td>31.10.2023</td>
+            <td><span class="completed_status">Completed</span></td>
+        </tr>
+		<tr class="completed_row">
+			<td rowspan="6" valign="top">4</td>
+			<td colspan="13"><b>COMBINED RECRUITMENT EXAMINATION - 2021 FOR GROUP 'C' POSTS</b> as under</td>
+		</tr>
+		<tr class="completed_row">
+			<td>Statistical Field Surveyor</td>
+			<td>529</td>
+			<td rowspan="5">01.10.2021</td>
+			<td rowspan="5">31.10.2021</td>
+			<td rowspan="5">&nbsp; </td>
+			<td rowspan="5">30.01.2022</td>
+			<td rowspan="5">18.05.2022</td>
+			<td rowspan="5" width="153px">
+			<p style="text-align:left;">1st round PT completed in July</p>
+			<p style="text-align:left;">2nd round PT<br>14 to 17 Sept. 2022</p>
+			<p>3rd round PT<br>27 to 28 Sept. 2022 </p>
+			<p>4th round PT<br>12th Jan. 2023 </p>
+			</td>
+			<td rowspan="5">&nbsp;</td>
+			<td rowspan="5">&nbsp; </td>
+			<td rowspan="5"><p style="text-align:left;">06-12-2022 for ARI/Amin/SFS</p><p style="text-align:left;">30-12-2022 for EC/FG</p><p style="text-align:left;">31-01-2023 for FG</p> </td>
+			<td rowspan="5"><p style="text-align:left;">07-12-2022 for ARI/Amin/SFS</p><p style="text-align:left;">30-12-2022 for EC/FG</p><p style="text-align:left;">31-01-2023 for FG</p></td>
+			<td rowspan="5" style="text-align:center;"><span class="completed_status">Completed</span> </td>
+		</tr>
+		<tr class="completed_row">
+			<td>Assistant Revenue Inspector</td>
+			<td>576</td>
+		</tr>
+		<tr class="completed_row">
+			<td>Amin</td>
+			<td>538</td>
+		</tr>
+		<tr class="completed_row">
+			<td>Forest Guard</td>
+			<td>806</td>
+		</tr>
+		<tr class="completed_row">
+			<td>Excise Constable</td>
+			<td>392</td>
+		</tr>
+		
+		<tr class="completed_row">
+            <td>5</td>
+            <td>Live-stock Inspector</td>
+            <td>565</td>
+            <td>31.07.21</td>
+            <td>26.08.21</td>
+			<td>&nbsp; </td>
+            <td>26.09.21</td>
+			<td>05.04.22</td>
+			<td>18.04.22</td>
+			<td>NA</td>
+			<td>&nbsp; </td>
+			<td>19.07.22</td>
+			<td>19.07.22</td>
+            <td style="text-align:center;"><span class="completed_status">Completed</span></td>
+        </tr>
+		<tr class="completed_row">
+            <td>6</td>
+            <td>Laboratory Technician</td>
+            <td>1000</td>
+            <td>24.11.21</td>
+            <td>25.12.21</td>
+			<td>&nbsp; </td>
+            <td>06.02.22</td>
+			<td>NA</td>
+			<td>NA</td>
+			<td>NA</td>
+			<td>&nbsp; </td>
+			<td>08.04.22</td>
+			<td>08.04.22</td>
+            <td style="text-align:center;"><span class="completed_status">Completed</span></td>
+        </tr>
+		<tr class="completed_row">
+            <td>7</td>
+            <td>Revenue Inspector</td>
+            <td>586</td>
+            <td>22.06.21</td>
+            <td>30.07.21</td>
+			<td>&nbsp; </td>
+            <td>29.08.21</td>
+			<td>29.10.21</td>
+			<td>NA</td>
+			<td>08.11.21</td>
+			<td>&nbsp; </td>
+			<td>10.12.21</td>
+			<td>10.12.21</td>
+            <td style="text-align:center;"><span class="completed_status">Completed</span></td>
+        </tr>
+		<tr class="completed_row">
+            <td>8</td>
+            <td>Pharmacist</td>
+            <td>600</td>
+            <td>28.12.20</td>
+            <td>06.02.21</td>
+			<td>&nbsp; </td>
+            <td>04.07.21</td>
+			<td>NA</td>
+			<td>NA</td>
+			<td>NA</td>
+			<td>&nbsp; </td>
+			<td>28.09.21</td>
+			<td>29.09.21</td>
+            <td style="text-align:center;"><span class="completed_status">Completed</span></td>
+        </tr>
+		<tr class="completed_row">
+            <td>9</td>
+            <td>Radiographer</td>
+            <td>200</td>
+            <td>28.12.20</td>
+            <td>06.02.21</td>
+			<td>&nbsp; </td>
+            <td>04.07.21</td>
+			<td>NA</td>
+			<td>NA</td>
+			<td>NA</td>
+			<td>&nbsp; </td>
+			<td>27.08.21</td>
+			<td>02.09.21</td>
+            <td style="text-align:center;"><span class="completed_status">Completed</span></td>
+        </tr>
+		
+		<tr class="completed_row">
+            <td>10</td>
+            <td>Junior Assistant</td>
+            <td>1746</td>
+            <td>28.12.18</td>
+            <td>06.02.19</td>
+			<td>&nbsp; </td>
+            <td>22.12.19</td>
+			<td>06.07.20</td>
+			<td>NA</td>
+			<td>ELIO 18.10.20 BCS 21.03.21</td>
+			<td>&nbsp; </td>
+			<td>28.04.21</td>
+			<td>10.05.21</td>
+            <td style="text-align:center;"><span class="completed_status">Completed</span></td>
+        </tr>
+		<tr class="completed_row">
+            <td>11</td>
+            <td>Nursing Officer</td>
+            <td>6432</td>
+            <td>04.12.20</td>
+            <td>12.01.21</td>
+			<td>&nbsp; </td>
+            <td>07.02.21</td>
+			<td>NA</td>
+			<td>NA</td>
+			<td>NA</td>
+			<td>&nbsp; </td>
+			<td>07.05.21</td>
+			<td>07.05.21</td>
+            <td style="text-align:center;"><span class="completed_status">Completed</span></td>
+        </tr>
+        
+		<tr class="completed_row">
+            <td rowspan="2">12</td>
+            <td>VAW</td>
+            <td>545</td>
+            <td rowspan="2">16.11.16</td>
+            <td rowspan="2">07.01.17</td>
+			<td rowspan="2">&nbsp; </td>
+            <td rowspan="2">08.11.20</td>
+			<td rowspan="2">NA</td>
+			<td rowspan="2">NA</td>
+			<td rowspan="2">NA</td>
+			<td rowspan="2">&nbsp; </td>
+			<td rowspan="2">19.04.21</td>
+			<td rowspan="2">19.04.21</td>
+            <td rowspan="2" style="text-align:center;"><span class="completed_status">Completed</span></td>
+        </tr>
+        <tr class="completed_row">
+            <td>HEW</td>
+            <td>195</td>
+        </tr>
+		
+		
+		
+
+    </tbody></table>
+    </div>
+	
+
+
+
+<div class="clr"></div>
+</div>
+</section>
+
+
+<section class="welcome">
+<div class="aligner">
+	<div class="welcome_message">
+    	<h2><span id="lbl_disclaimer">Disclaimer</span></h2>
+        <p><span id="lbl_disclaimer_cont">This is the Official Website/Web portal of Odisha Sub-Ordinate Staff Selection Commission (OSSSC). This Website/Web portal has been developed by National Informatics Centre. OSSSC is the owner of this Website/Web portal &amp; the contents in this Website/Web portal are being provided and updated by the OSSSC. It is deemed that the visitors to this Website/Web portal have read, understood and agreed to be bound by the Privacy Policy and Usage Terms and Conditions of the Website/ Web portal. Any suggestions or queries in regard to this Website/Web portal may be sent to the Secretary, OSSSC. Ph: / Fax: 0674-2597155, E-mail:</span><img src="mail_osssc.png" alt="Mail for "></p>
+    <div class="clr"></div>
+    </div>
+    
+    <div class="support_box">
+    	<h2><span id="lbl_hd_assistance">Happy to Assist !</span></h2>
+        <div class="supportbox">
+        	<h4><span id="lbl_tech_asst">For Technical Assistance call on</span></h4>
+            <h2><span id="lbl_telphone">0674-2597149</span></h2>
+            <h4>or email us on <img id="img_email" src="support_osssc.png" alt="support email"></h4>
+            <h4><span id="lbl_adm_asst">For Administrative Assistance call on</span></h4>
+            <h2><span id="lbl_adm_phone">0674-2597106</span></h2>
+            <span id="lbl_tech_hour">between 10 AM to 5 PM on official days</span>
+        <div class="clr"></div>
+        </div>
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</section>
+
+<footer>
+<div class="footermenu">
+	<ul>
+    	<li><a href="Privacy_policy.html"><span id="lbl_privacy">Privacy Policy</span></a></li>
+        <li><a href="Usage_Terms.html"><span id="lbl_terms">Usage Terms &amp; Condition</span></a></li>
+    </ul>
+</div>
+<div class="clr"></div>
+<div class="best_viewed"><span id="lbl_best_view">Site best viewed in I.E 9 or above, Mozilla 22.0 or above, Google Chrome 30.0 or above.</span></div>   
+<div class="clr"></div>
+<div class="copyright"><span id="lbl_copyright">All rights of this portal are vested with the Odisha Sub-Ordinate Staff-Selection Commission.</span></div>
+</footer>
+
+    <div class="ihide"><span id="lbl_disp_lang">1</span></div>
+</form> 
+
+
+                
+
+
+</body></html>

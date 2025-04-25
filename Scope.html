@@ -1,0 +1,788 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head><meta charset="UTF-8" /><title>
+	Odisha Sub-ordinate Staff Selection Commission|OSSSC
+</title><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" href="favicon.ico" type="image/x-icon" /><link rel="stylesheet" href="frontend-style.css" type="text/css" /><link rel="stylesheet" href="font-awesome.min.css" type="text/css" />
+
+<!--<script type='text/javascript' src='responsive-modernizr.js'></script>-->
+<script type="text/javascript" src="jquery-latest.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type='text/javascript' src="jquery.cookie.js"></script>
+    
+<!--for login hashing -->
+<script src="SHA1.js" defer="defer"></script>
+
+<!--Own Jquery Effects-->
+<script src="myeffects.js" defer="defer"></script>      
+
+
+<script lang="javascript" type="text/javascript" defer="defer">
+function noBack() { window.history.forward() }
+noBack();
+window.inhibited_load = noBack;
+window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+window.inhibited_unload = function () { void (0) }
+
+</script>
+<script lang="javascript" type="text/javascript" defer="defer">window.history.forward(1);</script>
+
+<script defer="defer">
+function On_Sametab() {
+    document.forms[0].target = "_self";
+}
+function On_Newtab() {
+    document.forms[0].target = "_blank";
+}
+function stopKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if (((evt.keyCode == 8) && (node.type != "text") && (node.type != "textarea") && (node.type != "password")) || evt.keyCode == 13)
+    { return false; }
+}
+</script>
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE" /><meta http-equiv="EXPIRES" content="0" />  
+<noscript><meta http-equiv="REFRESH" content="5; url=NoJavascript.html" /></noscript>
+<script>
+    function pageLoad() {
+
+        $(':input[type=password]').each(function () {
+            $(this).wrap("<div class='passwordboxx'></div>");
+            $(this).after("<div class='toggle_password'><i class='fa fa-eye' aria-hidden='true'></i></div>");
+        });
+
+        $('.toggle_password').mousedown(function () {
+            $(this).siblings(':input[type=password]').attr('type', 'text');
+        });
+        $('.toggle_password').mouseup(function () {
+            $(this).siblings(':input[type=text]').attr('type', 'password');
+        });
+
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var body_class = $.cookie("body_class");
+        if (body_class) {
+            chooseStyle(body_class);
+        }
+        else { chooseStyle('theme2'); }
+
+    });
+
+    function chooseStyle(color) {
+        //alert("color=" + color);
+        $("body").removeAttr('class');
+        $("body").addClass(color);
+        $.cookie("body_class", color, { path: '/' });
+    }
+
+</script>
+
+
+</head>
+<body ondrag="false" onkeydown="return stopKey(event)" class=""> 
+<div class="loader"></div>
+<form method="post" action="index.html" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="jsoy.js" type="text/javascript"></script>
+
+
+<script src="jsKS.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="jsDD.js" type="text/javascript"></script>
+<script src="jsUMU.js" type="text/javascript"></script>
+<script src="js16.js" type="text/javascript"></script>
+<script src="js6v.js" type="text/javascript"></script>
+<script src="jsTU.js" type="text/javascript"></script>
+<script src="jsiz.js" type="text/javascript"></script>
+<script src="jstf.js" type="text/javascript"></script>
+<script src="jsmd.js" type="text/javascript"></script>
+<script src="jsSW.js" type="text/javascript"></script>
+<script src="js96.js" type="text/javascript"></script>
+<script src="jsRS.js" type="text/javascript"></script>
+<script src="jsEj.js" type="text/javascript"></script>
+<script src="jsXA.js" type="text/javascript"></script>
+<script src="jsqh.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D5B356F4" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="3AkkifO5zWPIgLc8WeKf1DarjlF-apxr5q5c_-CHGnZ4_aE7-BulowgqeklbIzDuk_PNDBvZDT35yEjMTsHkWV8btctlRqmhx7NATgWOVk6e88v60" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="QX4w1JVtf9ESwg6WMioHbbLBfhwfL3vwlKQb7lXMmPfYzJjKoMydYUgxU/MSpojcb6vpB8o4p+FoY1iKgpVIBZXOBMt2lC7rEmZF+tphoAB7ciI42TXPuMlnjrQ4W2aOkj7b15vvgN+isv9d8saD71Jo8yp4kCHHK9VtYYyBkF7Ti70ozB+JnG+a3BTf8Q+9sn2qf1U22X7Ty/z227WdzzbIIk6RH0c2oT/w8/YWJYCFGGNu+AkBtNg72cW+Nb4JTJtuBg4n5wkeUe5OSGumu7mA00K8WdCKJj3M5oeZkrYpePOfBswrbm8iFFicd6uCtcqrrKDeWnQ86rXGwYIp6OqYichJgDOu0fB33Lbmb+b107VPSD1lsDgrFUUM/q4UQW26FMTkPLMJjz4RJxVLjC9SINS8zU5XZfJp50ogcBztQ7Nbpfq0oZVqpfJ26pz+CptwcIXCF1i/gwX46SzKtuqBWuH4b106aIKvxZ8/SiVe0qhV4PjyJyw+OFjZTdoerFGv0n6xSo6FILsX9QymivyrMll+oTLVAjEdczydJicn/fjxng1URV7fUXO03ptsdBcQgY/fYt9vOboyGT3m22r9E5TRjOCJf4QMs/pvQrVxWnNWB0hCiE+Pp8s/aJuHcs/ocg==" />
+</div>
+
+
+<div class="topper">
+<div class="aligner">
+    
+	<div class="main_content"><a href="#data" style="display:inline-block;">Skip to Main Content</a> | <a href="screen-reader-access.html" style="display:inline-block;">Screen Reader</a></div>
+    <div class="option_panel">
+        <div class="languages">
+            <span id="lang"><span id="lbl_lang">Select Language :  </span></span>
+            <div class="language-wrapper">
+            <label><select name="ctl00$drp_lang" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$drp_lang\&#39;,\&#39;\&#39;)&#39;, 0)" id="drp_lang" title="Select Language. " class="custom-selectt" onclick="On_Sametab();">
+	<option selected="selected" value="1">ENGLISH</option>
+
+</select></label>
+            </div>
+        <div class="clr"></div>   	
+        </div>
+        
+        <div class="font-resizer">
+            
+            <ul>
+                <li><a role="link" title="Decrease font size" id="minus">A<sup>-</sup></a></li>
+                <li><a role="link" title="Normal font size" id="normal">A<sup> </sup></a></li>
+                <li><a role="link" title="Increase font size" id="plus">A<sup>+</sup></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+        <div class="color_chooser">
+            <ul>
+                <li><span id="lbl_color">Select Color: : </span></li>
+                <li id="colorBlue"><a href="javascript:chooseStyle('theme1')"><div class="themebox1 patch"><span class="hide">Violet</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme2')"><div class="themebox2 patch"><span class="hide">Green</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme3')"><div class="themebox3 patch"><span class="hide">Gray</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme4')"><div class="themebox4 patch"><span class="hide">Reddish</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme5')"><div class="themebox5 patch"><span class="hide">Blue</span></div></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</div>
+
+
+
+<header class="myheader">
+<div class="aligner">
+		<div class="logo_holder">
+        	<div class="logo_icon"><a href="index.html"><img id="img_logo" alt="logo" src="govtlogo-trans_osssc.PNG" alt="logo" /></a></div>
+            <div class="organization_name">
+            	<h1><span id="lbl_ofc_name">Odisha Sub-ordinate Staff Selection Commission</span></h1>
+                
+                <h3><span id="lbl_ofc_abbr">(OSSSC)</span>, <span id="lbl_govt_odisha">Govt. of Odisha</span></h3>
+            </div>
+        <div class="clr"></div>   
+        </div>
+        
+        <div class="user_option">
+        	<ul>
+            	<li><a href="Login.html" onclick="On_Sametab()"><i class="fa fa-lock"></i> <span id="lbl_login">Login</span></a></li>
+                <li><a href="Post_detail_information.html" onclick="On_Sametab()"><i class="fa fa-user-plus"></i> <span id="lbl_reg">Apply Online</span></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+<div class="clr"></div>
+</div>
+</header>
+
+<section class="navigation">
+<div class="aligner">
+<nav class="sujit-nav">
+    
+    <ul class="menu">
+                    <li><a href="index.html"><span style="margin:0 0 0 0;">
+                    <img src="witte-home-icon.png" alt="Home" /></span></a></li>
+
+                    <li><a href="#"><span id="lbl_menu1">ABOUT US</span></a>
+                        <ul>
+                        <li><a href="About_Osssc.html"><span id="lbl_menu1_submenu1">OSSSC</span></a></li>
+                        <li><a href="Mission.html"><span id="lbl_menu1_submenu2">Mission</span></a></li>
+                        <li><a href="Organization.html"><span id="lbl_menu1_submenu3">Organization</span></a></li>
+                        <li><a href="Functionaries_Position.html"><span id="lbl_menu1_submenu4">Functionaries in Position</span></a></li>
+                        <li><a href="Job_Assignment.html"><span id="lbl_menu1_submenu5">Job Assignment</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#"><span id="lbl_menu2">COMMISSION</span></a>
+                    	<ul>
+                        <li><a href="Formation.html"><span id="lbl_menu2_submenu1">Formation</span></a></li>
+                        <li><a href="Chairman.html"><span id="lbl_menu2_submenu2">Chairman</span></a></li>
+                        <li><a href="Members.html"><span id="lbl_menu2_submenu3">Members</span></a></li>
+                        <li><a href="Functions.html"><span id="lbl_menu2_submenu4">Functions</span></a></li>
+                        <li><a href="Incumbancy.html"><span id="lbl_menu2_submenu5">Incumbency</span></a></li>
+                        <li><a href="Boards_Committees.html"><span id="lbl_menu2_submenu6">Boards &amp; Committies</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#"><span id="lbl_menu3">RECRUITMENT</span></a>
+                        <ul>
+                        <li><a href="Recruitment_calender.html"><span id="lbl_menu_recruit_calender">Recruitment Calender</span></a></li>
+                        <li><a href="VIEW_REGISTRATION_COPY.html"><span id="lbl_menu3_submenu6">View Registration Copy</span></a></li>
+						<li><a href="Old_Question_Papers.html">Old Questions</a></li>
+                        <li><a href="Scope.html"><span id="lbl_menu3_submenu1">Scope</span></a></li>
+                        <li><a href="Login.html"><span id="lbl_menu3_submenu2">Requisition</span></a></li> 
+                        <li><a href="Advertisements.html">
+                            <span id="lbl_menu3_submenu4">Advertisements</span></a></li>
+                        <li><a href="Notification.html">
+                            <span id="lbl_menu3_submenu5">Notifications</span></a></li>
+						<li><a href="Result.html">
+                            <span id="lbl_menu3_submenu_6">Results</span></a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="Tender.html"><span><span id="lbl_menu4">TENDERS &amp; QUOTATIONS</span></span></a></li>
+                    <li><a href="#"><span id="lbl_menu5">RULES</span></a>
+                    	<ul>
+                        <li><a href="Acts.html"><span id="lbl_menu5_submenu1">Acts</span></a></li>
+                        <li><a href="Rules.html"><span id="lbl_menu5_submenu2">Rules</span></a></li>
+                        <li><a href="Regulation.html"><span id="lbl_menu5_submenu3">Regulations</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="http://rtiodisha.in/pa/T1RILzIvMjAzNTUvMTk=" target="_blank" rel="noopener noreferrer"><span><span id="lbl_menu6">RTI</span></span></a></li>
+                    <li><a onclick="On_Newtab();" id="btn_Citizen" href="javascript:__doPostBack(&#39;ctl00$btn_Citizen&#39;,&#39;&#39;)">CITIZEN&#39;S CHARTER</a></li>
+                    <li><a href="Contact_Osssc.html"><span id="lbl_contact">CONTACT US</span></a> </li>
+                </ul>
+<div class="clr"></div>
+</nav>
+<div class="clr"></div>
+</div>
+</section> 
+
+
+
+    
+    <script type="text/javascript" src="jquery.bxslider.min.js"></script>
+    <script type="text/javascript" defer="defer">
+        $(function () {blinkeffect('#flashtext');}) 
+        function blinkeffect(selector) {$(selector).fadeOut('slow', function () { $(this).fadeIn('slow', function () {blinkeffect(this);});}); }
+        $(function () {$('.slider').bxSlider({mode: 'fade',speed:800,auto:true,autoHover: true,controls: false});
+        });function Set_Target() {document.forms[0].target = "_blank";}
+        function Set_Target_Same() {document.forms[0].target = "_self";} 
+    </script>
+   <script type="text/javascript" defer="defer">
+        function Validate() {
+            if (document.getElementById("generic_masterpage1_drp_post").value == "" || document.getElementByiId("generic_masterpage1_drp_post").value == "-1") {
+                alert("Select Post");
+                document.getElementById("generic_masterpage1_drp_post").style.borderColor = "red";
+                document.getElementById("generic_masterpage1_drp_post").focus();
+                return false;
+            }
+            else if (document.getElementById("generic_masterpage1_txt_date_of_birth").value.trim() == "") {
+
+                document.getElementById("generic_masterpage1_drp_post").style.borderColor = "#c4c4c4";
+                alert("Select Date of Birth");
+
+                document.getElementById("generic_masterpage1_txt_date_of_birth").style.borderColor = "red";
+                document.getElementById("generic_masterpage1_txt_date_of_birth").focus();
+                return false;
+            }
+            else {
+                var txt = "";
+
+                if (document.getElementById("generic_masterpage1_rb_M").checked || document.getElementById("generic_masterpage1_rb_U").checked || document.getElementById("generic_masterpage1_rb_R").checked) {
+                    if (document.getElementById("generic_masterpage1_rb_M").checked) {
+                        txt = document.getElementById("generic_masterpage1_rb_M").parentNode.childNodes[1].innerHTML;
+                    } else if (document.getElementById("generic_masterpage1_rb_U").checked) {
+                        txt = document.getElementById("generic_masterpage1_rb_U").parentNode.childNodes[1].innerHTML;
+                    }
+                    else if (document.getElementById("generic_masterpage1_rb_R").checked) {
+                        txt = document.getElementById("generic_masterpage1_rb_R").parentNode.childNodes[1].innerHTML;
+                    }
+                    if (document.getElementById("generic_masterpage1_txt_All").value.trim() == "") {
+                        alert("Enter " + txt);
+                        document.getElementById("generic_masterpage1_txt_All").style.borderColor = "red";
+                        document.getElementById("generic_masterpage1_txt_All").focus();
+                        return false;
+                    }
+                    else if (document.getElementById("generic_masterpage1_txtCaptchaText").value.trim() == "") {
+                        document.getElementById("generic_masterpage1_txt_All").style.borderColor = "#c4c4c4";
+                        alert("Enter Captcha");
+                        document.getElementById("generic_masterpage1_txtCaptchaText").style.borderColor = "red";
+                        document.getElementById("generic_masterpage1_txtCaptchaText").focus();
+                        return false;
+                    }
+                    else {
+                        document.getElementById("generic_masterpage1_txtCaptchaText").style.borderColor = "#c4c4c4";
+                        document.getElementById("generic_masterpage1_lbl_Msg").innerHTML = "";
+                        // document.forms[0].target = "_blank";
+                    }
+                }
+                else {
+                    alert("Select one of option through which you can view your Admit Card");
+                    document.getElementById("generic_masterpage1_rb_M").parentNode.childNodes[1].focus();
+                    return false;
+                }
+            }
+        }
+        function View_Text() {
+            var txt = "";
+            if (document.getElementById("generic_masterpage1_rb_M").checked) {
+                document.getElementById("generic_masterpage1_lbl_select_tag").innerText = "Enter " + document.getElementById("generic_masterpage1_rb_M").parentNode.childNodes[1].innerHTML;
+            }
+            else if (document.getElementById("generic_masterpage1_rb_U").checked) {
+                document.getElementById("generic_masterpage1_lbl_select_tag").innerText = "Enter " + document.getElementById("generic_masterpage1_rb_U").parentNode.childNodes[1].innerHTML;
+            }
+            else if (document.getElementById("generic_masterpage1_rb_R").checked) {
+                document.getElementById("generic_masterpage1_lbl_select_tag").innerText = "Enter " + document.getElementById("generic_masterpage1_rb_R").parentNode.childNodes[1].innerHTML;
+            }
+            else {
+
+            }
+        }
+        function Cap() {
+            alert("Invalid Captcha");
+            document.getElementById("generic_masterpage1_txtCaptchaText").style.borderColor = "red";
+            document.getElementById("generic_masterpage1_txtCaptchaText").focus();
+            document.getElementById("generic_masterpage1_txtCaptchaText").value = "";
+        }
+
+        function Reset() {
+            document.getElementById("generic_masterpage1_txt_date_of_birth").value = "";
+            document.getElementById("generic_masterpage1_txtCaptchaText").value = "";
+            document.getElementById("generic_masterpage1_txt_All").value = "";
+            document.getElementById("generic_masterpage1_lbl_select_tag").innerText = "";
+            document.getElementById("generic_masterpage1_lbl_Msg").innerText = "";
+            document.getElementById("generic_masterpage1_rb_R").checked = false;
+            document.getElementById("generic_masterpage1_rb_M").checked = false;
+            document.getElementById("generic_masterpage1_rb_U").checked = false;
+                      
+            return false;
+        }
+        function Reset_Close() {
+            document.getElementById("generic_masterpage1_txt_date_of_birth").value = "";
+            document.getElementById("generic_masterpage1_txtCaptchaText").value = "";
+            document.getElementById("generic_masterpage1_txt_All").value = "";
+            document.getElementById("generic_masterpage1_lbl_select_tag").innerText = "";
+            document.getElementById("generic_masterpage1_rb_R").checked = false;
+            document.getElementById("generic_masterpage1_rb_M").checked = false;
+            document.getElementById("generic_masterpage1_rb_U").checked = false;         
+            return true;
+        }
+        function Sametab() {
+            document.forms[0].target = "_self";
+        }
+        function No_Key_Press(evt) {
+            alert("Enter Date from Calender");
+            return false;
+        }    
+    </script> 
+    
+ 
+  <script type="text/javascript">
+     $(function () {
+         var value_year = $("#" + 'generic_masterpage1_hd_min_year').val();
+         var currentYear = $("#" + 'generic_masterpage1_hd_recruitement_year').val();
+         var hd_year = currentYear - value_year;
+         var min_yr = currentYear - 60;
+         var rec_month = $("#" + 'generic_masterpage1_hd_recruitement_month').val();
+               var rec_date = $("#" + 'generic_masterpage1_hd_recruitement_date').val();
+         //var rec_date = parseInt(rec_date) + 1;
+         var rec_date = parseInt(rec_date);
+
+         $("#generic_masterpage1_txt_date_of_birth").datepicker({
+             changeMonth: true,
+             changeYear: true,
+             dateFormat: "dd/mm/yy",
+             minDate: new Date(min_yr, 0, 1),
+             maxDate: new Date(hd_year, rec_month - 1, rec_date),
+
+             yearRange: "c-40:+0",
+             buttonText: ""
+         });
+
+        
+
+     });
+
+     function pageLoad() {
+
+         var value_year = $("#" + 'generic_masterpage1_hd_min_year').val();
+               //var value_year = $('#hd_min_year').val();
+               //var currentYear = (new Date).getFullYear();
+               var currentYear = $("#" + 'generic_masterpage1_hd_recruitement_year').val();
+               var hd_year = currentYear - value_year;
+               var min_yr = currentYear - 60;
+               var rec_month = $("#" + 'generic_masterpage1_hd_recruitement_month').val();
+             var rec_date = $("#" + 'generic_masterpage1_hd_recruitement_date').val();
+         var rec_date = parseInt(rec_date);
+
+               $("#generic_masterpage1_txt_date_of_birth").datepicker({
+                   changeMonth: true,
+                   changeYear: true,
+                   dateFormat: "dd/mm/yy",
+                   minDate: new Date(min_yr, 0, 1),
+                   maxDate: new Date(hd_year, rec_month - 1, rec_date),
+
+                   yearRange: "c-40:+0",
+                   buttonText: ""
+               });
+           }
+
+     </script> 
+<style>
+.bx-pager{z-index:999;}
+.getattention a{color:#000;}
+    .getattention {-webkit-animation: attention 0.5s linear 0.5s infinite alternate;animation: attention 0.5s linear 0.5s infinite alternate;}
+    @-webkit-keyframes attention { 0%   {background:#fcf001} 100% {background:#ff7d00}}
+    @keyframes attention { 0%   {background:#fcf001} 100% {background:#ff7d00}}
+.hideondesktop{display:none;}
+    .popup_att{background:#FFF;padding:0 0 15px 0;border:1px solid #04b5ee;}
+    .this_head{background:#04b5ee;color:#000; font-weight:bold;padding:5px 3px 5px 10px;margin:0 0 15px 0; font-size:112%;}
+    .popup_att .box1{padding:4px 10px;font-weight:bold;}
+    .popup_att .box1 span:nth-child(1),.popup_att .box1 h3 span:nth-child(3){color:red;}
+@media screen and (max-width:500px) {
+	.hideondesktop{display:block;}
+
+    
+}
+</style>       
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$generic_masterpage1$ScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+    
+
+
+ 
+<style>
+    .floating_contact{ cursor:pointer; position:fixed;top:40%; right:-225px; display:flex; z-index:999;
+     -webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;
+    }
+    .floating_contact:hover{right:0;}
+    .switch{color:#FFF; padding:5px;font-size:18px; font-weight:bold; text-align:center; width:30px;-webkit-animation: help 0.5s linear 0.5s infinite alternate;animation: help 0.5s linear 0.5s infinite alternate;}
+    @-webkit-keyframes help { 0%   {background:#000} 50% {background:#f00} 100% {background:#000}}
+    @keyframes help { 0%   {background:#000} 50% {background:#f00} 100% {background:#000}}
+    .switch i{ font-size:22px;}
+    .the_contact{ background:#FFF; padding:5px; text-align:center; width:225px;}
+</style>
+
+<div id="generic_masterpage1_technical_helpline" class="floating_contact">
+    <div class="switch"><i class="fa fa-comments" aria-hidden="true"></i> H<br/>E<br/>L<br/>P</div>
+    <div class="the_contact"><h4>For Technical Assistance<br/>Call on</h4><h1><span id="generic_masterpage1_lbl_cont_no">0674-2597149</span> </h1></div>
+    
+</div>
+
+
+<section id="banners" class="bannerholder">
+<div class="banner_overlay" style="padding:0px;">
+   <div id="generic_masterpage1_div_Banner" class="slider"> 
+    <div><img title="banner-1" src="banner-1.png" alt="banner-1" /></div><div><img title="banner-2" src="banner-2.png" alt="banner-2" /></div></div>
+</div>
+<div class="clr"></div>
+</section>    	
+<div id="generic_masterpage1_div_slogan" class="slogan"><span>Building Human Capital for <span class="thetag">SMART</span> Governance</span></div>
+
+<div class="notification" style="display:none;">
+    <div class="arrow_box"><span id="generic_masterpage1_lbl_notifications">Notification</span></div>
+    <div class="notification_content">
+        <div id="generic_masterpage1_div_Nt" style="display:block">
+            <div class="ihide">
+            <input type="hidden" name="ctl00$generic_masterpage1$HiddenField1" id="generic_masterpage1_HiddenField1" />
+                  
+                 
+                  
+            </div>
+            <p id="flashtext" style="color:red;"><a onclick="return Set_Target();" id="generic_masterpage1_lnk_btn_NT" href="javascript:__doPostBack(&#39;ctl00$generic_masterpage1$lnk_btn_NT&#39;,&#39;&#39;)">Steps to make Online Registration/Re-registration, Payment of applicable Examination Fee and to fill up Application Form. </a></p>
+        <div class="clr"></div>
+        </div>
+    <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+<section class="content" id="data">
+<div class="aligner">
+	<div class="container">        
+        <div id="generic_masterpage1_div_ur" class="job_listing" style="display:block">
+        	<h2><span id="generic_masterpage1_lbl_exam_head">Recruitment News</span></h2>
+            
+            <div>
+	<table cellspacing="0" id="generic_masterpage1_gv_UR" style="text-decoration:none;border-collapse:collapse;">
+		<tr>
+			<td>
+                            <div id="generic_masterpage1_gv_UR_div_cld_0" class="listing_date newflash">
+                                <div class="calendar_head" >
+                                    <span class="month">23</span>
+                                    <span class="date"><h4>Apr</h4></span>
+                                </div>
+                                    <span class="year">2025</span>
+                            </div>
+                            </td><td>
+                            <a onclick="return Set_Target();" id="generic_masterpage1_gv_UR_lnk_btn_UR_0" class="newflash" href="javascript:__doPostBack(&#39;ctl00$generic_masterpage1$gv_UR$ctl02$lnk_btn_UR&#39;,&#39;&#39;)">Notification No. IIE-64/2023-927/OSSSC dated - 23.04.2025 ----- Publication of Results (Phase-III) for recruitment to the post of Nursing Officer - 2023</a>
+                        </td>
+		</tr><tr>
+			<td>
+                            <div id="generic_masterpage1_gv_UR_div_cld_1" class="listing_date newflash">
+                                <div class="calendar_head" >
+                                    <span class="month">23</span>
+                                    <span class="date"><h4>Apr</h4></span>
+                                </div>
+                                    <span class="year">2025</span>
+                            </div>
+                            </td><td>
+                            <a onclick="return Set_Target();" id="generic_masterpage1_gv_UR_lnk_btn_UR_1" class="newflash" href="javascript:__doPostBack(&#39;ctl00$generic_masterpage1$gv_UR$ctl03$lnk_btn_UR&#39;,&#39;&#39;)">Notification No. IIE-57/2024-919/OSSSC dated - 23.04.2025 ----- Conduct of Main Examination for the posts of RI, ICDS Supervisor, ARI, Amin &amp; SFS under Combined Recruitment Examination-2023(IV)</a>
+                        </td>
+		</tr><tr>
+			<td>
+                            <div id="generic_masterpage1_gv_UR_div_cld_2" class="listing_date newflash">
+                                <div class="calendar_head" >
+                                    <span class="month">19</span>
+                                    <span class="date"><h4>Apr</h4></span>
+                                </div>
+                                    <span class="year">2025</span>
+                            </div>
+                            </td><td>
+                            <a onclick="return Set_Target();" id="generic_masterpage1_gv_UR_lnk_btn_UR_2" class="newflash" href="javascript:__doPostBack(&#39;ctl00$generic_masterpage1$gv_UR$ctl04$lnk_btn_UR&#39;,&#39;&#39;)">Notification No. IIE-33/2025-892/OSSSC dated - 19.04.2025 ----- Conduct of Preliminary Examinations for the posts of Sanskrit Teacher, Hindi Teacher and Physical Education Teacher (PET) on DigiOMR mode.</a>
+                        </td>
+		</tr><tr>
+			<td>
+                            <div id="generic_masterpage1_gv_UR_div_cld_3" class="listing_date newflash">
+                                <div class="calendar_head" >
+                                    <span class="month">29</span>
+                                    <span class="date"><h4>Mar</h4></span>
+                                </div>
+                                    <span class="year">2025</span>
+                            </div>
+                            </td><td>
+                            <a onclick="return Set_Target();" id="generic_masterpage1_gv_UR_lnk_btn_UR_3" class="newflash" href="javascript:__doPostBack(&#39;ctl00$generic_masterpage1$gv_UR$ctl05$lnk_btn_UR&#39;,&#39;&#39;)">Notification No. IIE-09/2025-770/OSSSC dated - 29.03.2025 ----- Publication of Provisional Results of the Written Test and Provisional Screening List for Document Verification for the posts of Pharmacist and Multipurpose Health Worker (Male) under Combined Recruitment Examination-2023 (III)</a>
+                        </td>
+		</tr><tr>
+			<td>&nbsp;</td><td>
+                            <a id="generic_masterpage1_gv_UR_lnk_See_More" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$generic_masterpage1$gv_UR$ctl06$lnk_See_More&quot;, &quot;&quot;, false, &quot;&quot;, &quot;Notification.html&quot;, false, true))" style="text-align: right;">See More</a>
+                        </td>
+		</tr>
+	</table>
+</div> 
+        <div class="clr"></div>
+        </div>
+    <div class="clr"></div>
+    </div>    
+    <div class="sidebar">
+    	<div id="generic_masterpage1_div_wn" class="sideblock faqlist" style="display:none;">
+        	<h2>Frequently Asked Questions</h2>
+            <ul>
+            
+            </ul>
+        <div class="clr"></div>
+        </div>		
+		<div class="sideblock">
+            <div class="theme_bg"><a href="How_do_I_OSSSC.pdf" target="_blank" title="Application Process detail PDF"><img src="how-to-apply.gif" alt="Application Process"/></a></div>
+        </div>
+        <div class="sideblock">
+            <h2>Helpful Links</h2>
+            <ul>
+                <li><a href="https://www.odisha.gov.in" target="_blank"><img src="orissagovin.gif" alt="Link to orissa governement Website"/></a></li>
+                <li><a href="https://www.india.gov.in" target="_blank"><img src="indiagovin.gif" alt="Link to India governement Website"/></a></li>
+                 <li class="hideondesktop"><a href="HelpfulLink.html" target="_self"><img src="irms.png" alt="Link to download IRMS (CAMS)"/></a></li>
+            </ul>
+        </div>
+    <div class="clr"></div>
+    </div>	
+        
+<div class="clr"></div>
+</div>
+</section>  
+<style>
+.modalbox { position: fixed;z-index:99;padding-top: 100px;left: 0;top: 0;width: 100%;height: 100%;overflow: auto;background: rgba(0,0,0,0.6);}
+.modal-content {background-color: #fefefe;margin: auto;padding: 20px;border: 1px solid #888;max-width:600px;color:red;position:relative;}
+a.highlight{color:#bc4403; text-decoration:none; font-size:125%;line-height:30px;}
+a.highlight:hover{color:#000; text-decoration:underline;}
+
+a.nta{color:#5e6938; text-decoration:none;}
+a.nta:hover{color:#af2a26; text-decoration:underline;}
+.close {color: #aaaaaa;text-align:right;font-size: 28px;font-weight: bold;}
+.close:hover,.close:focus {color: #000;text-decoration: none;cursor: pointer;}
+</style>
+<script>
+jQuery(document).ready(function(){
+	$("#close_pop").click(function () {
+                $("#popup_notice").hide();
+
+      });
+});
+
+</script>
+
+
+    
+     <input type="submit" name="ctl00$generic_masterpage1$btn1" value="Button" id="generic_masterpage1_btn1" style="visibility: hidden" />
+    
+      <div id="generic_masterpage1_pnlPopup" class="modalPopup">
+	 
+		
+		 
+        <div class="box1 whitepanel" >
+        <div class="registration_preview"> 
+              <div style="background:#dbdbdb;margin:0px auto;max-width:500px; padding:10px; border:1px solid #696969;"> 
+            <div class="panel_heading"><h2><span id="generic_masterpage1_lbl_Report" style="font-weight: 700">Download Admit Card for </span></h2></div>
+                  <div class="panel_content">
+            <div class="show_note">
+                <span id="generic_masterpage1_lbl_Msg"></span>
+            </div>
+                      <div class="show_error">
+                <span id="generic_masterpage1_lbl_error"></span>
+            </div>
+
+            <div class="box1">
+                <h3>
+                    <span id="generic_masterpage1_lbl_post">Select Post</span></h3>
+             <label class="selectboxx"><select name="ctl00$generic_masterpage1$drp_post" id="generic_masterpage1_drp_post" class="selectboxx">
+
+	</select></label>  
+                <span class="alert_label">
+                    <span id="generic_masterpage1_lbl_v_postnm" style="color:#FF3300;"></span></span>
+            </div>
+
+            <div class="box1">
+                <h3>
+                    <span id="generic_masterpage1_lbl_date_of_birth">Select Date Of Birth</span></h3>
+                <div class="date_holder">
+                    <input name="ctl00$generic_masterpage1$txt_date_of_birth" type="text" maxlength="10" id="generic_masterpage1_txt_date_of_birth" onkeypress="return No_Key_Press(event)" /></div>
+
+                <span class="alert_label">
+                    <span id="generic_masterpage1_lbl_V_dateofbth" style="color:#FF3300;"></span></span>
+            </div>
+
+            <div class="box1">
+                <h3>
+                    <span id="generic_masterpage1_lbl_rb">Select one of the following : </span></h3>
+                <div class="radiosol">
+                    <ul>
+                        <li>
+                            <span onchange="View_Text()"><input id="generic_masterpage1_rb_M" type="radio" name="ctl00$generic_masterpage1$rbl" value="rb_M" /><label for="generic_masterpage1_rb_M">Registered Mobile Number</label></span>
+                        </li>
+                        <li>
+                            <span onchange="View_Text()"><input id="generic_masterpage1_rb_U" type="radio" name="ctl00$generic_masterpage1$rbl" value="rb_U" /><label for="generic_masterpage1_rb_U">UserName</label></span></li>
+                        <li>
+                            <span onchange="View_Text()"><input id="generic_masterpage1_rb_R" type="radio" name="ctl00$generic_masterpage1$rbl" value="rb_R" /><label for="generic_masterpage1_rb_R">Registration Number</label></span></li>
+                    </ul>
+                    <span class="alert_label">
+                        <span id="generic_masterpage1_Label1" style="color:#FF3300;"></span></span>
+                    <div class="clr"></div>
+                </div> 
+                <span class="alert_label">
+                    <span id="generic_masterpage1_lbl_v_tag" style="color:#FF3300;"></span></span>
+            </div>
+            <div class="box1">
+                <h3><span id="generic_masterpage1_lbl_select_tag"></span></h3>
+                <input name="ctl00$generic_masterpage1$txt_All" type="text" maxlength="30" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$generic_masterpage1$txt_All\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="generic_masterpage1_txt_All" class="txtboxx" />
+                <span class="alert_label"><span id="generic_masterpage1_lbl_V_all" style="color:#FF3300;"></span></span></div>
+   
+            <div class="clr"></div>
+    
+<div class="clr"></div>
+
+            <div class="captchaboxx">
+                <h3><span id="generic_masterpage1_lbl_Captch">Enter Captcha Text Here:</span><span style="color: red">*</span></h3>
+                <ul>
+                    <li><div class="captchaa"><img id="generic_masterpage1_ImgCaptcha" src="" style="height:36px;width:120px;" /></div></li>
+                    <li><input type="image" name="ctl00$generic_masterpage1$Image1" id="generic_masterpage1_Image1" title="Refresh Captcha" src="refresh.png" onclick="Sametab();" style="width:25px;" /></li>
+                    <li><input name="ctl00$generic_masterpage1$txtCaptchaText" type="text" maxlength="6" id="generic_masterpage1_txtCaptchaText" autocomplete="off" onfocus="Clear_Label()" class="captacha_txt" /><span id="generic_masterpage1_lbl_v_captcha" class="alert_label"></span></li>
+                </ul>
+                <div class="clr"></div>
+                <div class="note"><span id="generic_masterpage1_lbl_captcha_txt"></span></div>
+            </div>
+            </div>
+            <div class="panel_footer">
+                <input type="submit" name="ctl00$generic_masterpage1$btn_Submit" value="Download" onclick="return Validate();" id="generic_masterpage1_btn_Submit" class="button_submit" />
+                <input type="submit" name="ctl00$generic_masterpage1$Button1" value="Reset" onclick="return Reset();" id="generic_masterpage1_Button1" class="button_reset" />
+                 <input type="submit" name="ctl00$generic_masterpage1$btnClose" value="Close" onclick="return Reset_Close();" id="generic_masterpage1_btnClose" class="button_update" />
+                
+            </div>
+        </div>
+            </div>
+            </div>
+            <input type="hidden" name="ctl00$generic_masterpage1$hd_min_year" id="generic_masterpage1_hd_min_year" value="18" />
+    <input type="hidden" name="ctl00$generic_masterpage1$hd_recruitement_year" id="generic_masterpage1_hd_recruitement_year" value="2023" />
+    <input type="hidden" name="ctl00$generic_masterpage1$hd_recruitement_month" id="generic_masterpage1_hd_recruitement_month" value="01" />
+    <input type="hidden" name="ctl00$generic_masterpage1$hd_recruitement_date" id="generic_masterpage1_hd_recruitement_date" value="01" /> 
+    <span id="generic_masterpage1_lbl_User_Name"></span>
+    <span id="generic_masterpage1_lbl_Language"></span>
+    
+</div>
+
+
+<section class="welcome">
+<div class="aligner">
+	<div class="welcome_message">
+    	<h2><span id="lbl_disclaimer">Disclaimer</span></h2>
+        <p><span id="lbl_disclaimer_cont">This is the Official Website/Web portal of Odisha Sub-Ordinate Staff Selection Commission (OSSSC). This Website/Web portal has been developed by National Informatics Centre. OSSSC is the owner of this Website/Web portal &amp; the contents in this Website/Web portal are being provided and updated by the OSSSC. It is deemed that the visitors to this Website/Web portal have read, understood and agreed to be bound by the Privacy Policy and Usage Terms and Conditions of the Website/ Web portal. Any suggestions or queries in regard to this Website/Web portal may be sent to the Secretary, OSSSC. Ph: / Fax: 0674-2597155, E-mail:</span><img src="mail_osssc.png" alt="Mail for "/></p>
+    <div class="clr"></div>
+    </div>
+    
+    <div class="support_box">
+    	<h2><span id="lbl_hd_assistance">Happy to Assist !</span></h2>
+        <div class="supportbox">
+        	<h4><span id="lbl_tech_asst">For Technical Assistance call on</span></h4>
+            <h2><span id="lbl_telphone">0674-2597149</span></h2>
+            <h4>or email us on <img id="img_email" src="support_osssc.png" alt="support email"/></h4>
+            <h4><span id="lbl_adm_asst">For Administrative Assistance call on</span></h4>
+            <h2><span id="lbl_adm_phone">0674-2597106</span></h2>
+            <span id="lbl_tech_hour">between 10 AM to 5 PM on official days</span>
+        <div class="clr"></div>
+        </div>
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</section>
+
+<footer>
+<div class="footermenu">
+	<ul>
+    	<li><a href="Privacy_policy.html"><span id="lbl_privacy">Privacy Policy</span></a></li>
+        <li><a href="Usage_Terms.html"><span id="lbl_terms">Usage Terms & Condition</span></a></li>
+    </ul>
+</div>
+<div class="clr"></div>
+<div class="best_viewed"><span id="lbl_best_view">Site best viewed in I.E 9 or above, Mozilla 22.0 or above, Google Chrome 30.0 or above.</span></div>   
+<div class="clr"></div>
+<div class="copyright"><span id="lbl_copyright">All rights of this portal are vested with the Odisha Sub-Ordinate Staff-Selection Commission.</span></div>
+</footer>
+
+    <div class="ihide"><span id="lbl_disp_lang">1</span></div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"backgroundCssClass":"modalBackground","cancelControlID":"generic_masterpage1_btnClose","dynamicServicePath":"/Public/OSSSC/index.html","id":"generic_masterpage1_mp1","popupControlID":"generic_masterpage1_pnlPopup"}, null, null, $get("generic_masterpage1_btn1"));
+});
+//]]>
+</script>
+</form> 
+
+
+                
+</body>
+</html>

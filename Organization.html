@@ -1,0 +1,434 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="UTF-8"><title>
+	Odisha Sub-ordinate Staff Selection Commission|OSSSC
+</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="stylesheet" href="frontend-style.css" type="text/css"><link rel="stylesheet" href="font-awesome.min.css" type="text/css">
+
+<!--<script type='text/javascript' src='responsive-modernizr.js'></script>-->
+<script type="text/javascript" src="jquery-latest.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+    
+<!--for login hashing -->
+<script src="SHA1.js" defer="defer"></script>
+
+<!--Own Jquery Effects-->
+<script src="myeffects.js" defer="defer"></script>      
+
+
+<script lang="javascript" type="text/javascript" defer="defer">
+function noBack() { window.history.forward() }
+noBack();
+window.inhibited_load = noBack;
+window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+window.inhibited_unload = function () { void (0) }
+
+</script>
+<script lang="javascript" type="text/javascript" defer="defer">window.history.forward(1);</script>
+
+<script defer="defer">
+function On_Sametab() {
+    document.forms[0].target = "_self";
+}
+function On_Newtab() {
+    document.forms[0].target = "_blank";
+}
+function stopKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if (((evt.keyCode == 8) && (node.type != "text") && (node.type != "textarea") && (node.type != "password")) || evt.keyCode == 13)
+    { return false; }
+}
+</script>
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="EXPIRES" content="0">  
+<noscript><meta http-equiv="REFRESH" content="5; url=NoJavascript.html" /></noscript>
+<script>
+    function pageLoad() {
+
+        $(':input[type=password]').each(function () {
+            $(this).wrap("<div class='passwordboxx'></div>");
+            $(this).after("<div class='toggle_password'><i class='fa fa-eye' aria-hidden='true'></i></div>");
+        });
+
+        $('.toggle_password').mousedown(function () {
+            $(this).siblings(':input[type=password]').attr('type', 'text');
+        });
+        $('.toggle_password').mouseup(function () {
+            $(this).siblings(':input[type=text]').attr('type', 'password');
+        });
+
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var body_class = $.cookie("body_class");
+        if (body_class) {
+            chooseStyle(body_class);
+        }
+        else { chooseStyle('theme2'); }
+
+    });
+
+    function chooseStyle(color) {
+        //alert("color=" + color);
+        $("body").removeAttr('class');
+        $("body").addClass(color);
+        $.cookie("body_class", color, { path: '/' });
+    }
+
+</script>
+
+
+</head>
+<body ondrag="false" onkeydown="return stopKey(event)" class="theme2"> 
+<div class="loader" style="display: none;"></div>
+<form method="post" action="./Organization.html" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="555B66CF">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="TRD+CuupQRUEZy84487m3u4b/RE5A8/89YPOVoEaMVlq0NYvb+vvttvvNU2KdD1OLaQQBELauVvyF7hAotO+U0tWuAxAW4jGovo2tAyORvK07x4TJSVfvTcSWB9lrtD3yuw+QvadlyUHej9laUyFnc9L6KVEbNlCqHoh5pMjz5GilZCe">
+</div>
+
+
+<div class="topper">
+<div class="aligner">
+    
+	<div class="main_content"><a href="#data" style="display:inline-block;">Skip to Main Content</a> | <a href="screen-reader-access.html" style="display:inline-block;">Screen Reader</a></div>
+    <div class="option_panel">
+        <div class="languages">
+            <span id="lang"><span id="lbl_lang">Select Language :  </span></span>
+            <div class="language-wrapper">
+            <label><select name="ctl00$drp_lang" onchange="javascript:setTimeout('__doPostBack(\'ctl00$drp_lang\',\'\')', 0)" id="drp_lang" title="Select Language. " class="custom-selectt" onclick="On_Sametab();">
+	<option selected="selected" value="1">ENGLISH</option>
+
+</select></label>
+            </div>
+        <div class="clr"></div>   	
+        </div>
+        
+        <div class="font-resizer">
+            
+            <ul>
+                <li><a role="link" title="Decrease font size" id="minus">A<sup>-</sup></a></li>
+                <li><a role="link" title="Normal font size" id="normal">A<sup> </sup></a></li>
+                <li><a role="link" title="Increase font size" id="plus">A<sup>+</sup></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+        <div class="color_chooser">
+            <ul>
+                <li><span id="lbl_color">Select Color: : </span></li>
+                <li id="colorBlue"><a href="javascript:chooseStyle('theme1')"><div class="themebox1 patch"><span class="hide">Violet</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme2')"><div class="themebox2 patch"><span class="hide">Green</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme3')"><div class="themebox3 patch"><span class="hide">Gray</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme4')"><div class="themebox4 patch"><span class="hide">Reddish</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme5')"><div class="themebox5 patch"><span class="hide">Blue</span></div></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</div>
+
+
+
+<header class="myheader">
+<div class="aligner">
+		<div class="logo_holder">
+        	<div class="logo_icon"><a href="index.html"><img id="img_logo" alt="logo" src="govtlogo-trans_osssc.PNG"></a></div>
+            <div class="organization_name">
+            	<h1><span id="lbl_ofc_name">Odisha Sub-ordinate Staff Selection Commission</span></h1>
+                
+                <h3><span id="lbl_ofc_abbr">(OSSSC)</span>, <span id="lbl_govt_odisha">Govt. of Odisha</span></h3>
+            </div>
+        <div class="clr"></div>   
+        </div>
+        
+        <div class="user_option">
+        	<ul>
+            	<li><a href="Login.html" onclick="On_Sametab()"><i class="fa fa-lock"></i> <span id="lbl_login">Login</span></a></li>
+                <li><a href="Post_detail_information.html" onclick="On_Sametab()"><i class="fa fa-user-plus"></i> <span id="lbl_reg">Apply Online</span></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+<div class="clr"></div>
+</div>
+</header>
+
+<section class="navigation">
+<div class="aligner">
+<nav class="sujit-nav"><a id="pull" href="#">Menu</a>
+    
+    <ul class="menu">
+                    <li><a href="index.html"><span style="margin:0 0 0 0;">
+                    <img src="witte-home-icon.png" alt="Home"></span></a></li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu1">ABOUT US</span></a>
+                        <ul>
+                        <li><a href="About_Osssc.html"><span id="lbl_menu1_submenu1">OSSSC</span></a></li>
+                        <li><a href="Mission.html"><span id="lbl_menu1_submenu2">Mission</span></a></li>
+                        <li><a href="Organization.html"><span id="lbl_menu1_submenu3">Organization</span></a></li>
+                        <li><a href="Functionaries_Position.html"><span id="lbl_menu1_submenu4">Functionaries in Position</span></a></li>
+                        <li><a href="Job_Assignment.html"><span id="lbl_menu1_submenu5">Job Assignment</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu2">COMMISSION</span></a>
+                    	<ul>
+                        <li><a href="Formation.html"><span id="lbl_menu2_submenu1">Formation</span></a></li>
+                        <li><a href="Chairman.html"><span id="lbl_menu2_submenu2">Chairman</span></a></li>
+                        <li><a href="Members.html"><span id="lbl_menu2_submenu3">Members</span></a></li>
+                        <li><a href="Functions.html"><span id="lbl_menu2_submenu4">Functions</span></a></li>
+                        <li><a href="Incumbancy.html"><span id="lbl_menu2_submenu5">Incumbency</span></a></li>
+                        <li><a href="Boards_Committees.html"><span id="lbl_menu2_submenu6">Boards &amp; Committies</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu3">RECRUITMENT</span></a>
+                        <ul>
+                        <li><a href="Recruitment_calender.html"><span id="lbl_menu_recruit_calender">Recruitment Calender</span></a></li>
+                        <li><a href="VIEW_REGISTRATION_COPY.html"><span id="lbl_menu3_submenu6">View Registration Copy</span></a></li>
+						<li><a href="Old_Question_Papers.html">Old Questions</a></li>
+                        <li><a href="Scope.html"><span id="lbl_menu3_submenu1">Scope</span></a></li>
+                        <li><a href="Login.html"><span id="lbl_menu3_submenu2">Requisition</span></a></li> 
+                        <li><a href="Advertisements.html">
+                            <span id="lbl_menu3_submenu4">Advertisements</span></a></li>
+                        <li><a href="Notification.html">
+                            <span id="lbl_menu3_submenu5">Notifications</span></a></li>
+						<li><a href="Result.html">
+                            <span id="lbl_menu3_submenu_6">Results</span></a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="Tender.html"><span><span id="lbl_menu4">TENDERS &amp; QUOTATIONS</span></span></a></li>
+                    <li class="hassub"><a href="#"><span id="lbl_menu5">RULES</span></a>
+                    	<ul>
+                        <li><a href="Acts.html"><span id="lbl_menu5_submenu1">Acts</span></a></li>
+                        <li><a href="Rules.html"><span id="lbl_menu5_submenu2">Rules</span></a></li>
+                        <li><a href="Regulation.html"><span id="lbl_menu5_submenu3">Regulations</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="http://rtiodisha.in/pa/T1RILzIvMjAzNTUvMTk=" target="_blank" rel="noopener noreferrer"><span><span id="lbl_menu6">RTI</span></span></a></li>
+                    <li><a onclick="On_Newtab();" id="btn_Citizen" href="javascript:__doPostBack('ctl00$btn_Citizen','')">CITIZEN'S CHARTER</a></li>
+                    <li><a href="Contact_Osssc.html"><span id="lbl_contact">CONTACT US</span></a> </li>
+                </ul>
+<div class="clr"></div>
+</nav>
+<div class="clr"></div>
+</div>
+</section> 
+
+
+
+
+
+<section class="content" id="data">
+<div class="aligner">
+    	
+    <h1><span id="generic_masterpage1_lbl_head">The Organization</span></h1>
+    <p><span id="generic_masterpage1_lbl_cont">Dr. Lalit Das, IPS (Retd.), has assumed the charges of the Chairman of the Commission with effect from 24th October, 2024 ForeNoon by virtue of GA &amp; PG Notification No.GAD-FE-OSSSC-0001-2018-31405/Gen dt. 22.10.2024. The sanctioned strength and present position of the officers and staff are as follows:</span></p>
+          
+<div class="ihide"> 
+         
+</div>  
+    <div class="organization_table table_holder">
+        <table>
+            <tbody><tr>
+                <th><span id="generic_masterpage1_lbl_tlb_head_col1">SL No.</span></th>
+                <th><span id="generic_masterpage1_lbl_tlb_head_col2">Officers/Staff</span></th>
+                <th><span id="generic_masterpage1_lbl_tlb_head_col3">Sanction Strength</span></th>
+                <th><span id="generic_masterpage1_lbl_tlb_head_col4">Present Position</span></th>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row11_cont">1</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row12_cont">Secretary</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row13_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row13_cont2">1</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row14_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row14_cont2">0</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row21_cont">2</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row22_cont">Deputy Secretary</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row23_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row23_cont2">1</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row24_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row24_cont2">1</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row31_cont">3</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row32_cont">Under Secretary</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row33_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row33_cont2">1</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row34_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row34_cont2">1</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row41_cont">4</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row42_cont">Account Officer</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row43_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row43_cont2">1</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row44_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row44_cont2">1</span></td>
+            </tr>
+			<tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row151_cont">5</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row152_cont">Establishment Officer</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row153_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row153_cont2">1</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row154_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row154_cont2">Vacant</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row51_cont">6</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row52_cont">Section Officer</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row53_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row53_cont2">3</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row54_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row54_cont2">1</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row61_cont">7</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row62_cont">Asst. Section Officer</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row63_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row63_cont2">6</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row64_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row64_cont2">4</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row71_cont">8</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row72_cont">Jr. Assistant</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row73_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row73_cont2">6</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row74_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row74_cont2">Vacant</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row81_cont">9</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row82_cont">Statistical Assistant</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row83_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row83_cont2">1</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row84_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row84_cont2">Vacant</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row91_cont">10</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row92_cont">Programmer</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row93_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row93_cont2">1</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row94_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row94_cont2">Vacant</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row101_cont">11</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row102_cont">P.S</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row103_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row103_cont2">1</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row104_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row104_cont2">Vacant</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row111_cont">12</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row112_cont">P.A</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row113_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row113_cont2">2</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row114_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row114_cont2">1</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row121_cont">13</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row122_cont">Sr. Stenographer</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row123_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row123_cont2">3</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row124_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row124_cont2">Vacant</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row131_cont">14</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row132_cont">Jr. Stenographer</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row133_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row133_cont2">2</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row134_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row134_cont2">Vacant</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row141_cont">15</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row142_cont">Diarist-cum-Despatcher</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row143_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row143_cont2">1</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row144_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row144_cont2">Vacant</span></td>
+            </tr>
+            
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row161_cont">16</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row162_cont">Driver</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row163_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row163_cont2">3</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row164_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row164_cont2">3 (Outsourced)</span></td>
+            </tr>
+            <tr>
+                <td><span id="generic_masterpage1_lbl_tlb_row171_cont">17</span></td>
+                <td><span id="generic_masterpage1_lbl_tlb_row172_cont">Peon</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row173_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row173_cont2">10</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row174_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row174_cont2">9 (Outsourced)</span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><span id="generic_masterpage1_lbl_tlb_row181_cont">Total</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row182_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row182_cont2">44</span></td>
+                <td><span class="hidden"><span id="generic_masterpage1_lbl_tlb_row183_cont1"></span></span><span id="generic_masterpage1_lbl_tlb_row183_cont2">22</span></td>
+            </tr>
+        </tbody></table>
+    <div class="clr"></div>
+    </div>
+
+<div class="clr"></div>
+</div>
+</section>
+
+
+
+<section class="welcome">
+<div class="aligner">
+	<div class="welcome_message">
+    	<h2><span id="lbl_disclaimer">Disclaimer</span></h2>
+        <p><span id="lbl_disclaimer_cont">This is the Official Website/Web portal of Odisha Sub-Ordinate Staff Selection Commission (OSSSC). This Website/Web portal has been developed by National Informatics Centre. OSSSC is the owner of this Website/Web portal &amp; the contents in this Website/Web portal are being provided and updated by the OSSSC. It is deemed that the visitors to this Website/Web portal have read, understood and agreed to be bound by the Privacy Policy and Usage Terms and Conditions of the Website/ Web portal. Any suggestions or queries in regard to this Website/Web portal may be sent to the Secretary, OSSSC. Ph: / Fax: 0674-2597155, E-mail:</span><img src="mail_osssc.png" alt="Mail for "></p>
+    <div class="clr"></div>
+    </div>
+    
+    <div class="support_box">
+    	<h2><span id="lbl_hd_assistance">Happy to Assist !</span></h2>
+        <div class="supportbox">
+        	<h4><span id="lbl_tech_asst">For Technical Assistance call on</span></h4>
+            <h2><span id="lbl_telphone">0674-2597149</span></h2>
+            <h4>or email us on <img id="img_email" src="support_osssc.png" alt="support email"></h4>
+            <h4><span id="lbl_adm_asst">For Administrative Assistance call on</span></h4>
+            <h2><span id="lbl_adm_phone">0674-2597106</span></h2>
+            <span id="lbl_tech_hour">between 10 AM to 5 PM on official days</span>
+        <div class="clr"></div>
+        </div>
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</section>
+
+<footer>
+<div class="footermenu">
+	<ul>
+    	<li><a href="Privacy_policy.html"><span id="lbl_privacy">Privacy Policy</span></a></li>
+        <li><a href="Usage_Terms.html"><span id="lbl_terms">Usage Terms &amp; Condition</span></a></li>
+    </ul>
+</div>
+<div class="clr"></div>
+<div class="best_viewed"><span id="lbl_best_view">Site best viewed in I.E 9 or above, Mozilla 22.0 or above, Google Chrome 30.0 or above.</span></div>   
+<div class="clr"></div>
+<div class="copyright"><span id="lbl_copyright">All rights of this portal are vested with the Odisha Sub-Ordinate Staff-Selection Commission.</span></div>
+</footer>
+
+    <div class="ihide"><span id="lbl_disp_lang">1</span></div>
+</form> 
+
+
+                
+
+
+</body></html>

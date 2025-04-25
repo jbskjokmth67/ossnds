@@ -1,0 +1,315 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="UTF-8"><title>
+	Odisha Sub-ordinate Staff Selection Commission|OSSSC
+</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="stylesheet" href="frontend-style.css" type="text/css"><link rel="stylesheet" href="font-awesome.min.css" type="text/css">
+
+<!--<script type='text/javascript' src='responsive-modernizr.js'></script>-->
+<script type="text/javascript" src="jquery-latest.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+    
+<!--for login hashing -->
+<script src="SHA1.js" defer="defer"></script>
+
+<!--Own Jquery Effects-->
+<script src="myeffects.js" defer="defer"></script>      
+
+
+<script lang="javascript" type="text/javascript" defer="defer">
+function noBack() { window.history.forward() }
+noBack();
+window.inhibited_load = noBack;
+window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+window.inhibited_unload = function () { void (0) }
+
+</script>
+<script lang="javascript" type="text/javascript" defer="defer">window.history.forward(1);</script>
+
+<script defer="defer">
+function On_Sametab() {
+    document.forms[0].target = "_self";
+}
+function On_Newtab() {
+    document.forms[0].target = "_blank";
+}
+function stopKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if (((evt.keyCode == 8) && (node.type != "text") && (node.type != "textarea") && (node.type != "password")) || evt.keyCode == 13)
+    { return false; }
+}
+</script>
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="EXPIRES" content="0">  
+<noscript><meta http-equiv="REFRESH" content="5; url=NoJavascript.html" /></noscript>
+<script>
+    function pageLoad() {
+
+        $(':input[type=password]').each(function () {
+            $(this).wrap("<div class='passwordboxx'></div>");
+            $(this).after("<div class='toggle_password'><i class='fa fa-eye' aria-hidden='true'></i></div>");
+        });
+
+        $('.toggle_password').mousedown(function () {
+            $(this).siblings(':input[type=password]').attr('type', 'text');
+        });
+        $('.toggle_password').mouseup(function () {
+            $(this).siblings(':input[type=text]').attr('type', 'password');
+        });
+
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var body_class = $.cookie("body_class");
+        if (body_class) {
+            chooseStyle(body_class);
+        }
+        else { chooseStyle('theme2'); }
+
+    });
+
+    function chooseStyle(color) {
+        //alert("color=" + color);
+        $("body").removeAttr('class');
+        $("body").addClass(color);
+        $.cookie("body_class", color, { path: '/' });
+    }
+
+</script>
+
+
+</head>
+<body ondrag="false" onkeydown="return stopKey(event)" class="theme2"> 
+<div class="loader" style="display: none;"></div>
+<form method="post" action="./Usage_Terms.html" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A0349F3">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Vizb1xQxbvG/sdqUCeMA8zuECfRbmDU7de1QAoBIqfhKpgEmTRj/p4YWKhAWuC1Lky/UAZPNIO8k1lYJ9dI2Kmuj6d7LRzkJlMWFTCvGfjYBhUL9vXKCxBNUxLwTLznkjKMnxt4SfamlUyFvNee1orFC9Wav1mP7UL2aGXCJWZewmVw5">
+</div>
+
+
+<div class="topper">
+<div class="aligner">
+    
+	<div class="main_content"><a href="#data" style="display:inline-block;">Skip to Main Content</a> | <a href="screen-reader-access.html" style="display:inline-block;">Screen Reader</a></div>
+    <div class="option_panel">
+        <div class="languages">
+            <span id="lang"><span id="lbl_lang">Select Language :  </span></span>
+            <div class="language-wrapper">
+            <label><select name="ctl00$drp_lang" onchange="javascript:setTimeout('__doPostBack(\'ctl00$drp_lang\',\'\')', 0)" id="drp_lang" title="Select Language. " class="custom-selectt" onclick="On_Sametab();">
+	<option selected="selected" value="1">ENGLISH</option>
+
+</select></label>
+            </div>
+        <div class="clr"></div>   	
+        </div>
+        
+        <div class="font-resizer">
+            
+            <ul>
+                <li><a role="link" title="Decrease font size" id="minus">A<sup>-</sup></a></li>
+                <li><a role="link" title="Normal font size" id="normal">A<sup> </sup></a></li>
+                <li><a role="link" title="Increase font size" id="plus">A<sup>+</sup></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+        <div class="color_chooser">
+            <ul>
+                <li><span id="lbl_color">Select Color: : </span></li>
+                <li id="colorBlue"><a href="javascript:chooseStyle('theme1')"><div class="themebox1 patch"><span class="hide">Violet</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme2')"><div class="themebox2 patch"><span class="hide">Green</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme3')"><div class="themebox3 patch"><span class="hide">Gray</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme4')"><div class="themebox4 patch"><span class="hide">Reddish</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme5')"><div class="themebox5 patch"><span class="hide">Blue</span></div></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</div>
+
+
+
+<header class="myheader">
+<div class="aligner">
+		<div class="logo_holder">
+        	<div class="logo_icon"><a href="index.html"><img id="img_logo" alt="logo" src="govtlogo-trans_osssc.PNG"></a></div>
+            <div class="organization_name">
+            	<h1><span id="lbl_ofc_name">Odisha Sub-ordinate Staff Selection Commission</span></h1>
+                
+                <h3><span id="lbl_ofc_abbr">(OSSSC)</span>, <span id="lbl_govt_odisha">Govt. of Odisha</span></h3>
+            </div>
+        <div class="clr"></div>   
+        </div>
+        
+        <div class="user_option">
+        	<ul>
+            	<li><a href="Login.html" onclick="On_Sametab()"><i class="fa fa-lock"></i> <span id="lbl_login">Login</span></a></li>
+                <li><a href="Post_detail_information.html" onclick="On_Sametab()"><i class="fa fa-user-plus"></i> <span id="lbl_reg">Apply Online</span></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+<div class="clr"></div>
+</div>
+</header>
+
+<section class="navigation">
+<div class="aligner">
+<nav class="sujit-nav"><a id="pull" href="#">Menu</a>
+    
+    <ul class="menu">
+                    <li><a href="index.html"><span style="margin:0 0 0 0;">
+                    <img src="witte-home-icon.png" alt="Home"></span></a></li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu1">ABOUT US</span></a>
+                        <ul>
+                        <li><a href="About_Osssc.html"><span id="lbl_menu1_submenu1">OSSSC</span></a></li>
+                        <li><a href="Mission.html"><span id="lbl_menu1_submenu2">Mission</span></a></li>
+                        <li><a href="Organization.html"><span id="lbl_menu1_submenu3">Organization</span></a></li>
+                        <li><a href="Functionaries_Position.html"><span id="lbl_menu1_submenu4">Functionaries in Position</span></a></li>
+                        <li><a href="Job_Assignment.html"><span id="lbl_menu1_submenu5">Job Assignment</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu2">COMMISSION</span></a>
+                    	<ul>
+                        <li><a href="Formation.html"><span id="lbl_menu2_submenu1">Formation</span></a></li>
+                        <li><a href="Chairman.html"><span id="lbl_menu2_submenu2">Chairman</span></a></li>
+                        <li><a href="Members.html"><span id="lbl_menu2_submenu3">Members</span></a></li>
+                        <li><a href="Functions.html"><span id="lbl_menu2_submenu4">Functions</span></a></li>
+                        <li><a href="Incumbancy.html"><span id="lbl_menu2_submenu5">Incumbency</span></a></li>
+                        <li><a href="Boards_Committees.html"><span id="lbl_menu2_submenu6">Boards &amp; Committies</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu3">RECRUITMENT</span></a>
+                        <ul>
+                        <li><a href="Recruitment_calender.html"><span id="lbl_menu_recruit_calender">Recruitment Calender</span></a></li>
+                        <li><a href="VIEW_REGISTRATION_COPY.html"><span id="lbl_menu3_submenu6">View Registration Copy</span></a></li>
+						<li><a href="Old_Question_Papers.html">Old Questions</a></li>
+                        <li><a href="Scope.html"><span id="lbl_menu3_submenu1">Scope</span></a></li>
+                        <li><a href="Login.html"><span id="lbl_menu3_submenu2">Requisition</span></a></li> 
+                        <li><a href="Advertisements.html">
+                            <span id="lbl_menu3_submenu4">Advertisements</span></a></li>
+                        <li><a href="Notification.html">
+                            <span id="lbl_menu3_submenu5">Notifications</span></a></li>
+						<li><a href="Result.html">
+                            <span id="lbl_menu3_submenu_6">Results</span></a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="Tender.html"><span><span id="lbl_menu4">TENDERS &amp; QUOTATIONS</span></span></a></li>
+                    <li class="hassub"><a href="#"><span id="lbl_menu5">RULES</span></a>
+                    	<ul>
+                        <li><a href="Acts.html"><span id="lbl_menu5_submenu1">Acts</span></a></li>
+                        <li><a href="Rules.html"><span id="lbl_menu5_submenu2">Rules</span></a></li>
+                        <li><a href="Regulation.html"><span id="lbl_menu5_submenu3">Regulations</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="http://rtiodisha.in/pa/T1RILzIvMjAzNTUvMTk=" target="_blank" rel="noopener noreferrer"><span><span id="lbl_menu6">RTI</span></span></a></li>
+                    <li><a onclick="On_Newtab();" id="btn_Citizen" href="javascript:__doPostBack('ctl00$btn_Citizen','')">CITIZEN'S CHARTER</a></li>
+                    <li><a href="Contact_Osssc.html"><span id="lbl_contact">CONTACT US</span></a> </li>
+                </ul>
+<div class="clr"></div>
+</nav>
+<div class="clr"></div>
+</div>
+</section> 
+
+
+
+ 
+    
+<section class="content" id="data"> 
+<div class="aligner">
+        
+<div class="ihide"><span id="generic_masterpage1_lbl_domain"></span></div>
+<h1><span id="generic_masterpage1_lbl_head">Website/Web portal Usage Terms and Conditions </span></h1>
+<span id="generic_masterpage1_lbl_terms_cont"></span>
+
+ <div id="generic_masterpage1_div_cont"><p>I understand and accept that the OSSSC maintains the Website/Web portal http://www.osssc.gov.in , hereinafter referred to as “the Site” or “the Portal” or “Website” or “Web portal”, to provide the visitors with information about it, its services and to facilitate communication with OSSSC and availing its services. I also accept that the visitors to the site are required to read the terms and conditions and the use of the site constitutes the visitors’ acceptance and agreement to be bound by such terms and conditions and the changes therein to the terms and conditions of usage of the website made from time to time as communicated and made available on the OSSSC website.</p><p>I am aware and accept that all information, content, materials, products, including, but not limited to text, content, photographs, graphics, video and audio contents, on the OSSSC Website is/are protected in the favor of OSSSC.
+</p><p>I understand and accept that all information submitted by the visitors or collected through the OSSSC website shall be deemed to be the property of the OSSSC and the OSSSC shall be free to use the same in any manner lawfully.</p><p>I agree that I shall not copy, reproduce, sell, redistribute, publish, enter into a database, display, perform, modify, transmit, license, create derivatives from, transfer or in any way exploit any part of any information, content, materials, services available from or through the OSSSC website, except that which I may download for my own personal, non-commercial use.</p><p>I agree that I will not use the OSSSC Website for any purpose that is unlawful, or prohibited by these terms and conditions of website usage. I also agree I will not use the OSSSC Website in any manner that could damage, disable or impair the website or interfere with any other party's use or enjoyment of the Website.</p><p>I acknowledge that the software and hardware underlying the OSSSC Website as well as other internet related software which are required for accessing the website are the legal property of the respective vendors/OSSSC. The permission given by the OSSSC to access the OSSSC website will not convey any proprietary or ownership rights in the above software/hardware. I agree that I shall not attempt to modify, translate, disassemble, decompile or reverse engineer the software/hardware underlying the OSSSC Website or create any derivative product based on the software/hardware.</p><p>I understand and accept that all the services offered on this Website are not available in all geographical areas and I may not be eligible for all the services offered by the OSSSC on its website. The OSSSC reserves the rights to determine the availability and the visitors’ eligibility to access any service.</p><p>I am aware that the OSSSC website proposes to use encrypted/unencrypted persistent/temporary "cookies", which are small data files that a website stores on my computer, to improve the visitors’ experience and to provide site functionalities on the website. By visiting the website, I acknowledge, accept and expressly authorize the OSSSC for the placement of cookies on my computer.</p><p>I understand and accept that the OSSSC is not responsible for the nature and extent of availability of the content or other services on third party sites linked from the OSSSC Website. I am aware that my access of hyperlinks to other internet sites are at my own risk and the content, accuracy, opinions expressed, and other links provided by these sites are not verified, monitored or endorsed by the OSSSC in any way. The OSSSC does not make any warranties and expressly disclaims all warranties expressed or implied, including without limitation those of merchantability and fitness for a particular purpose, title or non-infringement with respect to any information or services or products that are available or advertised or sold through these third party websites.</p><p>The OSSSC shall not be liable if any website services do not fructify or are not be completed or to any failure on part its part to perform any of its obligations under these terms and conditions or those applicable specifically to its services/facilities or if performance/access to the Website is prevented, hindered or delayed by a force majeure event, as defined below; and in such case its obligations shall be suspended for so long as the force majeure event continues; and I understand, agrees and accept that the OSSSC does not maintain or furnish any such records/data/information claimed in this regard by anybody.</p><p>“Force Majeure Event” means any event due to any cause including without limitations, unavailability of any communication systems, breach, or virus in the processes or payment or delivery mechanism, sabotage, fire, flood, explosion, acts of god, civil commotion, strikes or industrial action of any kind, riots, insurrection, war, acts of government, computer hacking, unauthorized access to computer data and storage devices, computer crashes, software application/system crashes, software application/system modifications/ changes /maintenance/ upgradation, malfunctioning in the computer/software applications/software systems  or the computer/software applications/software systems  getting affected by any malicious, destructive or corrupting code or program, mechanical or technical errors/failures or power shut downs, faults or failures in telecommunication etc.</p><p>I understand and accept that the OSSSC has the absolute discretion to amend or add or delete or supplement any of the terms and conditions of website usage at any time without any prior notice for such changes. By using the website services, I shall be deemed to have accepted the terms and conditions of the changed website usage.</p><p>I accept that the Courts within the limits of Bhubaneswar alone shall have exclusive jurisdiction with regard to any claim or matter arising out of dealings with the OSSSC and all disputes will be governed by the laws and acts of India.</p><p>I understand and agree that these terms and conditions of website usage are in addition to, and not in derogation of, the applicable terms and conditions relating to my usage of any other OSSSC services that I may be currently availing or may in the future avail, including without limitation any online services.</p></div> 
+
+<div class="clr"></div>
+</div>
+<div class="clr"></div>
+</section>
+
+
+
+<section class="welcome">
+<div class="aligner">
+	<div class="welcome_message">
+    	<h2><span id="lbl_disclaimer">Disclaimer</span></h2>
+        <p><span id="lbl_disclaimer_cont">This is the Official Website/Web portal of Odisha Sub-Ordinate Staff Selection Commission (OSSSC). This Website/Web portal has been developed by National Informatics Centre. OSSSC is the owner of this Website/Web portal &amp; the contents in this Website/Web portal are being provided and updated by the OSSSC. It is deemed that the visitors to this Website/Web portal have read, understood and agreed to be bound by the Privacy Policy and Usage Terms and Conditions of the Website/ Web portal. Any suggestions or queries in regard to this Website/Web portal may be sent to the Secretary, OSSSC. Ph: / Fax: 0674-2597155, E-mail:</span><img src="mail_osssc.png" alt="Mail for "></p>
+    <div class="clr"></div>
+    </div>
+    
+    <div class="support_box">
+    	<h2><span id="lbl_hd_assistance">Happy to Assist !</span></h2>
+        <div class="supportbox">
+        	<h4><span id="lbl_tech_asst">For Technical Assistance call on</span></h4>
+            <h2><span id="lbl_telphone">0674-2597149</span></h2>
+            <h4>or email us on <img id="img_email" src="support_osssc.png" alt="support email"></h4>
+            <h4><span id="lbl_adm_asst">For Administrative Assistance call on</span></h4>
+            <h2><span id="lbl_adm_phone">0674-2597106</span></h2>
+            <span id="lbl_tech_hour">between 10 AM to 5 PM on official days</span>
+        <div class="clr"></div>
+        </div>
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</section>
+
+<footer>
+<div class="footermenu">
+	<ul>
+    	<li><a href="Privacy_policy.html"><span id="lbl_privacy">Privacy Policy</span></a></li>
+        <li><a href="Usage_Terms.html"><span id="lbl_terms">Usage Terms &amp; Condition</span></a></li>
+    </ul>
+</div>
+<div class="clr"></div>
+<div class="best_viewed"><span id="lbl_best_view">Site best viewed in I.E 9 or above, Mozilla 22.0 or above, Google Chrome 30.0 or above.</span></div>   
+<div class="clr"></div>
+<div class="copyright"><span id="lbl_copyright">All rights of this portal are vested with the Odisha Sub-Ordinate Staff-Selection Commission.</span></div>
+</footer>
+
+    <div class="ihide"><span id="lbl_disp_lang">1</span></div>
+</form> 
+
+
+                
+
+
+</body></html>

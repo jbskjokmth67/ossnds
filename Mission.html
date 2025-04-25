@@ -1,0 +1,312 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="UTF-8"><title>
+	Odisha Sub-ordinate Staff Selection Commission|OSSSC
+</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="stylesheet" href="frontend-style.css" type="text/css"><link rel="stylesheet" href="font-awesome.min.css" type="text/css">
+
+<!--<script type='text/javascript' src='responsive-modernizr.js'></script>-->
+<script type="text/javascript" src="jquery-latest.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+    
+<!--for login hashing -->
+<script src="SHA1.js" defer="defer"></script>
+
+<!--Own Jquery Effects-->
+<script src="myeffects.js" defer="defer"></script>      
+
+
+<script lang="javascript" type="text/javascript" defer="defer">
+function noBack() { window.history.forward() }
+noBack();
+window.inhibited_load = noBack;
+window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+window.inhibited_unload = function () { void (0) }
+
+</script>
+<script lang="javascript" type="text/javascript" defer="defer">window.history.forward(1);</script>
+
+<script defer="defer">
+function On_Sametab() {
+    document.forms[0].target = "_self";
+}
+function On_Newtab() {
+    document.forms[0].target = "_blank";
+}
+function stopKey(evt) {
+    var evt = (evt) ? evt : ((event) ? event : null);
+    var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+    if (((evt.keyCode == 8) && (node.type != "text") && (node.type != "textarea") && (node.type != "password")) || evt.keyCode == 13)
+    { return false; }
+}
+</script>
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="EXPIRES" content="0">  
+<noscript><meta http-equiv="REFRESH" content="5; url=NoJavascript.html" /></noscript>
+<script>
+    function pageLoad() {
+
+        $(':input[type=password]').each(function () {
+            $(this).wrap("<div class='passwordboxx'></div>");
+            $(this).after("<div class='toggle_password'><i class='fa fa-eye' aria-hidden='true'></i></div>");
+        });
+
+        $('.toggle_password').mousedown(function () {
+            $(this).siblings(':input[type=password]').attr('type', 'text');
+        });
+        $('.toggle_password').mouseup(function () {
+            $(this).siblings(':input[type=text]').attr('type', 'password');
+        });
+
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var body_class = $.cookie("body_class");
+        if (body_class) {
+            chooseStyle(body_class);
+        }
+        else { chooseStyle('theme2'); }
+
+    });
+
+    function chooseStyle(color) {
+        //alert("color=" + color);
+        $("body").removeAttr('class');
+        $("body").addClass(color);
+        $.cookie("body_class", color, { path: '/' });
+    }
+
+</script>
+
+
+</head>
+<body ondrag="false" onkeydown="return stopKey(event)" class="theme2"> 
+<div class="loader" style="display: none;"></div>
+<form method="post" action="./Mission.html" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2519DCAF">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="GsBxIxjJnxgDLryHUDo74r6EONekej1nS55lvVoaprtnXIHrWqkb8oE+6QT6aY2On3bGaoC/8UxUNw2sv05eqlpqwBlkZ8+r/D0KxEvkY4kGfj/mSxYqBgDyfLuGoMbVTnKDZ5EvpVGlN4kwpLsLtv/okKdB5SDdZZJepHfYpiU4yg49">
+</div>
+
+
+<div class="topper">
+<div class="aligner">
+    
+	<div class="main_content"><a href="#data" style="display:inline-block;">Skip to Main Content</a> | <a href="screen-reader-access.html" style="display:inline-block;">Screen Reader</a></div>
+    <div class="option_panel">
+        <div class="languages">
+            <span id="lang"><span id="lbl_lang">Select Language :  </span></span>
+            <div class="language-wrapper">
+            <label><select name="ctl00$drp_lang" onchange="javascript:setTimeout('__doPostBack(\'ctl00$drp_lang\',\'\')', 0)" id="drp_lang" title="Select Language. " class="custom-selectt" onclick="On_Sametab();">
+	<option selected="selected" value="1">ENGLISH</option>
+
+</select></label>
+            </div>
+        <div class="clr"></div>   	
+        </div>
+        
+        <div class="font-resizer">
+            
+            <ul>
+                <li><a role="link" title="Decrease font size" id="minus">A<sup>-</sup></a></li>
+                <li><a role="link" title="Normal font size" id="normal">A<sup> </sup></a></li>
+                <li><a role="link" title="Increase font size" id="plus">A<sup>+</sup></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+        <div class="color_chooser">
+            <ul>
+                <li><span id="lbl_color">Select Color: : </span></li>
+                <li id="colorBlue"><a href="javascript:chooseStyle('theme1')"><div class="themebox1 patch"><span class="hide">Violet</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme2')"><div class="themebox2 patch"><span class="hide">Green</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme3')"><div class="themebox3 patch"><span class="hide">Gray</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme4')"><div class="themebox4 patch"><span class="hide">Reddish</span></div></a></li>
+                <li><a href="javascript:chooseStyle('theme5')"><div class="themebox5 patch"><span class="hide">Blue</span></div></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+        
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</div>
+
+
+
+<header class="myheader">
+<div class="aligner">
+		<div class="logo_holder">
+        	<div class="logo_icon"><a href="index.html"><img id="img_logo" alt="logo" src="govtlogo-trans_osssc.PNG"></a></div>
+            <div class="organization_name">
+            	<h1><span id="lbl_ofc_name">Odisha Sub-ordinate Staff Selection Commission</span></h1>
+                
+                <h3><span id="lbl_ofc_abbr">(OSSSC)</span>, <span id="lbl_govt_odisha">Govt. of Odisha</span></h3>
+            </div>
+        <div class="clr"></div>   
+        </div>
+        
+        <div class="user_option">
+        	<ul>
+            	<li><a href="Login.html" onclick="On_Sametab()"><i class="fa fa-lock"></i> <span id="lbl_login">Login</span></a></li>
+                <li><a href="Post_detail_information.html" onclick="On_Sametab()"><i class="fa fa-user-plus"></i> <span id="lbl_reg">Apply Online</span></a></li>
+            </ul>
+        <div class="clr"></div>
+        </div>
+<div class="clr"></div>
+</div>
+</header>
+
+<section class="navigation">
+<div class="aligner">
+<nav class="sujit-nav"><a id="pull" href="#">Menu</a>
+    
+    <ul class="menu">
+                    <li><a href="index.html"><span style="margin:0 0 0 0;">
+                    <img src="witte-home-icon.png" alt="Home"></span></a></li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu1">ABOUT US</span></a>
+                        <ul>
+                        <li><a href="About_Osssc.html"><span id="lbl_menu1_submenu1">OSSSC</span></a></li>
+                        <li><a href="Mission.html"><span id="lbl_menu1_submenu2">Mission</span></a></li>
+                        <li><a href="Organization.html"><span id="lbl_menu1_submenu3">Organization</span></a></li>
+                        <li><a href="Functionaries_Position.html"><span id="lbl_menu1_submenu4">Functionaries in Position</span></a></li>
+                        <li><a href="Job_Assignment.html"><span id="lbl_menu1_submenu5">Job Assignment</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu2">COMMISSION</span></a>
+                    	<ul>
+                        <li><a href="Formation.html"><span id="lbl_menu2_submenu1">Formation</span></a></li>
+                        <li><a href="Chairman.html"><span id="lbl_menu2_submenu2">Chairman</span></a></li>
+                        <li><a href="Members.html"><span id="lbl_menu2_submenu3">Members</span></a></li>
+                        <li><a href="Functions.html"><span id="lbl_menu2_submenu4">Functions</span></a></li>
+                        <li><a href="Incumbancy.html"><span id="lbl_menu2_submenu5">Incumbency</span></a></li>
+                        <li><a href="Boards_Committees.html"><span id="lbl_menu2_submenu6">Boards &amp; Committies</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hassub"><a href="#"><span id="lbl_menu3">RECRUITMENT</span></a>
+                        <ul>
+                        <li><a href="Recruitment_calender.html"><span id="lbl_menu_recruit_calender">Recruitment Calender</span></a></li>
+                        <li><a href="VIEW_REGISTRATION_COPY.html"><span id="lbl_menu3_submenu6">View Registration Copy</span></a></li>
+						<li><a href="Old_Question_Papers.html">Old Questions</a></li>
+                        <li><a href="Scope.html"><span id="lbl_menu3_submenu1">Scope</span></a></li>
+                        <li><a href="Login.html"><span id="lbl_menu3_submenu2">Requisition</span></a></li> 
+                        <li><a href="Advertisements.html">
+                            <span id="lbl_menu3_submenu4">Advertisements</span></a></li>
+                        <li><a href="Notification.html">
+                            <span id="lbl_menu3_submenu5">Notifications</span></a></li>
+						<li><a href="Result.html">
+                            <span id="lbl_menu3_submenu_6">Results</span></a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="Tender.html"><span><span id="lbl_menu4">TENDERS &amp; QUOTATIONS</span></span></a></li>
+                    <li class="hassub"><a href="#"><span id="lbl_menu5">RULES</span></a>
+                    	<ul>
+                        <li><a href="Acts.html"><span id="lbl_menu5_submenu1">Acts</span></a></li>
+                        <li><a href="Rules.html"><span id="lbl_menu5_submenu2">Rules</span></a></li>
+                        <li><a href="Regulation.html"><span id="lbl_menu5_submenu3">Regulations</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="http://rtiodisha.in/pa/T1RILzIvMjAzNTUvMTk=" target="_blank" rel="noopener noreferrer"><span><span id="lbl_menu6">RTI</span></span></a></li>
+                    <li><a onclick="On_Newtab();" id="btn_Citizen" href="javascript:__doPostBack('ctl00$btn_Citizen','')">CITIZEN'S CHARTER</a></li>
+                    <li><a href="Contact_Osssc.html"><span id="lbl_contact">CONTACT US</span></a> </li>
+                </ul>
+<div class="clr"></div>
+</nav>
+<div class="clr"></div>
+</div>
+</section> 
+
+
+
+
+
+<section class="content" id="data">
+<div class="aligner">
+    <h1><span id="generic_masterpage1_lbl_head">Our Mission</span></h1>
+    <p><span id="generic_masterpage1_lbl_cont">The Commission intends to regulate the method of recruitment to all Group - B &amp; C Civil posts and Services under different district offices of Government of Odisha. The Commission endeavors to bring about uniformity in the method of examinations, question setting, evaluation and declaration of results with a view to provide quality manpower to work at the grass-root level of the administration.</span></p>
+<div class="clr"></div>
+    
+<div class="ihide"> 
+         
+</div>
+</div>
+</section>
+
+
+
+<section class="welcome">
+<div class="aligner">
+	<div class="welcome_message">
+    	<h2><span id="lbl_disclaimer">Disclaimer</span></h2>
+        <p><span id="lbl_disclaimer_cont">This is the Official Website/Web portal of Odisha Sub-Ordinate Staff Selection Commission (OSSSC). This Website/Web portal has been developed by National Informatics Centre. OSSSC is the owner of this Website/Web portal &amp; the contents in this Website/Web portal are being provided and updated by the OSSSC. It is deemed that the visitors to this Website/Web portal have read, understood and agreed to be bound by the Privacy Policy and Usage Terms and Conditions of the Website/ Web portal. Any suggestions or queries in regard to this Website/Web portal may be sent to the Secretary, OSSSC. Ph: / Fax: 0674-2597155, E-mail:</span><img src="mail_osssc.png" alt="Mail for "></p>
+    <div class="clr"></div>
+    </div>
+    
+    <div class="support_box">
+    	<h2><span id="lbl_hd_assistance">Happy to Assist !</span></h2>
+        <div class="supportbox">
+        	<h4><span id="lbl_tech_asst">For Technical Assistance call on</span></h4>
+            <h2><span id="lbl_telphone">0674-2597149</span></h2>
+            <h4>or email us on <img id="img_email" src="support_osssc.png" alt="support email"></h4>
+            <h4><span id="lbl_adm_asst">For Administrative Assistance call on</span></h4>
+            <h2><span id="lbl_adm_phone">0674-2597106</span></h2>
+            <span id="lbl_tech_hour">between 10 AM to 5 PM on official days</span>
+        <div class="clr"></div>
+        </div>
+    <div class="clr"></div>
+    </div>
+<div class="clr"></div>
+</div>
+</section>
+
+<footer>
+<div class="footermenu">
+	<ul>
+    	<li><a href="Privacy_policy.html"><span id="lbl_privacy">Privacy Policy</span></a></li>
+        <li><a href="Usage_Terms.html"><span id="lbl_terms">Usage Terms &amp; Condition</span></a></li>
+    </ul>
+</div>
+<div class="clr"></div>
+<div class="best_viewed"><span id="lbl_best_view">Site best viewed in I.E 9 or above, Mozilla 22.0 or above, Google Chrome 30.0 or above.</span></div>   
+<div class="clr"></div>
+<div class="copyright"><span id="lbl_copyright">All rights of this portal are vested with the Odisha Sub-Ordinate Staff-Selection Commission.</span></div>
+</footer>
+
+    <div class="ihide"><span id="lbl_disp_lang">1</span></div>
+</form> 
+
+
+                
+
+
+</body></html>
