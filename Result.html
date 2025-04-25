@@ -279,39 +279,6 @@ function __doPostBack(eventTarget, eventArgument) {
         </table>
     </div>
 </div>
-
-<script>
-function showResult() {
-    const roll = document.getElementById('roll').value.trim();
-    const dob = document.getElementById('dob').value;
-
-    // Dummy data simulation
-    const results = [
-        { name: 'Tusar Mohanty', roll: roll, post: 'Junior Assistant', remark: 'Qualified' },
-        { name: 'Suman Das', roll: '23456', post: 'Data Entry Operator', remark: 'Not Qualified' },
-        { name: 'Pooja Kumari', roll: '34567', post: 'Clerk', remark: 'Qualified' }
-    ];
-
-    const resultBody = document.getElementById('resultBody');
-    resultBody.innerHTML = '';
-
-    results.forEach(r => {
-        resultBody.innerHTML += `
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ccc;">${r.name}</td>
-                <td style="padding: 8px; border: 1px solid #ccc;">${r.roll}</td>
-                <td style="padding: 8px; border: 1px solid #ccc;">${r.post}</td>
-                <td style="padding: 8px; border: 1px solid #ccc;">${r.remark}</td>
-            </tr>
-        `;
-    });
-
-    document.getElementById('resultTable').style.display = 'block';
-    return false;
-}
-</script>
-
-
 </section>
 
 
@@ -337,5 +304,46 @@ function showResult() {
 
                 
 
+<script>
+function showResult() {
+    const roll = document.getElementById('roll').value.trim();
+    const dob = document.getElementById('dob').value.trim();
+    const resultBody = document.getElementById('resultBody');
+    const resultTable = document.getElementById('resultTable');
+
+    // Sample records (you can add more)
+    const results = [
+        { name: 'Tusar Mohanty', roll: '12345', dob: '2000-01-01', post: 'Junior Assistant', remark: 'Qualified' },
+        { name: 'Suman Das', roll: '23456', dob: '1999-06-15', post: 'Data Entry Operator', remark: 'Not Qualified' },
+        { name: 'Pooja Kumari', roll: '34567', dob: '2001-10-20', post: 'Clerk', remark: 'Qualified' }
+    ];
+
+    const match = results.find(r => r.roll === roll && r.dob === dob);
+
+    resultBody.innerHTML = '';
+
+    if (match) {
+        resultBody.innerHTML += `
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ccc;">${match.name}</td>
+                <td style="padding: 8px; border: 1px solid #ccc;">${match.roll}</td>
+                <td style="padding: 8px; border: 1px solid #ccc;">${match.post}</td>
+                <td style="padding: 8px; border: 1px solid #ccc;">${match.remark}</td>
+            </tr>
+        `;
+    } else {
+        resultBody.innerHTML = `
+            <tr>
+                <td colspan="4" style="padding: 10px; border: 1px solid #ccc; text-align: center; color: red;">
+                    No result found for the provided Roll Number and Date of Birth.
+                </td>
+            </tr>
+        `;
+    }
+
+    resultTable.style.display = 'block';
+    return false; // prevent page reload
+}
+</script>
 
 </body></html>
