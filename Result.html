@@ -315,38 +315,48 @@ function showResult() {
     const results = [
     {
         name: 'Susmita Swain',
+	fname:'Trilochana Swain',
         roll: 'NO2023001',
-        dob: '1997-09-10',
+        dob: '1997-03-27',
         post: 'Nursing Officer',
-        remark: 'Qualified'
+        remark: 'Qualified',
+	    venue:'Jajati Keshri Medical College and Hospital, Jajpur'
     },
     {
         name: 'Preetimayee Swain',
+	fname:'Dillip Kumar Swain',
         roll: 'NO2023002',
-        dob: '1997-05-25',
+        dob: '1995-06-08',
         post: 'Nursing Officer',
-        remark: 'Qualified'
+        remark: 'Qualified',
+	    venue:'Jajati Keshri Medical College and Hospital, Jajpur'
     },
     {
         name: 'Krushna Chandra Sahu',
+	fname:'Basudev Sahu',
         roll: 'CL2023001',
-        dob: '1995-03-15',
+        dob: '1994-06-04',
         post: 'Junior Clerk',
-        remark: 'Qualified'
+        remark: 'Qualified',
+	    venue:'Jajati Keshri Medical College and Hospital, Jajpur'
     },
     {
         name: 'Mohammad Anesanul Haque',
+	fname:'-',
         roll: 'CL2023002',
-        dob: '1996-07-20',
+        dob: '-',
         post: 'Junior Clerk',
-        remark: 'Qualified'
+        remark: 'Qualified',
+	    venue:'Jajati Keshri Medical College and Hospital, Jajpur'
     },
     {
         name: 'Sailabala Mohapatra',
+	fname:'-',
         roll: 'NO2023003',
-        dob: '1998-11-05',
+        dob: '-',
         post: 'Nursing Officer',
-        remark: 'Qualified'
+        remark: 'Qualified',
+	    venue:'Jajati Keshri Medical College and Hospital, Jajpur'
     }
 ];
 	
@@ -359,9 +369,12 @@ function showResult() {
         resultBody.innerHTML += `
             <tr>
                 <td style="padding: 8px; border: 1px solid #ccc;">${match.name}</td>
+		<td style="padding: 8px; border: 1px solid #ccc;">${match.fname}</td>
                 <td style="padding: 8px; border: 1px solid #ccc;">${match.roll}</td>
+		<td style="padding: 8px; border: 1px solid #ccc;">${match.dob}</td>
                 <td style="padding: 8px; border: 1px solid #ccc;">${match.post}</td>
                 <td style="padding: 8px; border: 1px solid #ccc;">${match.remark}</td>
+		<td style="padding: 8px; border: 1px solid #ccc;">${match.venue}</td>
             </tr>
         `;
     } else {
