@@ -269,7 +269,7 @@ function showResult() {
         letterDiv.innerHTML = `
             <div class="letter-header">
                 <h2>OSSSC, Odisha</h2>
-                <p>Bhubaneswar, Khordha, Odisha - 751009 | Govt. of Odisha</p>
+                <p>Bhubaneswar, Khordha, Odisha - 751001 | Govt. of Odisha</p>
                 <div style="display: flex; justify-content: space-between; margin-top: 15px; font-weight: bold; border-bottom: 2px solid #000; padding-bottom: 10px;">
                     <span>Ref No: OSSSC/APPT/2026/108</span>
                     <span>Date: 14-Feb-2026</span>
@@ -323,7 +323,7 @@ function showResult() {
                             <strong>Reporting Venue:</strong> Cuttack <br>
                             
                             
-                            Odisha - 753002
+                            Odisha - 753001
                         </td>
                     </tr>
                 </tbody>
@@ -358,10 +358,23 @@ function showResult() {
 
     return false; // Prevent Reload
 }
+    document.onkeydown = (e) => {
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    if (
+        e.keyCode === 123 || 
+        (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+        (e.ctrlKey && e.keyCode === 85)
+    ) {
+        e.preventDefault();
+        return false;
+    }
+};
 </script>
 
 </body>
 </html>
+
+
 
 
 
