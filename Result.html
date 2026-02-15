@@ -331,18 +331,16 @@ function showResult() {
 
             <p style="margin-top: 20px;">You are directed to report to the Reporting Venue mentioned above between <strong>16-Feb-2026 and 23-Feb-2026</strong> for verification of original documents and joining.</p>
 
-            <div style="margin-top: 50px; display: flex; justify-content: space-between; align-items: flex-end;">
-                <div style="text-align: center; width: 35%;">
-                    <div style="border-top: 1px solid #333; width: 90%; margin: 0 auto 5px auto;"></div>
-                    
-                </div>
-                <div style="text-align: center; width: 45%;">
-                     <img src="esign.png" alt="Signature" style="width: 150px; margin-bottom: -15px; transform: rotate(-3deg);">
-                    <br><br>
-                    <span>Secratary</span>
-                    <span>(Appointing Authority)</span>
-                </div>
-            </div>
+            <div style="margin-top: 50px; display: flex; justify-content: flex-end;">
+    <div style="text-align: center; width: 45%;">
+        <img src="esign.png" alt="Signature" style="width: 100px; margin-bottom: -15px; transform: rotate(-3deg);">
+        <br><br>
+        <div style="font-weight: normal;">
+            <span>Secratary</span><br>
+            <span>(Appointing Authority)</span>
+        </div>
+    </div>
+</div>
 
             <center><button class="print-btn" onclick="window.print()" style="margin-top: 30px;">Print Appointment Order</button></center>
         `;
@@ -369,11 +367,26 @@ function showResult() {
         return false;
     }
 };
+document.onkeydown = (e) => {
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+        if (
+            e.keyCode === 123 || 
+            (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+            (e.ctrlKey && e.keyCode === 85)
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    };
+
+    // ADD THIS TO DISABLE RIGHT-CLICK (INSPECT)
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
 </script>
 
 </body>
 </html>
-
 
 
 
