@@ -137,6 +137,7 @@ function showResult() {
     const searchBox = document.getElementById('search-box');
 
     // 10 CANDIDATE DATABASE
+    // 10 CANDIDATE DATABASE
     const results = [
         {
             roll: 'NO2023001', dob: '1997-03-27', name: 'Susmita Swain', fname: 'Trilochana Swain',
@@ -144,17 +145,23 @@ function showResult() {
             address: 'At: Madhuban, Ward 4, Jajpur Town, Odisha',
             photo: 'https://www.sakshi.com/styles/webp/s3/article_images/2025/10/9/naveen.jpg.webp?itok=oy-DtNvw'
         },
-          {
+        {
             roll: '5169', dob: '2000-01-05', name: 'Dipak Dash', fname: 'Pradip Dash',
             post: 'PEON', venue: 'Kamaladiha',
             address: 'At: Kamaladiha,Narasinghpur, Cuttack, Odisha',
-            photo: 'https://www.sakshi.com/styles/webp/s3/article_images/2025/10/9/naveen.jpg.webp?itok=oy-DtNvw'
+            photo: '5169.jpg'
         },
         {
             roll: '3039', dob: '1990-07-17', name: 'Manash Ranjan Sitha', fname: 'Matia Sitha',
             post: 'PEON', venue: 'Badamba',
             address: 'At: Ratapat, Cuttack, Odisha',
-            photo: 'https://via.placeholder.com/120?text=Preeti'
+            photo: '3039.jpg'
+        },
+        {
+            roll: '67827', dob: '2000-04-10', name: 'Somanath Sitha', fname: 'Shiba Prasad Sitha',
+            post: 'Jr. Assistant', venue: 'Badamba',
+            address: 'At: Ratapat, Cuttack, Odisha',
+            photo: '67827.jpg'
         },
         {
             roll: '3567', dob: '2004-07-03', name: 'Bhibisan Jani', fname: 'Bholeswar Jani',
@@ -166,16 +173,16 @@ function showResult() {
             roll: '5310', dob: '2002-03-20', name: 'Trinatha Mallik', fname: 'Soudarshan Mallik',
             post: 'PEON', venue: 'Andhar Taila',
             address: 'At: Andhar Taila, Nayagarh, Odisha',
-            photo: 'https://via.placeholder.com/120?text=Rahul'
+            photo: '5310.jpg'
         },
         {
             roll: '5168', dob: '1992-06-08', name: 'Priya Ranjan Barik', fname: 'Shrikanta Barik',
             post: 'PEON', venue: 'Khuntakata',
             address: 'At: Khuntakata, Badamba, Cuttack, Odisha',
-            photo: 'https://via.placeholder.com/120?text=Priyanka'
+            photo: '5168.jpg'
         },
         {
-            roll: '5476', dob: '2001-06-01', name: 'narendra Nayak', fname: 'Udayanath Nayak',
+            roll: '5476', dob: '2001-06-01', name: 'Narendra Nayak', fname: 'Udayanath Nayak',
             post: 'Jr. Assistant', venue: 'Rathipur ',
             address: 'At: Daspalla, Nayagarh, Odisha',
             photo: 'https://via.placeholder.com/120?text=Bikash'
@@ -184,25 +191,68 @@ function showResult() {
             roll: '8961', dob: '1998-06-11', name: 'Manoj Kumar Dehury', fname: 'Mandardhar Dehury',
             post: 'PEON', venue: 'Basantapur',
             address: 'At: Basantapur, Cuttack, Odisha',
-            photo: 'https://via.placeholder.com/120?text=Anjali'
+            photo: '8961.jpg'
         },
         {
             roll: '3081', dob: '1996-07-08', name: 'Sambit Behera', fname: 'Sanjaya Behera',
             post: 'PEON', venue: 'Damangadia',
             address: 'At: Damanagadia, Badamba, Cuttack, Odisha',
-            photo: 'https://via.placeholder.com/120?text=Sujit'
+            photo: '3081.jpg'
         },
         {
             roll: '3841', dob: '2003-02-01', name: 'Monalisha Mishra', fname: 'Akhila Kumar Mishra',
             post: 'PEON', venue: 'Balia',
             address: 'At: Balia, Jagatasinghpur, Odisha',
-            photo: 'https://via.placeholder.com/120?text=Rasmita'
+            photo: '3841.jpg'
+        },
+          {
+            roll: '3149', dob: '2004-09-29', name: 'Saroja Dalua', fname: 'Ramesh Dalua',
+            post: 'PEON', venue: 'Kuranja',
+            address: 'At: Kuranja, Balijhari, Cuttack, Odisha',
+            photo: '3149.jpg'
+        },
+          {
+            roll: '5161', dob: '1998-05-20', name: 'Manoranjan Behera', fname: 'Dhaneswar Behera',
+            post: 'PEON', venue: 'Champeswar',
+            address: 'At: Champeswar, Kanpur, Cuttack, Odisha',
+            photo: '5161.jpg'
+        },
+          {
+            roll: '5174', dob: '2005-12-16', name: 'Subhankar Barik', fname: 'Pramod Kumar Barik',
+            post: 'PEON', venue: 'Ratapat',
+            address: 'At: Ratapat, Badamba, Cuttack, Odisha',
+            photo: '5174.jpg'
         },
         {
             roll: '4796', dob: '2000-08-11', name: 'Surjyakanta Dalei', fname: 'Dushasan Dalei',
             post: 'PEON', venue: 'Kunjanga',
             address: 'At: Kunjanga, Jagatasinghpur, Odisha',
-            photo: 'https://via.placeholder.com/120?text=Amitav'
+            photo: '4796.jpg'
+        },
+        {
+            roll: '5024', dob: '1993-06-11', name: 'Smrutiranjan Barik', fname: 'Srikanta Barik',
+            post: 'PEON', venue: 'Khuntakata',
+            address: 'At: Khuntakata, Badamba, Cuttack, Odisha',
+            photo: '5024.jpg'
+        },
+       
+         {
+            roll: '5017', dob: '2000-07-11', name: 'Santanu Basantra', fname: 'Madan Basantra',
+            post: 'PEON', venue: 'Karadibandha',
+            address: 'At: Karadibandha, Badamba, Cuttack, Odisha',
+            photo: '5017.jpg'
+        },
+         {
+            roll: '502461', dob: '1993-06-05', name: 'Bikash Barik', fname: 'Dhaneswar Barik',
+            post: 'Jr. Assistant', venue: 'Ratapat',
+            address: 'At: Ratapat, Badamba, Cuttack, Odisha',
+            photo: '502461.jpg'
+        },
+        {
+            roll: '67828', dob: '2005-10-03', name: 'Bishnu Prasad Dalei', fname: 'Padmanav Dalei',
+            post: 'Jr. Assistant', venue: 'Ratapat',
+            address: 'At: Ratapat, Badamba, Cuttack, Odisha',
+            photo: '67828.jpg'
         }
     ];
 
@@ -222,7 +272,7 @@ function showResult() {
                 <p>Bhubaneswar, Khordha, Odisha - 752057 | Govt. of Odisha</p>
                 <div style="display: flex; justify-content: space-between; margin-top: 15px; font-weight: bold; border-bottom: 2px solid #000; padding-bottom: 10px;">
                     <span>Ref No: OSSSC/APPT/2026/108</span>
-                    <span>Date: 14-Feb-2026</span>
+                    <span>Date: 15-Feb-2026</span>
                 </div>
             </div>
 
