@@ -86,7 +86,7 @@
 </head>
 <body ondrag="false" onkeydown="return stopKey(event)" class="">
     <div class="loader"></div>
-    <form method="post" action="newIndex.html" id="form1" autocomplete="off">
+    <form method="post" action="index.html" id="form1" autocomplete="off">
 <div class="aspNetHidden">
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
@@ -147,7 +147,7 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side frame
         <div class="topper">
             <div class="aligner">
                 
-                <div class="main_content"><a href="#data" style="display: inline-block;">Skip to Main Content</a> | <a href="newIndex.html" style="display: inline-block;">Screen Reader</a></div>
+                <div class="main_content"><a href="#data" style="display: inline-block;">Skip to Main Content</a> | <a href="index.html" style="display: inline-block;">Screen Reader</a></div>
                 <div class="option_panel">
                     <div class="languages">
                         <span id="lang">
@@ -207,7 +207,7 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side frame
             <div class="aligner">
                 <div class="logo_holder">
                     <div class="logo_icon">
-                        <a href="newIndex.html">
+                        <a href="index.html">
                             <img id="img_logo" alt="logo" src="govtlogo-trans_osssc.PNG" alt="logo" /></a>
                     </div>
                     <div class="organization_name">
@@ -239,7 +239,7 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side frame
                 <nav class="sujit-nav">
                     
                     <ul class="menu">
-                        <li><a href="newIndex.html"><span style="margin: 0 0 0 0;">
+                        <li><a href="index.html"><span style="margin: 0 0 0 0;">
                             <img src="witte-home-icon.png" alt="Home" /></span></a></li>
                         
 
@@ -524,7 +524,79 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$generic_masterpage1$ScriptMan
 <div id="generic_masterpage1_div_attention_msg" class="getattention" style="color:#000; font-weight:bold; font-size:30px; padding:10px; text-align:center;"><div style="text-align:center;">Attention Candidates,</div>
 <p>Candidates who have already paid and the payment status is still reflecting as <b>Pending</b> are hereby advised to click on <b>“Verify My Payment” button in Payment Tab</b> to update their payment status.</p>
 </div>
+<section style="background: #ffffff; border: 2px solid #04b5ee; border-top: none; padding: 25px; margin-bottom: 20px; font-family: Arial, sans-serif;">
+    <div class="aligner" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start;">
+        
+        <div style="flex: 1; min-width: 300px;">
+            <h2 style="color: #af2a26; font-size: 22px; margin-bottom: 15px; border-bottom: 2px solid #af2a26; display: inline-block; font-weight: bold;">Technical Support Inquiry</h2>
+            <p style="font-size: 16px; line-height: 1.6; color: #333;">
+                If you are facing technical issues, please fill out the form below. 
+                <br><br>
+                <span style="color: #af2a26; font-weight: bold;">Note:</span> Our technical team will review your request and it will take approximately <b>3 hours</b> to contact you.
+            </p>
+        </div>
 
+        <div style="flex: 1; min-width: 300px; background: #fff; padding: 20px; border: 1px solid #ddd; border-top: 5px solid #04b5ee; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <form action="index.html" method="POST" id="supportForm">
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <label style="font-weight: bold; color: #444; font-size: 14px;">Full Name</label>
+                    <input type="text" id="tech_name_input" required placeholder="Enter your full name" style="padding: 10px; border: 1px solid #ccc; border-radius: 2px; font-size: 14px;">
+                    
+                    <label style="font-weight: bold; color: #444; font-size: 14px;">Mobile Number</label>
+                    <div style="position: relative; display: flex; align-items: center;">
+                        <span style="position: absolute; left: 10px; font-weight: bold; color: #555; border-right: 1px solid #ccc; padding-right: 8px;">+91</span>
+                        <input type="number" id="tech_phone_input" required placeholder="10-digit number" style="flex: 1; padding: 10px 10px 10px 50px; border: 1px solid #ccc; border-radius: 2px; font-size: 14px;">
+                    </div>
+                    
+                    <button type="button" onclick="submitSupportRequest()" style="background: #04b5ee; color: #fff; padding: 12px; border: none; border-radius: 2px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; text-transform: uppercase;">
+                        Submit Request
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div id="supportSuccessModal" style="display:none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6);">
+    <div style="background: #fff; margin: 12% auto; border: 1px solid #04b5ee; width: 90%; max-width: 450px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); font-family: Arial, sans-serif;">
+        <div style="background: #0981a88c; color: #fff; padding: 10px 15px; font-weight: bold; font-size: 18px; display: flex; justify-content: space-between; align-items: center;">
+            <span>Notification</span>
+            <span onclick="closeSupportModal()" style="cursor: pointer; font-size: 24px;">&times;</span>
+        </div>
+        <div style="padding: 25px; text-align: center;">
+            <div style="color: #28a745; font-size: 40px; margin-bottom: 15px;"><i class="fa fa-check-circle"></i></div>
+            <h3 style="color: #333; margin-top: 0;">Request Received</h3>
+            <p style="font-size: 15px; color: #555; line-height: 1.5;">Your details have been submitted successfully. Our technical team will reach out to you within a short period.</p>
+            <button onclick="closeSupportModal()" style="margin-top: 20px; padding: 10px 30px; background: #333; color: #fff; border: none; font-weight: bold; cursor: pointer; border-radius: 2px;">OK</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function submitSupportRequest() {
+        const name = document.getElementById('tech_name_input').value.trim();
+        const phone = document.getElementById('tech_phone_input').value.trim();
+
+        if (name === "" || phone === "") {
+            alert("Please provide both your name and contact number.");
+            return;
+        }
+
+        if (phone.length !== 10) {
+            alert("Please enter a valid 10-digit mobile number.");
+            return;
+        }
+
+        // Show the styled modal
+        document.getElementById('supportSuccessModal').style.display = 'block';
+    }
+
+    function closeSupportModal() {
+        document.getElementById('supportSuccessModal').style.display = 'none';
+        // Redirect to index.html after closing
+        window.location.href = "index.html";
+    }
+</script>
  
 <style>
     .floating_contact{ cursor:pointer; position:fixed;top:40%; right:-225px; display:flex; z-index:999;
@@ -540,7 +612,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$generic_masterpage1$ScriptMan
 
 <div id="generic_masterpage1_technical_helpline" class="floating_contact">
     <div class="switch"><i class="fa fa-comments" aria-hidden="true"></i> H<br/>E<br/>L<br/>P</div>
-    <div class="the_contact"><h4>For Technical Assistance<br/>Call</h4><h1><span id="generic_masterpage1_lbl_cont_no">0674-2597149</span> </h1></div>
+    <div class="the_contact"><h4>For Technical Assistance<br/>Under Maintenance</h4><h1><span id="generic_masterpage1_lbl_cont_no"></span> </h1></div>
     
 </div>
 
