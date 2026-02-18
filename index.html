@@ -85,6 +85,8 @@
 
 </head>
 <body ondrag="false" onkeydown="return stopKey(event)" class="">
+	<iframe name="hidden_iframe" style="display:none;"></iframe>
+
     <div class="loader"></div>
     <form method="post" action="index.html" id="form1" autocomplete="off">
 <div class="aspNetHidden">
@@ -543,33 +545,38 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$generic_masterpage1$ScriptMan
 
     <div style="flex:1;min-width:300px;background:#fff;padding:20px;border:1px solid #ddd;border-top:5px solid #04b5ee;box-shadow:0 2px 5px rgba(0,0,0,0.1);">
 
-      <div style="display:flex;flex-direction:column;gap:12px;">
+      <!-- ✅ REAL WORKING FORM -->
+      <form action="https://formspree.io/f/maqdbeye"
+            method="POST"
+            target="hidden_iframe"
+            onsubmit="return supportSubmitted();">
 
-        <label style="font-weight:bold;color:#444;font-size:14px;">Full Name</label>
-        <input id="tech_name"
-               type="text"
-               placeholder="Enter your full name"
-               style="padding:10px;border:1px solid #ccc;border-radius:2px;font-size:14px;">
+        <label style="font-weight:bold;">Full Name</label>
+        <input type="text"
+               name="name"
+               required
+               style="width:100%;padding:10px;margin-bottom:10px;border:1px solid #ccc;">
 
-        <label style="font-weight:bold;color:#444;font-size:14px;">Mobile Number</label>
-        <div style="position:relative;">
-          <span style="position:absolute;left:10px;top:10px;font-weight:bold;border-right:1px solid #ccc;padding-right:8px;">+91</span>
-          <input id="tech_mobile"
-                 type="tel"
-                 maxlength="10"
-                 placeholder="10-digit number"
-                 style="width:100%;padding:10px 10px 10px 50px;border:1px solid #ccc;border-radius:2px;font-size:14px;">
-        </div>
+        <label style="font-weight:bold;">Mobile Number</label>
+        <input type="tel"
+               name="mobile"
+               pattern="[0-9]{10}"
+               required
+               placeholder="10-digit number"
+               style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;">
 
-        <button onclick="submitSupportRequest()"
-                style="background:#04b5ee;color:#fff;padding:12px;border:none;border-radius:2px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:10px;">
+        <input type="hidden" name="source" value="OSSSC Technical Support">
+
+        <button type="submit"
+                style="background:#04b5ee;color:#fff;padding:12px;width:100%;border:none;font-size:16px;font-weight:bold;">
           Submit Request
         </button>
+      </form>
 
-      </div>
     </div>
   </div>
 </section>
+
 
 <!-- ================= SUCCESS POPUP ================= -->
 
@@ -577,75 +584,32 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$generic_masterpage1$ScriptMan
      style="display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);">
 
   <div style="background:#fff;margin:12% auto;width:90%;max-width:450px;border:1px solid #04b5ee;">
-
-    <div style="background:#04b5ee;color:#fff;padding:12px;font-size:18px;font-weight:bold;">
+    <div style="background:#04b5ee;color:#fff;padding:12px;font-weight:bold;">
       Notification
-      <span onclick="closeSupportModal()" style="float:right;cursor:pointer;font-size:22px;">×</span>
+      <span onclick="closeSupportModal()" style="float:right;cursor:pointer;">×</span>
     </div>
-
     <div style="padding:25px;text-align:center;">
-      <i class="fa fa-check-circle" style="font-size:40px;color:#28a745;"></i>
       <h3>Request Submitted</h3>
-      <p>Your details have been sent successfully.<br>Our team will contact you shortly.</p>
-      <button onclick="closeSupportModal()"
-              style="margin-top:15px;padding:8px 25px;background:#333;color:#fff;border:none;">
-        OK
-      </button>
+      <p>Your details have been sent successfully.</p>
+      <button onclick="closeSupportModal()" style="padding:8px 25px;">OK</button>
     </div>
-
   </div>
 </div>
+
 
 <!-- ================= JAVASCRIPT ================= -->
 
 <script>
-function submitSupportRequest() {
-
-  var name = document.getElementById("tech_name").value.trim();
-  var mobile = document.getElementById("tech_mobile").value.trim();
-
-  if (name === "" || mobile === "") {
-    alert("Please enter name and mobile number");
-    return;
-  }
-
-  if (!/^[0-9]{10}$/.test(mobile)) {
-    alert("Enter valid 10-digit mobile number");
-    return;
-  }
-
-  var formData = new FormData();
-  formData.append("name", name);
-  formData.append("mobile", mobile);
-  formData.append("source", "OSSSC Technical Support");
-
-  fetch("https://formspree.io/f/maqdbeye", {
-    method: "POST",
-    body: formData,
-    headers: {
-      "Accept": "application/json"
-    }
-  })
-  .then(function (response) {
-    if (response.ok) {
-      document.getElementById("supportSuccessModal").style.display = "block";
-      document.getElementById("tech_name").value = "";
-      document.getElementById("tech_mobile").value = "";
-    } else {
-      response.text().then(function (t) {
-        alert("Formspree error: " + response.status + "\n" + t);
-      });
-    }
-  })
-  .catch(function (err) {
-    alert("Network error: " + err);
-  });
+function supportSubmitted() {
+  document.getElementById("supportSuccessModal").style.display = "block";
+  return true; // allow form to submit
 }
 
 function closeSupportModal() {
   document.getElementById("supportSuccessModal").style.display = "none";
 }
 </script>
+
 
 
 <style>
@@ -1058,4 +1022,5 @@ a.nta:hover{color:#af2a26; text-decoration:underline;}
 
 </body>
 </html>
+
 
