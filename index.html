@@ -524,80 +524,127 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$generic_masterpage1$ScriptMan
 <div id="generic_masterpage1_div_attention_msg" class="getattention" style="color:#000; font-weight:bold; font-size:30px; padding:10px; text-align:center;"><div style="text-align:center;">Attention Candidates,</div>
 <p>Candidates who have already paid and the payment status is still reflecting as <b>Pending</b> are hereby advised to click on <b>“Verify My Payment” button in Payment Tab</b> to update their payment status.</p>
 </div>
-<!-- <section style="background: #ffffff; border: 2px solid #04b5ee; border-top: none; padding: 25px; margin-bottom: 20px; font-family: Arial, sans-serif;">
-    <div class="aligner" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start;">
-        
-        <div style="flex: 1; min-width: 300px;">
-            <h2 style="color: #af2a26; font-size: 22px; margin-bottom: 15px; border-bottom: 2px solid #af2a26; display: inline-block; font-weight: bold;">Technical Support Inquiry</h2>
-            <p style="font-size: 16px; line-height: 1.6; color: #333;">
-                If you are facing technical issues, please fill out the form below. 
-                <br><br>
-                <span style="color: #af2a26; font-weight: bold;">Note:</span> Our technical team will review your request and it will take approximately <b>3 hours</b> to contact you.
-            </p>
+<!-- ================= TECHNICAL SUPPORT SECTION ================= -->
+
+<section style="background:#ffffff;border:2px solid #04b5ee;border-top:none;padding:25px;margin-bottom:20px;font-family:Arial,sans-serif;">
+  <div class="aligner" style="display:flex;flex-wrap:wrap;gap:30px;align-items:flex-start;">
+
+    <div style="flex:1;min-width:300px;">
+      <h2 style="color:#af2a26;font-size:22px;margin-bottom:15px;border-bottom:2px solid #af2a26;display:inline-block;font-weight:bold;">
+        Technical Support Inquiry
+      </h2>
+      <p style="font-size:16px;line-height:1.6;color:#333;">
+        If you are facing technical issues, please fill out the form below.
+        <br><br>
+        <span style="color:#af2a26;font-weight:bold;">Note:</span>
+        Our technical team will contact you within <b>3 hours</b>.
+      </p>
+    </div>
+
+    <div style="flex:1;min-width:300px;background:#fff;padding:20px;border:1px solid #ddd;border-top:5px solid #04b5ee;box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+
+        <label style="font-weight:bold;color:#444;font-size:14px;">Full Name</label>
+        <input id="tech_name"
+               type="text"
+               placeholder="Enter your full name"
+               style="padding:10px;border:1px solid #ccc;border-radius:2px;font-size:14px;">
+
+        <label style="font-weight:bold;color:#444;font-size:14px;">Mobile Number</label>
+        <div style="position:relative;">
+          <span style="position:absolute;left:10px;top:10px;font-weight:bold;border-right:1px solid #ccc;padding-right:8px;">+91</span>
+          <input id="tech_mobile"
+                 type="tel"
+                 maxlength="10"
+                 placeholder="10-digit number"
+                 style="width:100%;padding:10px 10px 10px 50px;border:1px solid #ccc;border-radius:2px;font-size:14px;">
         </div>
 
-        <div style="flex: 1; min-width: 300px; background: #fff; padding: 20px; border: 1px solid #ddd; border-top: 5px solid #04b5ee; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            <form action="index.html" method="POST" id="supportForm">
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <label style="font-weight: bold; color: #444; font-size: 14px;">Full Name</label>
-                    <input type="text" id="tech_name_input" required placeholder="Enter your full name" style="padding: 10px; border: 1px solid #ccc; border-radius: 2px; font-size: 14px;">
-                    
-                    <label style="font-weight: bold; color: #444; font-size: 14px;">Mobile Number</label>
-                    <div style="position: relative; display: flex; align-items: center;">
-                        <span style="position: absolute; left: 10px; font-weight: bold; color: #555; border-right: 1px solid #ccc; padding-right: 8px;">+91</span>
-                        <input type="number" id="tech_phone_input" required placeholder="10-digit number" style="flex: 1; padding: 10px 10px 10px 50px; border: 1px solid #ccc; border-radius: 2px; font-size: 14px;">
-                    </div>
-                    
-                    <button type="button" onclick="submitSupportRequest()" style="background: #04b5ee; color: #fff; padding: 12px; border: none; border-radius: 2px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; text-transform: uppercase;">
-                        Submit Request
-                    </button>
-                </div>
-            </form>
-        </div>
+        <button onclick="submitSupportRequest()"
+                style="background:#04b5ee;color:#fff;padding:12px;border:none;border-radius:2px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:10px;">
+          Submit Request
+        </button>
+
+      </div>
     </div>
+  </div>
 </section>
 
-<div id="supportSuccessModal" style="display:none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6);">
-    <div style="background: #fff; margin: 12% auto; border: 1px solid #04b5ee; width: 90%; max-width: 450px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); font-family: Arial, sans-serif;">
-        <div style="background: #0981a88c; color: #fff; padding: 10px 15px; font-weight: bold; font-size: 18px; display: flex; justify-content: space-between; align-items: center;">
-            <span>Notification</span>
-            <span onclick="closeSupportModal()" style="cursor: pointer; font-size: 24px;">&times;</span>
-        </div>
-        <div style="padding: 25px; text-align: center;">
-            <div style="color: #28a745; font-size: 40px; margin-bottom: 15px;"><i class="fa fa-check-circle"></i></div>
-            <h3 style="color: #333; margin-top: 0;">Request Received</h3>
-            <p style="font-size: 15px; color: #555; line-height: 1.5;">Your details have been submitted successfully. Our technical team will reach out to you within a short period.</p>
-            <button onclick="closeSupportModal()" style="margin-top: 20px; padding: 10px 30px; background: #333; color: #fff; border: none; font-weight: bold; cursor: pointer; border-radius: 2px;">OK</button>
-        </div>
+<!-- ================= SUCCESS POPUP ================= -->
+
+<div id="supportSuccessModal"
+     style="display:none;position:fixed;z-index:10000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);">
+
+  <div style="background:#fff;margin:12% auto;width:90%;max-width:450px;border:1px solid #04b5ee;">
+
+    <div style="background:#04b5ee;color:#fff;padding:12px;font-size:18px;font-weight:bold;">
+      Notification
+      <span onclick="closeSupportModal()" style="float:right;cursor:pointer;font-size:22px;">×</span>
     </div>
+
+    <div style="padding:25px;text-align:center;">
+      <i class="fa fa-check-circle" style="font-size:40px;color:#28a745;"></i>
+      <h3>Request Submitted</h3>
+      <p>Your details have been sent successfully.<br>Our team will contact you shortly.</p>
+      <button onclick="closeSupportModal()"
+              style="margin-top:15px;padding:8px 25px;background:#333;color:#fff;border:none;">
+        OK
+      </button>
+    </div>
+
+  </div>
 </div>
 
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
-    function submitSupportRequest() {
-        const name = document.getElementById('tech_name_input').value.trim();
-        const phone = document.getElementById('tech_phone_input').value.trim();
+function submitSupportRequest() {
 
-        if (name === "" || phone === "") {
-            alert("Please provide both your name and contact number.");
-            return;
-        }
+  var name = document.getElementById("tech_name").value.trim();
+  var mobile = document.getElementById("tech_mobile").value.trim();
 
-        if (phone.length !== 10) {
-            alert("Please enter a valid 10-digit mobile number.");
-            return;
-        }
+  if (name === "" || mobile === "") {
+    alert("Please enter your name and mobile number");
+    return;
+  }
 
-        // Show the styled modal
-        document.getElementById('supportSuccessModal').style.display = 'block';
+  if (!/^[0-9]{10}$/.test(mobile)) {
+    alert("Please enter a valid 10-digit mobile number");
+    return;
+  }
+
+  fetch("https://formspree.io/f/maqdbeye", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      Name: name,
+      Mobile: mobile,
+      Source: "OSSSC Technical Support"
+    })
+  })
+  .then(function (response) {
+    if (response.ok) {
+      document.getElementById("supportSuccessModal").style.display = "block";
+      document.getElementById("tech_name").value = "";
+      document.getElementById("tech_mobile").value = "";
+    } else {
+      alert("Submission failed. Please try again.");
     }
+  })
+  .catch(function () {
+    alert("Network error. Please try later.");
+  });
+}
 
-    function closeSupportModal() {
-        document.getElementById('supportSuccessModal').style.display = 'none';
-        // Redirect to index.html after closing
-        window.location.href = "index.html";
-    }
-</script> -->
- 
+function closeSupportModal() {
+  document.getElementById("supportSuccessModal").style.display = "none";
+}
+</script>
+
 <style>
     .floating_contact{ cursor:pointer; position:fixed;top:40%; right:-225px; display:flex; z-index:999;
      -webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;
@@ -1008,4 +1055,3 @@ a.nta:hover{color:#af2a26; text-decoration:underline;}
 
 </body>
 </html>
-
