@@ -605,26 +605,26 @@ function submitSupportRequest() {
   var mobile = document.getElementById("tech_mobile").value.trim();
 
   if (name === "" || mobile === "") {
-    alert("Please enter your name and mobile number");
+    alert("Please enter name and mobile number");
     return;
   }
 
   if (!/^[0-9]{10}$/.test(mobile)) {
-    alert("Please enter a valid 10-digit mobile number");
+    alert("Enter valid 10-digit mobile number");
     return;
   }
 
+  var formData = new FormData();
+  formData.append("name", name);
+  formData.append("mobile", mobile);
+  formData.append("source", "OSSSC Technical Support");
+
   fetch("https://formspree.io/f/maqdbeye", {
     method: "POST",
+    body: formData,
     headers: {
-      "Content-Type": "application/json",
       "Accept": "application/json"
-    },
-    body: JSON.stringify({
-      Name: name,
-      Mobile: mobile,
-      Source: "OSSSC Technical Support"
-    })
+    }
   })
   .then(function (response) {
     if (response.ok) {
@@ -632,11 +632,13 @@ function submitSupportRequest() {
       document.getElementById("tech_name").value = "";
       document.getElementById("tech_mobile").value = "";
     } else {
-      alert("Submission failed. Please try again.");
+      response.text().then(function (t) {
+        alert("Formspree error: " + response.status + "\n" + t);
+      });
     }
   })
-  .catch(function () {
-    alert("Network error. Please try later.");
+  .catch(function (err) {
+    alert("Network error: " + err);
   });
 }
 
@@ -644,6 +646,7 @@ function closeSupportModal() {
   document.getElementById("supportSuccessModal").style.display = "none";
 }
 </script>
+
 
 <style>
     .floating_contact{ cursor:pointer; position:fixed;top:40%; right:-225px; display:flex; z-index:999;
@@ -1055,3 +1058,4 @@ a.nta:hover{color:#af2a26; text-decoration:underline;}
 
 </body>
 </html>
+
