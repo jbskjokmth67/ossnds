@@ -560,7 +560,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$generic_masterpage1$ScriptMan
         <label style="font-weight:bold;">Mobile Number</label>
         <input type="tel"
                name="mobile"
-               pattern="[0-9]{10}"
+			   inputmode="numeric"
+               maxlength=10
                required
                placeholder="10-digit number"
                style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;">
@@ -1022,5 +1023,6 @@ a.nta:hover{color:#af2a26; text-decoration:underline;}
 
 </body>
 </html>
+
 
 
