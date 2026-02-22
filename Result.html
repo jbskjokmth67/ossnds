@@ -136,103 +136,118 @@ function showResult() {
     const errorDiv = document.getElementById('errorMsg');
     const searchBox = document.getElementById('search-box');
 
-    // 10 CANDIDATE DATABASE
-    // 10 CANDIDATE DATABASE
+    // 10 CANDIDATE DATABASE with designation and department mapping
     const results = [
         {
             roll: 'NO2023001', dob: '1997-03-27', name: 'Susmita Swain', fname: 'Trilochana Swain',
             post: 'Nursing Officer', venue: 'JKMCH Jajpur (Trauma Center)',
             address: 'At: Madhuban, Ward 4, Jajpur Town, Odisha',
+            designation: 'Administrative Officer,Cuttack', department: 'Revenue and Disaster Management',
             photo: 'https://www.sakshi.com/styles/webp/s3/article_images/2025/10/9/naveen.jpg.webp?itok=oy-DtNvw'
         },
         {
             roll: '5169', dob: '2000-01-05', name: 'Dipak Dash', fname: 'Pradip Dash',
             post: 'PEON', venue: 'Kamaladiha',
             address: 'At: Kamaladiha,Narasinghpur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5169.jpg'
         },
         {
             roll: '3039', dob: '1990-07-17', name: 'Manas Ranjan Sitha', fname: 'Matia Sitha',
             post: 'PEON', venue: 'Badamba',
             address: 'At: Ratapat, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '3039.jpg'
         },
         {
             roll: '67827', dob: '2000-04-10', name: 'Somanath Sitha', fname: 'Shiba Prasad Sitha',
             post: 'Jr. Assistant', venue: 'Badamba',
             address: 'At: Ratapat, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '67827.jpg'
         },
         {
             roll: '3567', dob: '2004-07-03', name: 'Bhibisan Jani', fname: 'Bholeswar Jani',
             post: 'Jr. Assistant', venue: 'Boipaju',
             address: 'At: Boipaju, Nayagarh, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: 'https://via.placeholder.com/120?text=Krushna'
         },
         {
             roll: '5310', dob: '2002-03-20', name: 'Trinatha Mallik', fname: 'Soudarshan Mallik',
             post: 'PEON', venue: 'Andhar Taila',
             address: 'At: Andhar Taila, Nayagarh, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5310.jpg'
         },
         {
             roll: '5168', dob: '1992-06-08', name: 'Priya Ranjan Barik', fname: 'Shrikanta Barik',
             post: 'PEON', venue: 'Khuntakata',
             address: 'At: Khuntakata, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5168.jpg'
         },
         {
             roll: '5476', dob: '2001-06-01', name: 'Narendra Nayak', fname: 'Udayanath Nayak',
             post: 'Jr. Assistant', venue: 'Rathipur ',
             address: 'At: Daspalla, Nayagarh, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: 'https://via.placeholder.com/120?text=Bikash'
         },
         {
             roll: '8961', dob: '1998-06-11', name: 'Manoj Kumar Dehury', fname: 'Mandardhar Dehury',
             post: 'PEON', venue: 'Basantapur',
             address: 'At: Basantapur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '8961.jpg'
         },
         {
             roll: '3081', dob: '1996-07-08', name: 'Sabita Behera', fname: 'Sanjaya Behera',
             post: 'PEON', venue: 'Damangadia',
             address: 'At: Damanagadia, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '3081.jpg'
         },
         {
             roll: '3841', dob: '2003-02-01', name: 'Monalisha Mishra', fname: 'Akhila Kumar Mishra',
             post: 'PEON', venue: 'Balia',
             address: 'At: Balia, Jagatasinghpur, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '3841.jpg'
         },
           {
             roll: '3149', dob: '2004-09-29', name: 'Saroja Dalua', fname: 'Ramesh Dalua',
             post: 'PEON', venue: 'Kuranja',
             address: 'At: Kuranja, Balijhari, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '3149.jpg'
         },
           {
             roll: '5161', dob: '1998-05-20', name: 'Manoranjan Behera', fname: 'Dhaneswar Behera',
             post: 'PEON', venue: 'Champeswar',
             address: 'At: Champeswar, Kanpur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5161.jpg'
         },
           {
             roll: '5174', dob: '2005-12-16', name: 'Subhankar Barik', fname: 'Pramod Kumar Barik',
             post: 'PEON', venue: 'Ratapat',
             address: 'At: Ratapat, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5174.jpg'
         },
         {
             roll: '4796', dob: '2000-08-11', name: 'Surjyakanta Dalei', fname: 'Dushasan Dalei',
             post: 'PEON', venue: 'Kunjanga',
             address: 'At: Kunjanga, Jagatasinghpur, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '4796.jpg'
         },
         {
             roll: '5024', dob: '1993-06-11', name: 'Smrutiranjan Barik', fname: 'Srikanta Barik',
             post: 'PEON', venue: 'Khuntakata',
             address: 'At: Khuntakata, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5024.jpg'
         },
        
@@ -240,126 +255,188 @@ function showResult() {
             roll: '5017', dob: '2000-07-11', name: 'Santanu Basantra', fname: 'Madan Basantra',
             post: 'PEON', venue: 'Karadibandha',
             address: 'At: Karadibandha, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5017.jpg'
         },
          {
             roll: '502461', dob: '1993-06-05', name: 'Bikash Barik', fname: 'Dhaneswar Barik',
             post: 'Jr. Assistant', venue: 'Ratapat',
             address: 'At: Ratapat, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '502461.jpg'
         },
         {
             roll: '67828', dob: '2005-10-03', name: 'Bishnu Prasad Dalei', fname: 'Padmanav Dalei',
             post: 'Jr. Assistant', venue: 'Ratapat',
             address: 'At: Ratapat, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '67828.jpg'
         },
          {
             roll: '3104', dob: '1978-05-20', name: 'PRADEEP KUMAR ROUL', fname: 'FAGU ROUL',
             post: 'PEON', venue: 'BISWANATHAPUR',
             address: 'At: Biswanathapur, SIANA, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '3104.jpg'
         },
         {
             roll: '3115', dob: '1998-02-07', name: 'Ramakanta Behera', fname: 'Prahallad Behera',
             post: 'PEON', venue: 'KamalaDiha',
             address: 'At: KamalaDiha, Narasinghpur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '3115.jpg'
         },
         {
             roll: '5024078', dob: '1996-06-15', name: 'Upendra Kumar Nayak', fname: 'Dhadia Nayak',
             post: 'PEON', venue: 'KHUNTUKATA',
             address: 'At: Khuntukata, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5024078.jpg'
         },
          {
             roll: '506893', dob: '2005-03-06', name: 'Saurava pradhan', fname: 'Birendra pradhan',
             post: 'Jr. Assistant', venue: 'DAMANAGADIA',
             address: 'At: DAMANAGADIA, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '506893.jpg'
         },
           {
             roll: '5024062', dob: '1995-06-06', name: 'Bibhuti Bhusan Rout', fname: 'Gurubari Rout',
             post: 'PEON', venue: 'KHUNTAKATA',
             address: 'At: Khuntakata, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5024062.jpg'
         },
         {
             roll: '5024831', dob: '1999-03-01', name: 'Soumyaranjan Jena', fname: 'Santosh Kumar Jena',
             post: 'PEON', venue: 'Kakhadi',
             address: 'At: Kakhadi, Tangi, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '3149.jpg'
         },
          {
             roll: '5187', dob: '1986-05-22', name: 'Minakshi Mishra', fname: '',
             post: 'PEON', venue: 'KAMALADIHA',
             address: 'At: KamalaDiha, Narasinghpur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5187.jpg'
         },
           {
             roll: '3093', dob: '1999-05-18', name: 'Saraswati Pradhan', fname: 'Late Srikanta Pradhan',
             post: 'PEON', venue: 'Bahali',
             address: 'At: Bahali, Kanpur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '3093.jpg'
         },
           {
             roll: '5350', dob: '1991-04-19', name: 'Laxmipriya Muduli', fname: 'Late Biranchi Narayan Sahoo',
             post: 'PEON', venue: 'Dasarathipur',
             address: 'At: Dasarathipur, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5350.jpg'
         },
            {
             roll: '3073', dob: '2007-02-15', name: 'Bikram Das', fname: 'Sanjay Kumar Das',
             post: 'Jr. Assistant', venue: 'Gopalpur',
             address: 'At: Gopalpur, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '3073.jpg'
         },
          {
             roll: '3081', dob: '1996-07-08', name: 'Sabita Behera', fname: 'Sanjay Behera',
             post: 'PEON', venue: 'Gopalpur',
             address: 'At: Gopalpur, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '3081.jpg'
         },
          {
             roll: '67971', dob: '2000-01-05', name: 'Samir Rana', fname: 'Rabinarayan Rana',
             post: 'PEON', venue: 'KAMALADIHA',
             address: 'At: KamalaDiha, Narasinghpur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '67971.jpg'
         },
            {
             roll: '50249', dob: '1994-03-12', name: 'MAMATA ROUT', fname: 'JOGINATH ROUT',
             post: 'Jr. Assistant', venue: 'ALARA',
             address: 'At: Alara, Narasinghpur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '50249.jpg'
         }, {
             roll: '5186', dob: '2000-04-04', name: 'SOUMYA RANJAN RATH', fname: 'PRAMOD KUMAR RATH',
             post: 'PEON', venue: 'ADHEIGUNDI',
             address: 'At: Adheigundi, Kanpur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5186.jpg'
         },
         {
             roll: '700243', dob: '1997-07-24', name: 'SUBRAT KUMAR PRADHAN', fname: 'MATIKRUSHNA PRADHAN',
             post: 'Jr. Assistant', venue: 'Sagar',
             address: 'At: Sagar, Narsinghpur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '700243.jpg'
         },
          {
             roll: '607934', dob: '2003-09-28', name: 'HRUDANANDA PRADHAN', fname: 'PRAVAKAR PRADHAN',
             post: 'Jr. Assistant', venue: 'KHAIRPANGA',
             address: 'At: Khairpanga, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '607934.jpg'
         },
          {
             roll: '5024822', dob: '1992-05-29', name: 'Ajit kumar Jena', fname: 'Indramani Jena',
             post: 'PEON', venue: 'BIJIPUR',
             address: 'At: Bijipur, Badamba, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5024822Ajit.jpg'
         },
           {
             roll: '5024616', dob: '2007-05-12', name: 'Subha Laxmi Sahoo', fname: 'Digambar Sahoo',
             post: 'PEON', venue: 'BIJIPUR',
             address: 'At: Siaria, Kanpur, Cuttack, Odisha',
+            designation: 'District Education Officer,Cuttack', department: 'School & Mass Education',
             photo: '5024616.jpg'
+        },
+        {
+            roll: '202357', dob: '1998-05-11', name: 'Susant kumar Nayak', fname: 'Subash Chandra Nayak',
+            post: 'PEON', venue: 'Kanjiapada',
+            address: 'Padamala, Kanjiapada, Cuttack, Odisha',
+            designation: 'Administrative Officer, Cuttack', department: 'Revenue and Disaster Management',
+            photo: '202357.jpg'        },
+        {
+            roll: '24212', dob: '1989-07-10', name: 'Pranati Sahoo', fname: 'Digambar Sahoo',
+            post: 'PEON', venue: 'Siaria',
+            address: 'At: Siaria, Kanpur, Cuttack, Odisha',
+            designation: 'Administrative Officer,Cuttack', department: 'Revenue and Disaster Management',
+            photo: '24212.jpg'
+        },
+        {
+            roll: '202353', dob: '2003-12-10', name: 'Sangram Keshari Das', fname: 'Sanjay Kumar Das',
+            post: 'PEON', venue: 'Gopalpur',
+            address: 'At: Gopalpur, Badamba, Cuttack, Odisha',
+            designation: 'Administrative Officer,Cuttack', department: 'Revenue and Disaster Management',
+            photo: '202353.jpg'
+        },
+        {
+            roll: '2023579', dob: '2004-03-02', name: 'Babul Dakua', fname: 'Indramani Dakua',
+            post: 'PEON', venue: 'Beliapal',
+            address: 'Badamba, Cuttack, Odisha',
+            designation: 'Administrative Officer,Cuttack', department: 'Revenue and Disaster Management',
+            photo: '2023579.jpg'
+        },
+        {
+            roll: '24512', dob: '2001-05-14', name: 'Sourav Kumar Roul', fname: 'Srinibash Roul',
+            post: 'Jr. Assistant', venue: 'Kanpur',
+            address: 'At: Kanpur, Cuttack, Odisha',
+            designation: 'Administrative Officer,Cuttack', department: 'Revenue and Disaster Management',
+            photo: '24512.jpg'
+        },
+        {
+            roll: '1750', dob: '1992-02-04', name: 'Nilakantha Dalei', fname: 'Meghanad Dalei',
+            post: 'PEON', venue: 'Padamala',
+            address: 'At: Padamala, Cuttack, Odisha',
+            designation: 'Administrative Officer,Cuttack', department: 'Revenue and Disaster Management',
+            photo: '1750.jpg'
         }
     ];
 
@@ -379,7 +456,7 @@ function showResult() {
                 <p>Bhubaneswar, Khordha, Odisha - 751001 | Govt. of Odisha</p>
                 <div style="display: flex; justify-content: space-between; margin-top: 15px; font-weight: bold; border-bottom: 2px solid #000; padding-bottom: 10px;">
                     <span>Ref No: OSSSC/APPT/2026/108</span>
-                    <span>Date: 28-Jan-2026</span>
+                    <span>Date: 21-feb-2026</span>
                 </div>
             </div>
 
@@ -424,9 +501,9 @@ function showResult() {
                         </td>
                         
                         <td style="border: 1px solid #000; padding: 10px; vertical-align: top;">
-                            <strong>Designation:</strong> District Education Officer,Cuttack <br>
+                            <strong>Designation:</strong> ${match.designation} <br>
                             
-                            <strong>Department:</strong> School & Mass Education <br><br>
+                            <strong>Department:</strong> ${match.department} <br><br>
                             <strong>Reporting Venue:</strong> Cuttack <br>
                             
                             
@@ -494,7 +571,6 @@ document.onkeydown = (e) => {
 
 </body>
 </html>
-
 
 
 
